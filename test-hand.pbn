@@ -1,20 +1,20 @@
 % PBN 2.1
-% Bridge hand for testing
-
+% EXPORT
+%Content-type: text/pbn; charset=ISO-8859-1
+%Creator: Jolly Good Bridge
+%
 [Event “Test Hand”]
 [Site “Jolly Good Bridge”]
 [Date “2025.09.03”]
 [Board “1”]
-[West “West”]
-[North “North”]
-[East “East”]
-[South “South”]
+[West “”]
+[North “”]
+[East “”]
+[South “”]
 [Dealer “N”]
 [Vulnerable “None”]
 [Deal “N:AK32.QJ4.A65.K87 QJ109.1032.QJ4.Q32 8765.AK9.K32.A54 4.8765.10987.J1096”]
 [Scoring “MP”]
-[Declarer “N”]
-[Contract “3NT”]
-[Result “9”]
-
-- 
+[Declarer “?”]
+[Contract “?”]
+[Result “?”]
