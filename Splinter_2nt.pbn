@@ -1,0 +1,125 @@
+[Event "Sample Teaching Set"]
+[Site "WordPress Blog"]
+[Date "2025.09.01"]
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[North "♠ AKJ4 ♥ AQ97 ♦ 86 ♣ 872"]
+[East  "♠ 976 ♥ J432 ♦ AQJ10 ♣ Q5"]
+[South "♠ Q105 ♥ K1085 ♦ K743 ♣ A4"]
+[West  "♠ 832 ♥ 6 ♦ 952 ♣ KJ10963"]
+[Auction "N"]
+1H Pass 4C Pass
+4H Pass Pass Pass
+[Note "Board 1: North shows a Splinter raise with 4C (singleton club)."]
+
+[Board "2"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[North "♠ AQJ5 ♥ 84 ♦ A763 ♣ 972"]
+[East  "♠ 876 ♥ QJ32 ♦ J95 ♣ K84"]
+[South "♠ K943 ♥ AK107 ♦ KQ2 ♣ AJ"]
+[West  "♠ 102 ♥ 965 ♦ 1084 ♣ Q10653"]
+[Auction "S"]
+1H Pass 2NT Pass
+3NT Pass 4H Pass
+Pass Pass
+[Note "Board 2: South opens 1H, North bids 2NT (forcing raise), leading to game."]
+
+[Board "3"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[North "♠ Q106 ♥ AJ95 ♦ KQ42 ♣ 63"]
+[East  "♠ AKJ3 ♥ KQ6 ♦ A87 ♣ A92"]
+[South "♠ 9854 ♥ 72 ♦ J95 ♣ K1087"]
+[West  "♠ 72 ♥ 10843 ♦ 1063 ♣ QJ54"]
+[Auction "E"]
+1S Pass 4D Pass
+4S Pass Pass Pass
+[Note "Board 3: East uses 4D Splinter to show spade support + diamond shortage."]
+
+[Board "4"]
+[Dealer "W"]
+[Vulnerable "All"]
+[North "♠ KJ42 ♥ 965 ♦ QJ109 ♣ K7"]
+[East  "♠ A105 ♥ 742 ♦ 84 ♣ QJ1062"]
+[South "♠ 987 ♥ AQJ103 ♦ AK7 ♣ A3"]
+[West  "♠ Q63 ♥ K8 ♦ 6532 ♣ 9854"]
+[Auction "W"]
+Pass Pass 1H Pass
+2NT Pass 4H Pass
+Pass Pass
+[Note "Board 4: South shows a forcing 2NT raise of partner’s heart opening."]
+
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[North "♠ AKQ7 ♥ 83 ♦ AJ1062 ♣ 82"]
+[East  "♠ J986 ♥ KQ6 ♦ Q87 ♣ QJ5"]
+[South "♠ 1054 ♥ AJ975 ♦ 5 ♣ AK94"]
+[West  "♠ 32 ♥ 1042 ♦ K943 ♣ 10763"]
+[Auction "N"]
+1D Pass 4H Pass
+4S Pass Pass Pass
+[Note "Board 5: North splinters with 4H to support diamonds, showing heart shortage."]
+
+[Board "6"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[North "♠ QJ97 ♥ 75 ♦ K1086 ♣ 942"]
+[East  "♠ 862 ♥ Q94 ♦ A742 ♣ KQ5"]
+[South "♠ AK54 ♥ AKJ106 ♦ Q3 ♣ A7"]
+[West  "♠ 103 ♥ 832 ♦ J95 ♣ J10863"]
+[Auction "S"]
+1H Pass 2NT Pass
+4H Pass Pass Pass
+[Note "Board 6: Forcing 2NT raise leads to a safe heart game."]
+
+[Board "7"]
+[Dealer "E"]
+[Vulnerable "None"]
+[North "♠ K108 ♥ AQJ95 ♦ 874 ♣ 52"]
+[East  "♠ AQJ63 ♥ K7 ♦ AK93 ♣ A4"]
+[South "♠ 942 ♥ 108632 ♦ QJ5 ♣ 107"]
+[West  "♠ 75 ♥ 4 ♦ 1062 ♣ KQJ9863"]
+[Auction "E"]
+1S Pass 4C Pass
+4S Pass Pass Pass
+[Note "Board 7: East splinters with 4C to show spade support + club shortage."]
+
+[Board "8"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[North "♠ 976 ♥ AJ6 ♦ K103 ♣ A742"]
+[East  "♠ AQ54 ♥ 1084 ♦ QJ74 ♣ 53"]
+[South "♠ KJ103 ♥ KQ95 ♦ A52 ♣ K6"]
+[West  "♠ 82 ♥ 732 ♦ 986 ♣ QJ1098"]
+[Auction "W"]
+Pass Pass 1H Pass
+2NT Pass 4H Pass
+Pass Pass
+[Note "Board 8: Forcing 2NT support for hearts."]
+
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[North "♠ AQJ5 ♥ K3 ♦ AJ42 ♣ 982"]
+[East  "♠ 10762 ♥ Q106 ♦ Q1083 ♣ J6"]
+[South "♠ K83 ♥ AJ975 ♦ K75 ♣ AK"]
+[West  "♠ 94 ♥ 842 ♦ 96 ♣ Q107543"]
+[Auction "N"]
+1D Pass 4H Pass
+4S Pass Pass Pass
+[Note "Board 9: Splinter raise in hearts shows diamond support + heart shortage."]
+
+[Board "10"]
+[Dealer "S"]
+[Vulnerable "All"]
+[North "♠ Q95 ♥ 74 ♦ KQ83 ♣ 10962"]
+[East  "♠ J108 ♥ KJ62 ♦ 1062 ♣ KJ4"]
+[South "♠ AK743 ♥ AQ1095 ♦ A4 ♣ A"]
+[West  "♠ 62 ♥ 83 ♦ J975 ♣ Q8753"]
+[Auction "S"]
+1H Pass 2NT Pass
+4H Pass Pass Pass
+[Note "Board 10: Forcing 2NT support raises South’s hearts to game."]
