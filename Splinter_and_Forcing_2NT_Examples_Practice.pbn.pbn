@@ -1,0 +1,66 @@
+% PBN 2.1
+% EXPORT
+%Content-type: text/pbn; charset=ISO-8859-1
+
+[Event "Splinter and Forcing 2NT Examples (Practice)"]
+[Site "GitHub Pages"]
+[Date "2025.09.01"]
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AKJ4.AQ97.86.872 832.6.952.KJT963 976.J432.AQJ.Q5 QT5.KT85.K743.A4"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "2"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:K943.AK107.KQ2.AJ AQJ5.84.A763.972 876.QJ32.J95.K84 T2.965.T84.QT653"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "3"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:AKJ3.KQ6.A87.A92 Q106.AJ95.KQ42.63 9854.72.J95.KT87 72.T843.T63.QJ54"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "4"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "S:987.AQJ103.AK7.A3 KJ42.965.QJT9.K7 Q63.K8.6532.9854 A105.742.84.QJT62"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AKQ7.83.AJT62.82 32.T42.K943.T763 J986.KQ6.Q87.QJ5 T54.AJ975.5.AK94"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "6"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:AK54.AKJ106.Q3.A7 QJ97.75.KT86.942 862.Q94.A742.KQ5 T3.832.J95.JT863"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "7"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:AQJ63.K7.AK93.A4 K108.AQJ95.874.52 942.T8632.QJ5.T7 75.4.T62.KQJ9863"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "8"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "S:KJ103.KQ95.A52.K6 976.AJ6.KT3.A742 AQ54.T84.QJ74.53 82.732.986.QJT98"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:AQJ5.K3.AJ42.982 94.842.96.QT543 10762.Q106.QT83.J6 K83.AJ975.K75.AK"]
+[OptimumResultTable "Declarer;Denomination;Result"]
+
+[Board "10"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:AK743.AQ1095.A4.A Q95.74.KQ83.T962 J108.KJ62.T62.KJ4 62.83.J975.Q8753"]
+[OptimumResultTable "Declarer;Denomination;Result"]
