@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge Solver Test - Jolly Good Bridge</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+```
+    .header {
+        text-align: center;
+        border-bottom: 3px solid #2c5530;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        color: #2c5530;
+        margin: 0;
+    }
+    
+    .post {
+        background: white;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .post-title {
+        color: #2c5530;
+        border-bottom: 2px solid #e9ecef;
+        padding-bottom: 10px;
+    }
+    
+    .bridge-solver {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .solver-link {
+        background-color: #2c5530;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 10px;
+        font-size: 16px;
+    }
+    
+    .solver-link:hover {
+        background-color: #1e3a22;
+    }
+    
+    .bridge-hand {
+        background-color: #f8f9fa;
+        padding: 15px;
+        font-family: monospace;
+        border-left: 4px solid #2c5530;
+        margin: 20px 0;
+    }
+    
+    .iframe-container {
+        margin: 20px 0;
+        border: 2px solid #2c5530;
+        border-radius: 8px;
+        padding: 10px;
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="header">
+        <h1>🃏 Bridge Solver Test</h1>
+        <p>Testing Bridge Solver Online Integration</p>
+    </div>
+
+```
+<article class="post">
+    <h2 class="post-title">Testing Bridge Solver Online</h2>
+    
+    <p>This is a test to see if Bridge Solver Online works on GitHub Pages. We're testing with a sample hand.</p>
+    
+    <div class="bridge-hand">
+        <strong>Sample Hand:</strong><br>
+        North: ♠ AK32 ♥ QJ4 ♦ A65 ♣ K87<br>
+        East: ♠ QJ109 ♥ 1032 ♦ QJ4 ♣ Q32<br>
+        South: ♠ 8765 ♥ AK9 ♦ K32 ♣ A54<br>
+        West: ♠ 4 ♥ 8765 ♦ 10987 ♣ J1096
+    </div>
+    
+    <div class="bridge-solver">
+        <h3>Try Bridge Solver Online:</h3>
+        
+        <!-- Method 1: Direct link to BSOL with hand data -->
+        <a href="https://dds.bridgewebs.com/bsol/ddummy.htm?club=jolly&board=1&hands=N:AK32.QJ4.A65.K87%20QJ109.1032.QJ4.Q32%208765.AK9.K32.A54%204.8765.10987.J1096&dealer=N&vul=None" 
+           class="solver-link" target="_blank">
+           🎯 Analyze This Hand
+        </a>
+        
+        <!-- Method 2: Link to general BSOL where users can paste PBN -->
+        <a href="https://mirgo2.co.uk/bridgesolver/" 
+           class="solver-link" target="_blank">
+           🔧 Bridge Solver Online
+        </a>
+    </div>
+    
+    <div class="iframe-container">
+        <h3>Embedded Bridge Solver:</h3>
+        <p><em>Attempting to embed Bridge Solver Online directly:</em></p>
+        
+        <!-- Trying to embed BSOL directly -->
+        <iframe src="https://dds.bridgewebs.com/bsol/ddummy.htm?club=test&board=1&hands=N:AK32.QJ4.A65.K87%20QJ109.1032.QJ4.Q32%208765.AK9.K32.A54%204.8765.10987.J1096&dealer=N&vul=None" 
+                width="100%" 
+                height="600" 
+                frameborder="0"
+                title="Bridge Solver Online">
+            <p>Your browser doesn't support iframes. <a href="https://dds.bridgewebs.com/bsol/ddummy.htm?club=test&board=1&hands=N:AK32.QJ4.A65.K87%20QJ109.1032.QJ4.Q32%208765.AK9.K32.A54%204.8765.10987.J1096&dealer=N&vul=None">Click here to open Bridge Solver</a></p>
+        </iframe>
+    </div>
+    
+    <p><strong>Test Results:</strong></p>
+    <ul>
+        <li>✅ Direct links to Bridge Solver should work</li>
+        <li>❓ Embedded iframe may or may not work (depends on CORS settings)</li>
+        <li>🔄 If iframe doesn't work, users can still click the links</li>
+    </ul>
+    
+</article>
+```
+
+</body>
+</html>
