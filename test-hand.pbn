@@ -1,7 +1,7 @@
 % PBN 2.1
 % EXPORT
 %Content-type: text/pbn; charset=ISO-8859-1
-%Creator: Jolly Good Bridge1
+%Creator: Jolly Good Bridge2
 %
 [Event “Test Hand”]
 [Site “Jolly Good Bridge”]
@@ -15,6 +15,6 @@
 [Vulnerable “None”]
 [Deal “N:AK32.QJ4.A65.K87 QJ109.1032.QJ4.Q32 8765.AK9.K32.A54 4.8765.10987.J1096”]
 [Scoring “MP”]
-[Declarer “?”]
+[Declarer “N”]
 [Contract “?”]
 [Result “?”]
