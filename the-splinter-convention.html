@@ -158,8 +158,780 @@
     <p>Splinter bids are one of those conventions that make bridge both more complex and more beautiful. They're a tool for precise communication in those exciting moments when slam might be on the horizon. Just remember: with great power comes great responsibility. Use your splinters wisely, discuss them with your partner beforehand, and prepare for the occasional confused look from opponents who haven't discovered this particular gem yet.</p>
 
 
-    <h2>Play Through Example Hands</h2>
-<p>You can interact with the example deals below using Bridge Solver Online:</p>
+    <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Bridge Hand Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #0f4c3a, #1a5c4a);
+            color: white;
+            min-height: 100vh;
+        }
+
+```
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 20px;
+        padding: 30px;
+        color: #333;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #0f4c3a;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .board-selector {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px;
+        background: linear-gradient(135deg, #e8f5e8, #d4edda);
+        border-radius: 15px;
+        border: 2px solid #28a745;
+    }
+    
+    .board-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .board-btn {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 25px;
+        background: #28a745;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1em;
+    }
+    
+    .board-btn:hover {
+        background: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+    }
+    
+    .board-btn.active {
+        background: #0f4c3a;
+        box-shadow: 0 5px 15px rgba(15, 76, 58, 0.4);
+    }
+    
+    .animation-container {
+        margin-top: 30px;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+    }
+    
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+    
+    .hand-display {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .hand-diagram {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        border: 3px solid #0f4c3a;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hand-diagram::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+        animation: shimmer 2s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    .position {
+        margin: 20px 0;
+        text-align: center;
+        opacity: 0;
+        animation: slideIn 0.8s ease forwards;
+    }
+    
+    .position:nth-child(1) { animation-delay: 0.2s; }
+    .position:nth-child(2) .position:nth-child(1) { animation-delay: 0.4s; }
+    .position:nth-child(2) .position:nth-child(2) { animation-delay: 0.6s; }
+    .position:nth-child(3) { animation-delay: 0.8s; }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .position-label {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #0f4c3a;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .suits {
+        text-align: left;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 4px solid #0f4c3a;
+    }
+    
+    .suit {
+        margin: 8px 0;
+        font-family: 'Courier New', monospace;
+        font-size: 1.2em;
+        transition: all 0.3s ease;
+    }
+    
+    .suit.highlight {
+        background: #fff3cd;
+        padding: 5px;
+        border-radius: 5px;
+        border-left: 4px solid #ffc107;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+    }
+    
+    .spades { color: #000; font-weight: bold; }
+    .hearts { color: #d32f2f; font-weight: bold; }
+    .diamonds { color: #f57c00; font-weight: bold; }
+    .clubs { color: #000; font-weight: bold; }
+    
+    .bidding-animation {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        border: 3px solid #0f4c3a;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .bidding-sequence {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .bid-step {
+        display: inline-block;
+        margin: 10px 15px;
+        padding: 15px 25px;
+        background: #e8f5e8;
+        border: 2px solid #28a745;
+        border-radius: 25px;
+        font-family: 'Courier New', monospace;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #155724;
+        opacity: 0;
+        transform: scale(0.8);
+        animation: bidAppear 0.8s ease forwards;
+    }
+    
+    .bid-step:nth-child(1) { animation-delay: 0.5s; }
+    .bid-step:nth-child(2) { animation-delay: 1.0s; }
+    .bid-step:nth-child(3) { animation-delay: 1.5s; }
+    .bid-step:nth-child(4) { animation-delay: 2.0s; }
+    
+    @keyframes bidAppear {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    .decision-tree {
+        margin: 30px 0;
+        padding: 25px;
+        background: linear-gradient(135deg, #fff8e1, #fff3cd);
+        border-radius: 15px;
+        border-left: 6px solid #ffc107;
+    }
+    
+    .decision-step {
+        margin: 15px 0;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        border-left: 4px solid #007bff;
+        opacity: 0;
+        animation: slideUp 0.6s ease forwards;
+    }
+    
+    .decision-step:nth-child(1) { animation-delay: 2.5s; }
+    .decision-step:nth-child(2) { animation-delay: 3.0s; }
+    .decision-step:nth-child(3) { animation-delay: 3.5s; }
+    .decision-step:nth-child(4) { animation-delay: 4.0s; }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .decision-question {
+        font-weight: bold;
+        color: #0056b3;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+    }
+    
+    .decision-answer {
+        color: #495057;
+        font-style: italic;
+    }
+    
+    .conclusion {
+        margin-top: 25px;
+        padding: 20px;
+        background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+        border-radius: 15px;
+        border-left: 6px solid #17a2b8;
+        opacity: 0;
+        animation: slideUp 0.6s ease forwards;
+        animation-delay: 4.5s;
+    }
+    
+    .conclusion h3 {
+        color: #0c5460;
+        margin-bottom: 10px;
+    }
+    
+    .controls {
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .control-btn {
+        padding: 12px 25px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 25px;
+        background: #007bff;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .control-btn:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+    }
+    
+    .control-btn:disabled {
+        background: #6c757d;
+        cursor: not-allowed;
+        transform: none;
+    }
+    
+    .hcp-counter {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #0f4c3a;
+        color: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+    
+    .vulnerability-indicator {
+        display: inline-block;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        margin-left: 15px;
+    }
+    
+    .vul-none { background: #e3f2fd; color: #1976d2; }
+    .vul-ns { background: #ffebee; color: #d32f2f; }
+    .vul-ew { background: #fff3e0; color: #f57c00; }
+    .vul-all { background: #f3e5f5; color: #7b1fa2; }
+    
+    .warning-box {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 15px 0;
+        color: #721c24;
+    }
+    
+    .success-box {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 15px 0;
+        color: #155724;
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Animated Bridge Decision Making</h1>
+
+```
+    <div class="board-selector">
+        <h2>Select a Hand to Analyze</h2>
+        <div class="board-buttons" id="boardButtons">
+            <!-- Buttons will be generated dynamically -->
+        </div>
+    </div>
+    
+    <div class="hcp-counter" id="hcpCounter" style="display: none;">
+        <div><strong>Combined HCP:</strong> <span id="totalHcp">0</span></div>
+        <div><strong>Vulnerability:</strong> <span id="vulnStatus">None</span></div>
+    </div>
+    
+    <div class="controls">
+        <button class="control-btn" onclick="playAnimation()">▶️ Play Animation</button>
+        <button class="control-btn" onclick="pauseAnimation()">⏸️ Pause</button>
+        <button class="control-btn" onclick="resetAnimation()">🔄 Reset</button>
+    </div>
+    
+    <div id="animationContainer" class="animation-container" style="display: none;">
+        <!-- Content will be dynamically inserted here -->
+    </div>
+</div>
+
+<script>
+    // Bridge hands data
+    const bridgeHands = {
+        1: {
+            deal: "N:AKJ75.AQ6.K8.J43 832.9542.965.A85 Q964.KJ3.AQJ7.K2 T.T87.T432.QT976",
+            vulnerability: "None",
+            title: "Perfect 2NT Response - Balanced Support",
+            decisionType: "2NT_RESPONSE",
+            opener: "N", responder: "S",
+            sequence: ["1♠", "2NT", "4♠"],
+            decisions: [
+                {
+                    question: "Does South have 4+ spade support?",
+                    answer: "Yes - Q964 = 4-card support ✓",
+                    highlight: "S-spades"
+                },
+                {
+                    question: "Does South have game-going values (13+ HCP)?",
+                    answer: "Yes - 13 HCP with good distribution ✓",
+                    highlight: "S-all"
+                },
+                {
+                    question: "Does South have a clear shortage?",
+                    answer: "No - South is relatively balanced (4-3-4-2)",
+                    highlight: "S-all"
+                },
+                {
+                    question: "What should South bid?",
+                    answer: "2NT - Shows 4+ trump support, game values, NO shortage",
+                    highlight: "bidding"
+                }
+            ],
+            conclusion: "Perfect 2NT response! South shows spade support and game values but indicates balanced distribution. North accepts the game invitation with extra values."
+        },
+        2: {
+            deal: "S:K943.AK107.KQ2.AJ AQJ5.84.A763.972 876.QJ32.J95.K84 T2.965.T84.QT653",
+            vulnerability: "NS",
+            title: "Splinter with Wasted Values - Game Only",
+            decisionType: "SPLINTER_WASTE",
+            opener: "S", responder: "N",
+            sequence: ["1♥", "4♣", "4♥"],
+            decisions: [
+                {
+                    question: "Does North have 4+ heart support?",
+                    answer: "Yes - QJ32 = 4-card heart support ✓",
+                    highlight: "N-hearts"
+                },
+                {
+                    question: "Does North have a clear shortage?",
+                    answer: "Yes - Singleton club ✓",
+                    highlight: "N-clubs"
+                },
+                {
+                    question: "Does North have game+ values?",
+                    answer: "Yes - 9 HCP + shortness + 4 trumps ✓",
+                    highlight: "N-all"
+                },
+                {
+                    question: "Should North splinter 4♣?",
+                    answer: "YES - All conditions met for splinter bid",
+                    highlight: "bidding"
+                },
+                {
+                    question: "How should South (opener) respond?",
+                    answer: "4♥ ONLY - A♣J are completely wasted opposite shortage",
+                    highlight: "S-clubs"
+                }
+            ],
+            conclusion: "Classic splinter scenario! North correctly splinters, but South must stop at game because the A♣J are worthless opposite partner's club shortage. Despite 31 combined HCP, slam is poor."
+        },
+        5: {
+            deal: "N:AKQ7.83.AJT62.82 32.T42.K943.T763 J986.KQ65.Q87.AK T54.AJ97.5.QJ954",
+            vulnerability: "NS", 
+            title: "Don't Splinter - Honours in Short Suit",
+            decisionType: "ANTI_SPLINTER_HONORS",
+            opener: "N", responder: "S",
+            sequence: ["1♦", "2NT"],
+            decisions: [
+                {
+                    question: "Does South have diamond support?",
+                    answer: "No - Only 3 diamonds, looking for major fit",
+                    highlight: "S-diamonds"
+                },
+                {
+                    question: "Does South have club shortage?", 
+                    answer: "Yes - Only 2 clubs (AK)",
+                    highlight: "S-clubs"
+                },
+                {
+                    question: "Should South bid 3♣ as splinter?",
+                    answer: "NO! - A♣K are valuable honors, not 'waste'",
+                    highlight: "S-clubs"
+                },
+                {
+                    question: "What should South bid instead?",
+                    answer: "Show the heart suit - balanced approach is better",
+                    highlight: "S-hearts"
+                }
+            ],
+            conclusion: "Anti-splinter example! Don't splinter when you have significant honors in your 'short' suit. The A♣K are working cards that contribute to trick-taking."
+        },
+        6: {
+            deal: "S:AK54.AKJ106.Q3.A7 QJ97.75.KT86.942 862.Q94.A742.KQ5 T3.832.J95.JT863",
+            vulnerability: "EW",
+            title: "Splinter to Slam - Perfect Fit",
+            decisionType: "SPLINTER_SLAM",
+            opener: "S", responder: "N",
+            sequence: ["1♥", "4♦", "6♥"],
+            decisions: [
+                {
+                    question: "Does North have 4+ heart support?",
+                    answer: "No, only 3 hearts... but very strong ones (Q94)",
+                    highlight: "N-hearts"
+                },
+                {
+                    question: "Does North have clear shortage?",
+                    answer: "Yes - Singleton diamond ✓",
+                    highlight: "N-diamonds"
+                },
+                {
+                    question: "Does North have slam values?",
+                    answer: "Yes - 11 HCP + shortness + good trumps ✓",
+                    highlight: "N-all"
+                },
+                {
+                    question: "Should South accept slam try?",
+                    answer: "YES! - No wasted diamond values, excellent controls",
+                    highlight: "S-all"
+                }
+            ],
+            conclusion: "Perfect slam hand! South has A♠K, A♥KJ106, and A♣ - all prime honors with no wastage opposite North's diamond shortage. Despite only 28 HCP, the fit is perfect."
+        },
+        9: {
+            deal: "N:AQJ5.K3.AJ42.982 K94.842.976.QT54 T76.Q106.5.AKJ643 832.AJ975.KQT83.7",
+            vulnerability: "EW",
+            title: "Don't Splinter - Minimal Trump Support",
+            decisionType: "ANTI_SPLINTER_SUPPORT",
+            opener: "N", responder: "S", 
+            sequence: ["1♠", "2NT"],
+            decisions: [
+                {
+                    question: "Does South have spade support?",
+                    answer: "Barely - Only T76 (3-card support)",
+                    highlight: "S-spades"
+                },
+                {
+                    question: "Does South have clear shortage?",
+                    answer: "Yes - Singleton diamond",
+                    highlight: "S-diamonds"
+                },
+                {
+                    question: "Should South splinter 4♦?",
+                    answer: "NO - Only 3-card trump support is insufficient",
+                    highlight: "S-spades"
+                },
+                {
+                    question: "What should South bid?",
+                    answer: "2♣ - Show the strong club suit instead",
+                    highlight: "S-clubs"
+                }
+            ],
+            conclusion: "Anti-splinter example! Don't splinter with minimal (3-card) trump support. South's club suit is much stronger and more descriptive than a splinter bid."
+        }
+    };
+
+    let currentBoard = null;
+    let animationState = 'stopped';
+    let animationTimeouts = [];
+
+    function initializePage() {
+        createBoardButtons();
+        loadBoard(1);
+    }
+
+    function createBoardButtons() {
+        const container = document.getElementById('boardButtons');
+        const boards = [1, 2, 5, 6, 9]; // Key teaching examples
+        
+        boards.forEach(boardNum => {
+            const btn = document.createElement('button');
+            btn.className = 'board-btn';
+            btn.textContent = `Board ${boardNum}`;
+            btn.onclick = () => loadBoard(boardNum);
+            container.appendChild(btn);
+        });
+    }
+
+    function loadBoard(boardNum) {
+        currentBoard = boardNum;
+        
+        // Update active button
+        document.querySelectorAll('.board-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.textContent === `Board ${boardNum}`) {
+                btn.classList.add('active');
+            }
+        });
+        
+        resetAnimation();
+        setupBoardDisplay();
+    }
+
+    function setupBoardDisplay() {
+        const hand = bridgeHands[currentBoard];
+        if (!hand) return;
+        
+        const container = document.getElementById('animationContainer');
+        container.style.display = 'block';
+        
+        const hands = parseHandData(hand.deal);
+        const hcp = calculateAllHCP(hands);
+        
+        // Update HCP counter
+        updateHCPCounter(hcp, hand.vulnerability);
+        
+        container.innerHTML = `
+            <div class="hand-display">
+                <div class="hand-diagram">
+                    <h3 style="text-align: center; margin-bottom: 20px; color: #0f4c3a;">
+                        ${hand.title}
+                        <span class="vulnerability-indicator ${getVulnClass(hand.vulnerability)}">
+                            ${hand.vulnerability}
+                        </span>
+                    </h3>
+                    ${renderHandDiagram(hands, hcp)}
+                </div>
+                <div class="bidding-animation">
+                    <h3 style="text-align: center; margin-bottom: 20px; color: #0f4c3a;">Bidding Sequence</h3>
+                    <div class="bidding-sequence" id="biddingSequence">
+                        ${hand.sequence.map(bid => `<div class="bid-step">${bid}</div>`).join('')}
+                    </div>
+                    <div class="decision-tree" id="decisionTree">
+                        <h3 style="margin-bottom: 15px; color: #856404;">Decision Making Process:</h3>
+                        ${hand.decisions.map(decision => `
+                            <div class="decision-step">
+                                <div class="decision-question">${decision.question}</div>
+                                <div class="decision-answer">${decision.answer}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="conclusion" id="conclusion">
+                        <h3>Conclusion</h3>
+                        <p>${hand.conclusion}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function parseHandData(dealString) {
+        const parts = dealString.split(':')[1].split(' ');
+        const positions = ['N', 'E', 'S', 'W'];
+        const hands = {};
+        
+        positions.forEach((pos, idx) => {
+            const suits = parts[idx].split('.');
+            hands[pos] = {
+                spades: suits[0] || '',
+                hearts: suits[1] || '',
+                diamonds: suits[2] || '',
+                clubs: suits[3] || ''
+            };
+        });
+        
+        return hands;
+    }
+
+    function calculateAllHCP(hands) {
+        const hcp = {};
+        Object.keys(hands).forEach(pos => {
+            hcp[pos] = calculateHCP(hands[pos]);
+        });
+        return hcp;
+    }
+
+    function calculateHCP(hand) {
+        let total = 0;
+        const values = {'A': 4, 'K': 3, 'Q': 2, 'J': 1};
+        const allCards = hand.spades + hand.hearts + hand.diamonds + hand.clubs;
+        for (let card of allCards) {
+            total += values[card] || 0;
+        }
+        return total;
+    }
+
+    function renderHandDiagram(hands, hcp) {
+        return `
+            <div class="position">
+                <div class="position-label">North (${hcp.N} HCP)</div>
+                <div class="suits" data-position="N">
+                    <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.N.spades)}</div>
+                    <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.N.hearts)}</div>
+                    <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.N.diamonds)}</div>
+                    <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.N.clubs)}</div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="position">
+                    <div class="position-label">West (${hcp.W} HCP)</div>
+                    <div class="suits" data-position="W">
+                        <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.W.spades)}</div>
+                        <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.W.hearts)}</div>
+                        <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.W.diamonds)}</div>
+                        <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.W.clubs)}</div>
+                    </div>
+                </div>
+                
+                <div class="position">
+                    <div class="position-label">East (${hcp.E} HCP)</div>
+                    <div class="suits" data-position="E">
+                        <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.E.spades)}</div>
+                        <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.E.hearts)}</div>
+                        <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.E.diamonds)}</div>
+                        <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.E.clubs)}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="position">
+                <div class="position-label">South (${hcp.S} HCP)</div>
+                <div class="suits" data-position="S">
+                    <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.S.spades)}</div>
+                    <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.S.hearts)}</div>
+                    <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.S.diamonds)}</div>
+                    <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.S.clubs)}</div>
+                </div>
+            </div>
+        `;
+    }
+
+    function formatCards(cards) {
+        return cards ? cards.replace(/T/g, '10') : '—';
+    }
+
+    function getVulnClass(vuln) {
+        const classes = {
+            'None': 'vul-none',
+            'NS': 'vul-ns', 
+            'EW': 'vul-ew',
+            'All': 'vul-all'
+        };
+        return classes[vuln] || 'vul-none';
+    }
+
+    function updateHCPCounter(hcp, vulnerability) {
+        const total = hcp.N + hcp.E + hcp.S + hcp.W;
+        document.getElementById('totalHcp').textContent = total;
+        document.getElementById('vulnStatus').textContent = vulnerability;
+        document.getElementById('hcpCounter').style.display = 'block';
+    }
+
+    function playAnimation() {
+        if (animationState === 'playing') return;
+        
+        resetAnimation();
+        animationState = 'playing';
+        
+        const hand = bridgeHands[currentBoard];
+        if (!hand) return;
+        
+        // Animate highlighting of relevant suits/hands during decision process
+        hand.decisions.forEach((decision, index) => {
+            const timeout = setTimeout(() => {
+                highlightRelevantCards(decision.highlight);
+            }, (index + 1) * 1000);
+            animationTimeouts.push(timeout);
+        });
+    }
+
+    function highlightRelevantCards(highlightType) {
+        // Remove previous highlights
+        document.querySelectorAll('.suit.highlight').forEach(el => {
+            el.classList.remove('highlight');
+        });
+        
+        if (highlightType.includes('-')) {
+            const [position, suit] = highlightType.split('-');
+            if (suit === 'all') {
+                // Highlight entire hand
+                document.querySelectorAll(`[data-position="${position}"] .suit`).forEach(el => {
+                    el.classList.add('highlight');
+                });
+```
 
 <div style="margin:20px 0;">
 
