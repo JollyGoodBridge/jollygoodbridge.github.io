@@ -1,86 +1,116 @@
-% PBN 2.1
-% EXPORT
-%Content-type: text/pbn; charset=ISO-8859-1
+Event "Splinter and Forcing 2NT Examples"]
+[Site "Jolly Good Bridge"]
+[Date "2025.09.04"]
 
-[Event "Splinter and Forcing 2NT Examples (Practice)"]
-[Site "GitHub Pages"]
-[Date "2025.09.01"]
 [Board "1"]
 [Dealer "N"]
 [Vulnerable "None"]
-[Deal "N:AKJ75.AQ6.K8.J43 832.9542.965.A85 Q964.KJ3.AQJ7.K2 T.T87.T432.QT976"]
-[Declarer "N"]
-[Contract "4S"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SAKJ4 HAQ97 D86 C872"]
+[East  "S976 HJ432 DAQJT CQ5"]
+[South "SQT5 HKT85 DK743 CA4"]
+[West  "S832 H6 D952 CKJT63"]
+[Auction "N"]
+1H Pass 4C Pass
+4H Pass Pass Pass
 
 [Board "2"]
 [Dealer "S"]
 [Vulnerable "NS"]
-[Deal "S:K943.AK107.KQ2.AJ AQJ5.84.A763.972 876.QJ32.J95.K84 T2.965.T84.QT653"]
-[Declarer "S"]
-[Contract "4H"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SAQJ5 H84 DA763 C972"]
+[East  "S876 HQJ32 DJ95 CK84"]
+[South "SK943 HAKT7 DKQ2 CAJ"]
+[West  "ST2 H965 DT84 CQT653"]
+[Auction "S"]
+1H Pass 2NT Pass
+3NT Pass 4H Pass
+Pass Pass
 
 [Board "3"]
 [Dealer "E"]
 [Vulnerable "EW"]
-[Deal "E:AKJ3.KQ6.A87.A92 Q106.AJ95.KQ42.63 9854.72.J95.KT87 72.T843.T63.QJ54"]
-[Declarer "E"]
-[Contract "3NT"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SQT6 HAJ95 DKQ42 C63"]
+[East  "SAKJ3 HKQ6 DA87 CA92"]
+[South "S9854 H72 DJ95 CKT87"]
+[West  "S72 HT843 DT63 CQJ54"]
+[Auction "E"]
+1S Pass 4D Pass
+4S Pass Pass Pass
 
 [Board "4"]
 [Dealer "W"]
 [Vulnerable "All"]
-[Deal "W:KJ42.965.QJT9.K7 987.AQJ10.AK7.A32 Q63.K83.6532.985 AT5.742.84.QJT64"]
-[Declarer "E"]
-[Contract "4H"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SKJ42 H965 DQJT9 CK7"]
+[East  "SAT5 H742 D84 CQJT62"]
+[South "S987 HAQJT3 DAK7 CA3"]
+[West  "SQ63 HK8 D6532 C9854"]
+[Auction "W"]
+Pass Pass 1H Pass
+2NT Pass 4H Pass
+Pass Pass
 
 [Board "5"]
 [Dealer "N"]
 [Vulnerable "NS"]
-[Deal "N:AKQ7.83.AJT62.82 32.T42.K943.T763 J986.KQ65.Q87.QJ T54.AJ97.5.AK954"]
-[Declarer "N"]
-[Contract "3NT"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SAKQ7 H83 DAJT62 C82"]
+[East  "SJ986 HKQ6 DQ87 CQJ5"]
+[South "ST54 HAJ975 D5 CAK94"]
+[West  "S32 HT42 DK943 CT763"]
+[Auction "N"]
+1D Pass 4H Pass
+4S Pass Pass Pass
 
 [Board "6"]
 [Dealer "S"]
 [Vulnerable "EW"]
-[Deal "S:AK54.AKJ106.Q3.A7 QJ97.75.KT86.942 862.Q94.A742.KQ5 T3.832.J95.JT863"]
-[Declarer "S"]
-[Contract "6H"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SQJ97 H75 DKT86 C942"]
+[East  "S862 HQ94 DA742 CKQ5"]
+[South "SAK54 HAKJT6 DQ3 CA7"]
+[West  "ST3 H832 DJ95 CJT863"]
+[Auction "S"]
+1H Pass 2NT Pass
+4H Pass Pass Pass
 
 [Board "7"]
 [Dealer "E"]
 [Vulnerable "None"]
-[Deal "E:AQJ63.K7.AK93.A4 K108.AQJ95.874.52 942.T8632.QJ5.T7 75.4.T62.KQJ9863"]
-[Declarer "E"]
-[Contract "4S"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SKT8 HAQJ95 D874 C52"]
+[East  "SAQJ63 HK7 DAK93 CA4"]
+[South "S942 HT8632 DQJ5 C107"]
+[West  "S75 H4 DT62 CKQJ9863"]
+[Auction "E"]
+1S Pass 4C Pass
+4S Pass Pass Pass
 
 [Board "8"]
 [Dealer "W"]
 [Vulnerable "NS"]
-[Deal "W:976.AJ6.KT3.A742 KJ103.KQ95.A52.K6 AQ54.T84.QJ74.53 82.732.986.QJT98"]
-[Declarer "E"]
-[Contract "4S"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "S976 HAJ6 DKT3 CA742"]
+[East  "SAQ54 HT84 DQJ74 C53"]
+[South "SKJT3 HKQ95 DA52 CK6"]
+[West  "S82 H732 D986 CQJT98"]
+[Auction "W"]
+Pass Pass 1H Pass
+2NT Pass 4H Pass
+Pass Pass
 
 [Board "9"]
 [Dealer "N"]
 [Vulnerable "EW"]
-[Deal "N:AQJ5.K3.AJ42.982 K94.842.976.QT54 T762.Q106.QT83.J6 83.AJ975.K5.AK73"]
-[Declarer "N"]
-[Contract "3NT"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SAQJ5 HK3 DAJ42 C982"]
+[East  "S10762 HQT6 DQT83 CJ6"]
+[South "SK83 HAJ975 DK75 CAK"]
+[West  "S94 H842 D96 CQT543"]
+[Auction "N"]
+1D Pass 4H Pass
+4S Pass Pass Pass
 
 [Board "10"]
 [Dealer "S"]
 [Vulnerable "All"]
-[Deal "S:AK743.AQ1095.A4.A Q95.74.KQ83.T962 J108.KJ62.T62.KJ4 62.83.J975.Q8753"]
-[Declarer "S"]
-[Contract "6H"]
-[OptimumResultTable "Declarer;Denomination;Result"]
+[North "SQ95 H74 DKQ83 CT962"]
+[East  "SJT8 HKJ62 DT62 CKJ4"]
+[South "SAK743 HAQT95 DA4 CA"]
+[West  "S62 H83 DJ975 CQ8753"]
+[Auction "S"]
+1H Pass 2NT Pass
+4H Pass Pass Pass
