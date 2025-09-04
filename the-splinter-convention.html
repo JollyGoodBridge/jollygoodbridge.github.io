@@ -375,7 +375,10 @@
         <div class="board-selector">
             <h3>Select a Hand to Analyze:</h3>
             <div class="board-buttons" id="boardButtons">
-                <!-- Buttons will be generated dynamically -->
+                <button class="board-btn active" onclick="loadBoard(1)">Example 1</button>
+                <button class="board-btn" onclick="loadBoard(2)">Example 2</button>
+                <button class="board-btn" onclick="loadBoard(5)">Example 5</button>
+                <button class="board-btn" onclick="loadBoard(6)">Example 6</button>
             </div>
         </div>
         
@@ -385,8 +388,92 @@
             <button class="control-btn" onclick="resetAnimation()">🔄 Reset</button>
         </div>
         
-        <div id="animationContainer" class="animation-container" style="display: none;">
-            <!-- Interactive content will be dynamically inserted here -->
+        <div id="animationContainer" class="animation-container">
+            <!-- Default content shown immediately -->
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h3 style="color: #2c5530; margin-bottom: 10px;">
+                    Perfect 2NT Response - Balanced Support
+                    <span class="vulnerability-indicator vul-none">None</span>
+                </h3>
+                <p style="font-style: italic; color: #666;">Combined HCP: 31</p>
+            </div>
+            
+            <div class="hand-display">
+                <div class="hand-diagram">
+                    <div class="position">
+                        <div class="position-label">North (18 HCP)</div>
+                        <div class="suits" data-position="N">
+                            <div class="suit spades" data-suit="spades">♠ AKJ75</div>
+                            <div class="suit hearts" data-suit="hearts">♥ AQ6</div>
+                            <div class="suit diamonds" data-suit="diamonds">♦ K8</div>
+                            <div class="suit clubs" data-suit="clubs">♣ J43</div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                        <div class="position">
+                            <div class="position-label">West (7 HCP)</div>
+                            <div class="suits" data-position="W">
+                                <div class="suit spades" data-suit="spades">♠ 832</div>
+                                <div class="suit hearts" data-suit="hearts">♥ 9542</div>
+                                <div class="suit diamonds" data-suit="diamonds">♦ 965</div>
+                                <div class="suit clubs" data-suit="clubs">♣ A85</div>
+                            </div>
+                        </div>
+                        
+                        <div class="position">
+                            <div class="position-label">East (3 HCP)</div>
+                            <div class="suits" data-position="E">
+                                <div class="suit spades" data-suit="spades">♠ 10</div>
+                                <div class="suit hearts" data-suit="hearts">♥ 1087</div>
+                                <div class="suit diamonds" data-suit="diamonds">♦ 10432</div>
+                                <div class="suit clubs" data-suit="clubs">♣ Q10976</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="position">
+                        <div class="position-label">South (13 HCP)</div>
+                        <div class="suits" data-position="S">
+                            <div class="suit spades" data-suit="spades">♠ Q964</div>
+                            <div class="suit hearts" data-suit="hearts">♥ KJ3</div>
+                            <div class="suit diamonds" data-suit="diamonds">♦ AQJ7</div>
+                            <div class="suit clubs" data-suit="clubs">♣ K2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analysis-section">
+                    <h4 style="text-align: center; color: #2c5530;">Bidding Analysis</h4>
+                    <div class="bidding-sequence">
+                        <div class="bid-step">1♠</div>
+                        <div class="bid-step">2NT</div>
+                        <div class="bid-step">4♠</div>
+                    </div>
+                    <div class="decision-tree">
+                        <h4 style="margin-bottom: 15px; color: #856404;">Decision Process:</h4>
+                        <div class="decision-step">
+                            <div class="decision-question">Does South have 4+ spade support?</div>
+                            <div class="decision-answer">Yes - Q964 = 4-card support ✓</div>
+                        </div>
+                        <div class="decision-step">
+                            <div class="decision-question">Does South have game-going values?</div>
+                            <div class="decision-answer">Yes - 13 HCP with good distribution ✓</div>
+                        </div>
+                        <div class="decision-step">
+                            <div class="decision-question">Should South splinter?</div>
+                            <div class="decision-answer">No - South is balanced, no clear shortage</div>
+                        </div>
+                        <div class="decision-step">
+                            <div class="decision-question">What should South bid?</div>
+                            <div class="decision-answer">2NT - Shows support + game values + balanced</div>
+                        </div>
+                    </div>
+                    <div class="conclusion">
+                        <strong>Key Learning:</strong><br>
+                        This shows the difference between splinter hands and 2NT responses. South has the strength and support but no shortage to advertise.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -531,21 +618,14 @@
     let animationTimeouts = [];
 
     function initializePage() {
-        createBoardButtons();
-        loadBoard(1);
+        // Set initial board
+        currentBoard = 1;
+        console.log("Page initialized with board 1");
     }
 
     function createBoardButtons() {
-        const container = document.getElementById('boardButtons');
-        const boards = [1, 2, 5, 6]; // Key teaching examples
-        
-        boards.forEach(boardNum => {
-            const btn = document.createElement('button');
-            btn.className = 'board-btn';
-            btn.textContent = `Example ${boardNum}`;
-            btn.onclick = () => loadBoard(boardNum);
-            container.appendChild(btn);
-        });
+        // Buttons are now static HTML, no need to create dynamically
+        console.log("Using static buttons");
     }
 
     function loadBoard(boardNum) {
