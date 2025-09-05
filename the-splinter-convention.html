@@ -324,8 +324,12 @@
     }
 </style>
 ```
-
+<script defer>
+        function loadBoard() {
+                  }
+    </script>
 </head>
+    
 <body>
     <div class="container">
         <h1>The Splinter Convention: When Bridge Players Go Completely Bonkers (But in a Good Way)</h1>
@@ -375,43 +379,30 @@
         <div class="board-selector">
             <h3>Select a Hand to Analyze:</h3>
             <div class="board-buttons" id="boardButtons">
-                <button class="board-btn active" onclick="loadboard(1)">Example 1</button>
-                <button class="board-btn" onclick="loadboard(2)">Example 2</button>
-                <button class="board-btn" onclick="loadboard(5)">Example 5</button>
-                <button class="board-btn" onclick="loadboard(6)">Example 6</button>
+                <button class="board-btn active" onclick="loadBoard(1)">Example 1</button>
+                <button class="board-btn" onclick="loadBoard(2)">Example 2</button>
+                <button class="board-btn" onclick="loadBoard(5)">Example 5</button>
+                <button class="board-btn" onclick="loadBoard(6)">Example 6</button>
             </div>
         </div>
         
         <div class="controls">
-            <button class="control-btn" onclick="playanimation()">▶️ Play Animation</button>
-            <button class="control-btn" onclick="pauseanimation()">⏸️ Pause</button>
-            <button class="control-btn" onclick="resetanimation()">🔄 Reset</button>
+            <button class="control-btn" onclick="playAnimation()">▶️ Play Animation</button>
+            <button class="control-btn" onclick="pauseAnimation()">⏸️ Pause</button>
+            <button class="control-btn" onclick="resetAnimation()">🔄 Reset</button>
         </div>
         
         <div id="animationContainer" class="animation-container">
             <!-- Default content shown immediately -->
             <div style="text-align: center; margin-bottom: 20px;">
                 <h3 style="color: #2c5530; margin-bottom: 10px;">
-                       Perfect 2NT Response - Balanced Support
+                    Perfect 2NT Response - Balanced Support
     <span class="vulnerability-indicator vul-none">
         <!-- Define functions with lowercase names to match console error -->
         <script>
             window.loadboard = function(boardNum) {
                 console.log("Loading board:", boardNum);
                 currentBoard = boardNum;
-        
-        // Update active button
-        document.querySelectorAll('.board-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        // Find and activate the clicked button
-        const buttons = document.querySelectorAll('.board-btn');
-        buttons.forEach(btn => {
-            if (btn.textContent === `Example ${boardNum}`) {
-                btn.classList.add('</span>
-                </h3>
-                <p style="font-style: italic; color: #666;">Combined HCP: 31</p>
             </div>
             
             <div class="hand-display">
@@ -639,185 +630,35 @@
         console.log("Page initialized with board 1");
     }
 
-    function parseHandData(dealString) {
-        const parts = dealString.split(':')[1].split(' ');
-        const positions = ['N', 'E', 'S', 'W'];
-        const hands = {};
-        
-        positions.forEach((pos, idx) => {
-            const suits = parts[idx].split('.');
-            hands[pos] = {
-                spades: suits[0] || '',
-                hearts: suits[1] || '',
-                diamonds: suits[2] || '',
-                clubs: suits[3] || ''
-            };
-        });
-        
-        return hands;
+    function createBoardButtons() {
+        // Buttons are now static HTML, no need to create dynamically
+        console.log("Using static buttons");
     }
 
-    function calculateAllHCP(hands) {
-        const hcp = {};
-        Object.keys(hands).forEach(pos => {
-            hcp[pos] = calculateHCP(hands[pos]);
-        });
-        return hcp;
-    }
-
-    function calculateHCP(hand) {
-        let total = 0;
-        const values = {'A': 4, 'K': 3, 'Q': 2, 'J': 1};
-        const allCards = hand.spades + hand.hearts + hand.diamonds + hand.clubs;
-        for (let card of allCards) {
-            total += values[card] || 0;
-        }
-        return total;
-    }
-
-    function renderHandDiagram(hands, hcp) {
-        return `
-            <div class="position">
-                <div class="position-label">North (${hcp.N} HCP)</div>
-                <div class="suits" data-position="N">
-                    <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.N.spades)}</div>
-                    <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.N.hearts)}</div>
-                    <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.N.diamonds)}</div>
-                    <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.N.clubs)}</div>
-                </div>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
-                <div class="position">
-                    <div class="position-label">West (${hcp.W} HCP)</div>
-                    <div class="suits" data-position="W">
-                        <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.W.spades)}</div>
-                        <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.W.hearts)}</div>
-                        <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.W.diamonds)}</div>
-                        <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.W.clubs)}</div>
-                    </div>
-                </div>
-                
-                <div class="position">
-                    <div class="position-label">East (${hcp.E} HCP)</div>
-                    <div class="suits" data-position="E">
-                        <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.E.spades)}</div>
-                        <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.E.hearts)}</div>
-                        <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.E.diamonds)}</div>
-                        <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.E.clubs)}</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="position">
-                <div class="position-label">South (${hcp.S} HCP)</div>
-                <div class="suits" data-position="S">
-                    <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.S.spades)}</div>
-                    <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.S.hearts)}</div>
-                    <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.S.diamonds)}</div>
-                    <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.S.clubs)}</div>
-                </div>
-            </div>
-        `;
-    }
-
-    function formatCards(cards) {
-        return cards ? cards.replace(/T/g, '10') : '—';
-    }
-
-    function getVulnClass(vuln) {
-        const classes = {
-            'None': 'vul-none',
-            'NS': 'vul-ns',
-            'EW': 'vul-ew',
-            'All': 'vul-all'
-        };
-        return classes[vuln] || 'vul-none';
-    }
-
-    // Make sure all functions are globally accessible
-    window.loadBoard = function(boardNum) {
-        console.log("Loading board:", boardNum);
+    function loadBoard(boardNum) {
         currentBoard = boardNum;
         
         // Update active button
         document.querySelectorAll('.board-btn').forEach(btn => {
             btn.classList.remove('active');
+            if (btn.textContent === `Example ${boardNum}`) {
+                btn.classList.add('active');
+            }
         });
-        event.target.classList.add('active');
         
         resetAnimation();
         setupBoardDisplay();
-    };
-    
-    window.playAnimation = function() {
-        console.log("Play animation clicked");
-        if (animationState === 'playing') return;
-        
-        resetAnimation();
-        animationState = 'playing';
-        
-        const hand = bridgeHands[currentBoard];
-        if (!hand) {
-            console.log("No hand data for board:", currentBoard);
-            return;
-        }
-        
-        console.log("Starting animation for board:", currentBoard);
-        
-        // Animate highlighting during decision process
-        hand.decisions.forEach((decision, index) => {
-            const timeout = setTimeout(() => {
-                console.log("Highlighting:", decision.highlight);
-                highlightRelevantCards(decision.highlight);
-            }, (index + 1) * 1000);
-            animationTimeouts.push(timeout);
-        });
-    };
-    
-    window.pauseAnimation = function() {
-        console.log("Pause animation clicked");
-        animationState = 'paused';
-        animationTimeouts.forEach(timeout => clearTimeout(timeout));
-        animationTimeouts = [];
-    };
-    
-    window.resetAnimation = function() {
-        console.log("Reset animation clicked");
-        animationState = 'stopped';
-        animationTimeouts.forEach(timeout => clearTimeout(timeout));
-        animationTimeouts = [];
-        
-        // Remove all highlights
-        document.querySelectorAll('.suit.highlight').forEach(el => {
-            el.classList.remove('highlight');
-        });
-        
-        // Reset animations by recreating container
-        if (currentBoard) {
-            setupBoardDisplay();
-        }
-    };
+    }
 
-    function setupboarddisplay() {
-        console.log("Setting up board display for:", currentBoard);
+    function setupBoardDisplay() {
         const hand = bridgeHands[currentBoard];
-        if (!hand) {
-            console.log("No hand data found for board:", currentBoard);
-            return;
-        }
+        if (!hand) return;
         
         const container = document.getElementById('animationContainer');
-        if (!container) {
-            console.log("Animation container not found!");
-            return;
-        }
+        container.style.display = 'block';
         
         const hands = parseHandData(hand.deal);
         const hcp = calculateAllHCP(hands);
-        
-        console.log("Hand data:", hands);
-        console.log("HCP:", hcp);
         
         container.innerHTML = `
             <div style="text-align: center; margin-bottom: 20px;">
@@ -855,41 +696,6 @@
                 </div>
             </div>
         `;
-        console.log("Board display updated successfully");
-    }
-
-    function highlightrelevantcards(highlightType) {
-        console.log("Highlighting:", highlightType);
-        
-        // Remove previous highlights
-        document.querySelectorAll('.suit.highlight').forEach(el => {
-            el.classList.remove('highlight');
-        });
-        
-        if (highlightType.includes('-')) {
-            const [position, suit] = highlightType.split('-');
-            console.log("Position:", position, "Suit:", suit);
-            
-            if (suit === 'all') {
-                // Highlight entire hand
-                const elements = document.querySelectorAll(`[data-position="${position}"] .suit`);
-                console.log("Found elements for all suits:", elements.length);
-                elements.forEach(el => {
-                    el.classList.add('highlight');
-                });
-            } else {
-                // Highlight specific suit
-                const suitElement = document.querySelector(`[data-position="${position}"] [data-suit="${suit}"]`);
-                console.log("Found suit element:", suitElement);
-                if (suitElement) {
-                    suitElement.classList.add('highlight');
-                }
-            }
-        }
-    }>
-            </div>
-        `;
-        console.log("Board display updated successfully");
     }
 
     // Helper functions
