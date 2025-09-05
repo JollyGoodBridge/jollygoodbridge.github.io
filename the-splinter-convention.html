@@ -392,11 +392,13 @@
             <!-- Default content shown immediately -->
             <div style="text-align: center; margin-bottom: 20px;">
                 <h3 style="color: #2c5530; margin-bottom: 10px;">
-                    Perfect 2NT Response - Balanced Support
-                    <span class="vulnerability-indicator vul-none">        // Define functions with lowercase names to match console error
-    window.loadboard = function(boardNum) {
-        console.log("Loading board:", boardNum);
-        currentBoard = boardNum;
+                       Perfect 2NT Response - Balanced Support
+    <span class="vulnerability-indicator vul-none">
+        <!-- Define functions with lowercase names to match console error -->
+        <script>
+            window.loadboard = function(boardNum) {
+                console.log("Loading board:", boardNum);
+                currentBoard = boardNum;
         
         // Update active button
         document.querySelectorAll('.board-btn').forEach(btn => {
