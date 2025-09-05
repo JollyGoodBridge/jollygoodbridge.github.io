@@ -59,58 +59,58 @@
   <script defer>
     // ====== Bridge hands data with educational examples ======
     const bridgeHands = {
-      1: {
-        deal: "AKJ75.AQ6.K8.J43 832.9542.965.A85 10.1087.10432.Q10976 Q964.KJ3.AQJ7.K2",
-        vulnerability: "None",
-        title: "Perfect 2NT Response - Balanced Support",
-        sequence: ["1♠", "2NT", "4♠"],
-        decisions: [
-          { question: "Does South have 4+ spade support?", answer: "Yes - Q964 = 4-card support ✓", highlight: "S-spades" },
-          { question: "Does South have game-going values?", answer: "Yes - 13 HCP with good distribution ✓", highlight: "S-all" },
-          { question: "Should South splinter?", answer: "No - South is balanced, no clear shortage", highlight: "S-all" },
-          { question: "What should South bid?", answer: "2NT - Shows support + game values + balanced", highlight: "bidding" }
-        ],
-        conclusion: "This shows the difference between splinter hands and 2NT responses. South has the strength and support but no shortage to advertise."
-      },
-      2: {
-        deal: "K943.AK107.KQ2.AJ AQJ5.84.A763.972 876.QJ32.J95.K84 T2.965.T84.QT653",
-        vulnerability: "NS",
-        title: "Classic Splinter - But Opener Has Wasted Values",
-        sequence: ["1♥", "4♣", "4♥"],
-        decisions: [
-          { question: "Does North have 4+ heart support?", answer: "Yes - QJ32 = 4-card support ✓", highlight: "N-hearts" },
-          { question: "Does North have a shortage?", answer: "Yes - Singleton club ✓", highlight: "N-clubs" },
-          { question: "Should North splinter 4♣?", answer: "YES - Perfect splinter hand!", highlight: "N-all" },
-          { question: "How should South respond?", answer: "4♥ only - A♣J are wasted opposite shortage", highlight: "S-clubs" }
-        ],
-        conclusion: "Perfect example of why opener signs off at game level. Despite 31 combined HCP, South's club honors are worthless opposite North's shortage."
-      },
-      5: {
-        deal: "AKQ7.83.AJT62.82 32.T42.K943.T763 J986.KQ65.Q87.AK T54.AJ97.5.QJ954",
-        vulnerability: "NS",
-        title: "DON'T Splinter - You Have Honours in Short Suit!",
-        sequence: ["1♦", "1♥", "2♥"],
-        decisions: [
-          { question: "Does South have diamond support?", answer: "Only 3 diamonds - looking for major fit", highlight: "S-diamonds" },
-          { question: "Does South have a 'shortage'?", answer: "Only 2 clubs, but they're A♣K!", highlight: "S-clubs" },
-          { question: "Should South splinter 3♣?", answer: "NO! - Never splinter with honors in 'short' suit", highlight: "S-clubs" },
-          { question: "What should South do?", answer: "Show the hearts - much more descriptive", highlight: "S-hearts" }
-        ],
-        conclusion: "Anti-splinter example! Don't splinter when your 'shortage' contains working honors. The A♣K are valuable cards that help make tricks."
-      },
-      6: {
-        deal: "AK54.AKJ106.Q3.A7 QJ97.75.KT86.942 862.Q94.A742.KQ5 T3.832.J95.JT863",
-        vulnerability: "EW",
-        title: "Splinter to Slam - Perfect Controls",
-        sequence: ["1♥", "4♦", "6♥"],
-        decisions: [
-          { question: "Does North have heart support?", answer: "3 hearts, but strong ones (Q94) ✓", highlight: "N-hearts" },
-          { question: "Does North have shortage + values?", answer: "Yes - singleton diamond + 11 HCP ✓", highlight: "N-diamonds" },
-          { question: "Should South accept slam?", answer: "YES! - Perfect controls, no wasted diamonds", highlight: "S-all" }
-        ],
-        conclusion: "Despite only 28 combined HCP, this is a great slam! South has A♠K, A♥KJ106, A♣ - all working honors with no wastage opposite the diamond shortage."
-      }
-    };
+  1: {
+    deal: "832.9542.965.A85 AKJ75.AQ6.K8.J43 Q964.KJ3.AQJ7.K2 T.T987.T432.QT976",
+    vulnerability: "None",
+    title: "Perfect 2NT Response - Balanced Support",
+    sequence: ["1♠", "2NT", "4♠"],
+    decisions: [
+      { question: "Does South have 4+ spade support?", answer: "Yes - Q964 = 4-card support ✓", highlight: "S-spades" },
+      { question: "Does South have game-going values?", answer: "Yes - 13 HCP with good distribution ✓", highlight: "S-all" },
+      { question: "Should South splinter?", answer: "No - South is balanced, no clear shortage", highlight: "S-all" },
+      { question: "What should South bid?", answer: "2NT - Shows support + game values + balanced", highlight: "bidding" }
+    ],
+    conclusion: "This shows the difference between splinter hands and 2NT responses. South has the strength and support but no shortage to advertise."
+  },
+  2: {
+    deal: "AQJ5.84.A763.972 K943.AKT7.KQ2.AJ 876.QJ32.J95.K84 T2.965.T84.QT653",
+    vulnerability: "NS",
+    title: "Classic Splinter - But Opener Has Wasted Values",
+    sequence: ["1♥", "4♣", "4♥"],
+    decisions: [
+      { question: "Does North have 4+ heart support?", answer: "Yes - QJ32 = 4-card support ✓", highlight: "N-hearts" },
+      { question: "Does North have a shortage?", answer: "Yes - Singleton club ✓", highlight: "N-clubs" },
+      { question: "Should North splinter 4♣?", answer: "YES - Perfect splinter hand!", highlight: "N-all" },
+      { question: "How should South respond?", answer: "4♥ only - A♣J are wasted opposite shortage", highlight: "S-clubs" }
+    ],
+    conclusion: "Perfect example of why opener signs off at game level. Despite 31 combined HCP, South's club honors are worthless opposite North's shortage."
+  },
+  5: {
+    deal: "32.T42.K943.T763 AKQ7.83.AJT62.82 T54.AJ97.5.QJ954 J986.KQ65.Q87.AK",
+    vulnerability: "NS",
+    title: "DON'T Splinter - You Have Honours in Short Suit!",
+    sequence: ["1♦", "1♥", "2♥"],
+    decisions: [
+      { question: "Does South have diamond support?", answer: "Only 3 diamonds - looking for major fit", highlight: "S-diamonds" },
+      { question: "Does South have a 'shortage'?", answer: "Only 2 clubs, but they're A♣K!", highlight: "S-clubs" },
+      { question: "Should South splinter 3♣?", answer: "NO! - Never splinter with honors in 'short' suit", highlight: "S-clubs" },
+      { question: "What should South do?", answer: "Show the hearts - much more descriptive", highlight: "S-hearts" }
+    ],
+    conclusion: "Anti-splinter example! Don't splinter when your 'shortage' contains working honors. The A♣K are valuable cards that help make tricks."
+  },
+  6: {
+    deal: "QJ97.75.KT86.942 AK54.AKJ106.Q3.A7 T3.832.J95.JT863 862.Q94.A742.KQ5",
+    vulnerability: "EW",
+    title: "Splinter to Slam - Perfect Controls",
+    sequence: ["1♥", "4♦", "6♥"],
+    decisions: [
+      { question: "Does North have heart support?", answer: "3 hearts, but strong ones (Q94) ✓", highlight: "N-hearts" },
+      { question: "Does North have shortage + values?", answer: "Yes - singleton diamond + 11 HCP ✓", highlight: "N-diamonds" },
+      { question: "Should South accept slam?", answer: "YES! - Perfect controls, no wasted diamonds", highlight: "S-all" }
+    ],
+    conclusion: "Despite only 28 combined HCP, this is a great slam! South has A♠K, A♥KJ106, A♣ - all working honors with no wastage opposite the diamond shortage."
+  }
+},
 
     let currentBoard = 1;
     let animationState = 'stopped';
