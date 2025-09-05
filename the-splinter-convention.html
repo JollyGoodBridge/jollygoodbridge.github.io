@@ -463,14 +463,18 @@
             };
         }
         function splitHand(handStr) {
-            const suits = handStr.split('.');
-            return {
-                spades: suits || '',
-                hearts: suits || '',
-                diamonds: suits || '',
-                clubs: suits || '',
-            };
-        }
+  const suits = handStr.split('.');
+  // pad with empty strings if fewer than 4 parts
+  while (suits.length < 4) suits.push('');
+  
+  return {
+    spades: suits[0],
+    hearts: suits[1],
+    diamonds: suits[2],
+    clubs: suits[3],
+  };
+}
+
         function calculateAllHCP(hands) {
             return {
                 N: calculateHCP(hands.N),
