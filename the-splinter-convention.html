@@ -25,6 +25,7 @@
     .hand-diagram { background: #f8f9fa; border-radius: 10px; padding: 20px; border: 2px solid #dee2e6; }
     .position { margin: 15px 0; text-align: center; }
     .position-label { font-weight: bold; color: #2c5530; margin-bottom: 8px; }
+    .position-label.dealer { color: #d32f2f; border-bottom: 2px solid #ffc107; padding-bottom: 2px; }
     .suits { text-align: left; background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #2c5530; }
     .suit { margin: 6px 0; font-family: 'Courier New', monospace; font-size: 1.1em; transition: all .3s ease; }
     .suit.highlight { background: #fff3cd; padding: 4px; border-radius: 4px; border-left: 3px solid #ffc107; animation: pulse 1.5s infinite; }
@@ -55,62 +56,65 @@
     .vul-all { background: #f3e5f5; color: #7b1fa2; }
     @media (max-width: 768px) { .hand-display { grid-template-columns: 1fr; gap: 15px; } .container { padding: 20px; margin: 10px; } .interactive-section { margin: 20px -20px; padding: 20px; } }
   </style>
-
   <script defer>
-    // ====== Bridge hands data with educational examples ======
+    // -- Hands are always S (dealer), W, N, E order
     const bridgeHands = {
-  1: {
-    deal: "832.9542.965.A85 AKJ75.AQ6.K8.J43 Q964.KJ3.AQJ7.K2 T.T987.T432.QT976",
-    vulnerability: "None",
-    title: "Perfect 2NT Response - Balanced Support",
-    sequence: ["1♠", "2NT", "4♠"],
-    decisions: [
-      { question: "Does South have 4+ spade support?", answer: "Yes - Q964 = 4-card support ✓", highlight: "S-spades" },
-      { question: "Does South have game-going values?", answer: "Yes - 13 HCP with good distribution ✓", highlight: "S-all" },
-      { question: "Should South splinter?", answer: "No - South is balanced, no clear shortage", highlight: "S-all" },
-      { question: "What should South bid?", answer: "2NT - Shows support + game values + balanced", highlight: "bidding" }
-    ],
-    conclusion: "This shows the difference between splinter hands and 2NT responses. South has the strength and support but no shortage to advertise."
-  },
-  2: {
-    deal: "AQJ5.84.A763.972 K943.AKT7.KQ2.AJ 876.QJ32.J95.K84 T2.965.T84.QT653",
-    vulnerability: "NS",
-    title: "Classic Splinter - But Opener Has Wasted Values",
-    sequence: ["1♥", "4♣", "4♥"],
-    decisions: [
-      { question: "Does North have 4+ heart support?", answer: "Yes - QJ32 = 4-card support ✓", highlight: "N-hearts" },
-      { question: "Does North have a shortage?", answer: "Yes - Singleton club ✓", highlight: "N-clubs" },
-      { question: "Should North splinter 4♣?", answer: "YES - Perfect splinter hand!", highlight: "N-all" },
-      { question: "How should South respond?", answer: "4♥ only - A♣J are wasted opposite shortage", highlight: "S-clubs" }
-    ],
-    conclusion: "Perfect example of why opener signs off at game level. Despite 31 combined HCP, South's club honors are worthless opposite North's shortage."
-  },
-  5: {
-    deal: "32.T42.K943.T763 AKQ7.83.AJT62.82 T54.AJ97.5.QJ954 J986.KQ65.Q87.AK",
-    vulnerability: "NS",
-    title: "DON'T Splinter - You Have Honours in Short Suit!",
-    sequence: ["1♦", "1♥", "2♥"],
-    decisions: [
-      { question: "Does South have diamond support?", answer: "Only 3 diamonds - looking for major fit", highlight: "S-diamonds" },
-      { question: "Does South have a 'shortage'?", answer: "Only 2 clubs, but they're A♣K!", highlight: "S-clubs" },
-      { question: "Should South splinter 3♣?", answer: "NO! - Never splinter with honors in 'short' suit", highlight: "S-clubs" },
-      { question: "What should South do?", answer: "Show the hearts - much more descriptive", highlight: "S-hearts" }
-    ],
-    conclusion: "Anti-splinter example! Don't splinter when your 'shortage' contains working honors. The A♣K are valuable cards that help make tricks."
-  },
-  6: {
-    deal: "QJ97.75.KT86.942 AK54.AKJ106.Q3.A7 T3.832.J95.JT863 862.Q94.A742.KQ5",
-    vulnerability: "EW",
-    title: "Splinter to Slam - Perfect Controls",
-    sequence: ["1♥", "4♦", "6♥"],
-    decisions: [
-      { question: "Does North have heart support?", answer: "3 hearts, but strong ones (Q94) ✓", highlight: "N-hearts" },
-      { question: "Does North have shortage + values?", answer: "Yes - singleton diamond + 11 HCP ✓", highlight: "N-diamonds" },
-      { question: "Should South accept slam?", answer: "YES! - Perfect controls, no wasted diamonds", highlight: "S-all" }
-    ],
-    conclusion: "Despite only 28 combined HCP, this is a great slam! South has A♠K, A♥KJ106, A♣ - all working honors with no wastage opposite the diamond shortage."
-  }
-},
+      1: {
+        deal: "Q964.KJ3.AQJ7.K2 T.T987.T432.QT976 AKJ75.AQ6.K8.J43 832.9542.965.A85",  // South is dealer, classic "2NT" example
+        dealer: "S",
+        vulnerability: "None",
+        title: "Perfect 2NT Response - Balanced Support",
+        sequence: ["1♠", "2NT", "4♠"],
+        decisions: [
+          { question: "Does South have 4+ spade support?", answer: "Yes - Q964 = 4-card support ✓", highlight: "S-spades" },
+          { question: "Does South have game-going values?", answer: "Yes - 13 HCP with good distribution ✓", highlight: "S-all" },
+          { question: "Should South splinter?", answer: "No - South is balanced, no clear shortage", highlight: "S-all" },
+          { question: "What should South bid?", answer: "2NT - Shows support + game values + balanced", highlight: "bidding" }
+        ],
+        conclusion: "This shows the difference between splinter hands and 2NT responses. South has the strength and support but no shortage to advertise."
+      },
+      2: {
+        deal: "876.QJ32.J95.K84 T2.965.T84.QT653 AQJ5.84.A763.972 K943.AKT7.KQ2.AJ",   // South is dealer, classic Splinter
+        dealer: "S",
+        vulnerability: "NS",
+        title: "Classic Splinter - But Opener Has Wasted Values",
+        sequence: ["1♥", "4♣", "4♥"],
+        decisions: [
+          { question: "Does South have 4+ heart support?", answer: "Yes - QJ32 = 4-card support ✓", highlight: "S-hearts" },
+          { question: "Does South have a shortage?", answer: "Yes - singleton club ✓", highlight: "S-clubs" },
+          { question: "Should South splinter 4♣?", answer: "YES - Perfect splinter hand!", highlight: "S-all" },
+          { question: "How should North respond?", answer: "4♥ only - A♣J are wasted opposite shortage", highlight: "N-clubs" }
+        ],
+        conclusion: "Perfect example of why opener signs off at game level. Despite 31 combined HCP, North's club honors are worthless opposite South's shortage."
+      },
+      5: {
+        deal: "J986.KQ65.Q87.AK 32.T42.K943.T763 T54.AJ97.5.QJ954 AKQ7.83.AJT62.82",
+        dealer: "S",
+        vulnerability: "NS",
+        title: "DON'T Splinter - You Have Honours in Short Suit!",
+        sequence: ["1♦", "1♥", "2♥"],
+        decisions: [
+          { question: "Does South have diamond support?", answer: "Only 3 diamonds - looking for major fit", highlight: "S-diamonds" },
+          { question: "Does South have a 'shortage'?", answer: "Only 2 clubs, but they're A♣K!", highlight: "S-clubs" },
+          { question: "Should South splinter 3♣?", answer: "NO! - Never splinter with honors in 'short' suit", highlight: "S-clubs" },
+          { question: "What should South do?", answer: "Show the hearts - much more descriptive", highlight: "S-hearts" }
+        ],
+        conclusion: "Anti-splinter example! Don't splinter when your 'shortage' contains working honors. The A♣K are valuable cards that help make tricks."
+      },
+      6: {
+        deal: "862.Q94.A742.KQ5 QJ97.75.KT86.942 AK54.AKJ106.Q3.A7 T3.832.J95.JT863",
+        dealer: "S",
+        vulnerability: "EW",
+        title: "Splinter to Slam - Perfect Controls",
+        sequence: ["1♥", "4♦", "6♥"],
+        decisions: [
+          { question: "Does South have heart support?", answer: "3 hearts, but strong ones (Q94) ✓", highlight: "S-hearts" },
+          { question: "Does South have shortage + values?", answer: "Yes - singleton diamond + 11 HCP ✓", highlight: "S-diamonds" },
+          { question: "Should North accept slam?", answer: "YES! - Perfect controls, no wasted diamonds", highlight: "N-all" }
+        ],
+        conclusion: "Despite only 28 combined HCP, this is a great slam! North has A♠K, A♥KJ106, A♣ - all working honors with no wastage opposite the diamond shortage."
+      }
+    };
 
     let currentBoard = 1;
     let animationState = 'stopped';
@@ -128,10 +132,9 @@
       setupBoardDisplay();
     }
 
-    // ================= CORE FIX STARTS HERE =================
-    // Adjust this if your input deal string is in a different order than NESW.
-    // Common options you might encounter: 'NESW' (default), 'WENS', etc.
-    const DEAL_ORDER = 'NESW';
+    // Order for display: S(dealer), W, N, E
+    const HAND_SEATS = ["S", "W", "N", "E"];
+    const HAND_LABELS = { S:"South", W:"West", N:"North", E:"East" };
 
     function setupBoardDisplay() {
       const hand = bridgeHands[currentBoard];
@@ -139,7 +142,7 @@
       const container = document.getElementById('animationContainer');
       container.style.display = 'block';
 
-      const hands = parseHandData(hand.deal); // -> { N, E, S, W }
+      const hands = parseHandData(hand.deal); // { S, W, N, E }
       const hcp = calculateAllHCP(hands);
 
       container.innerHTML = `
@@ -148,12 +151,10 @@
             ${hand.title}
             <span class="vulnerability-indicator ${getVulnClass(hand.vulnerability)}">${hand.vulnerability}</span>
           </h3>
-          <p style="font-style: italic; color: #666;">HCP Breakdown:
-            N:${hcp.N} E:${hcp.E} S:${hcp.S} W:${hcp.W}
-          </p>
+          <p style="font-style: italic; color: #666;">Dealer: <strong>${HAND_LABELS[hand.dealer]}</strong> | HCP Breakdown: S:${hcp.S} W:${hcp.W} N:${hcp.N} E:${hcp.E}</p>
         </div>
         <div class="hand-display">
-          <div class="hand-diagram">${renderHandDiagram(hands, hcp)}</div>
+          <div class="hand-diagram">${renderHandDiagram(hands, hcp, hand.dealer)}</div>
           <div class="analysis-section">
             <h4 style="text-align: center; color: #2c5530;">Bidding Analysis</h4>
             <div class="bidding-sequence">
@@ -179,15 +180,15 @@
       const parts = String(dealString || '').trim().split(/\s+/);
       if (parts.length !== 4) {
         console.error('Deal must contain exactly 4 hands separated by spaces. Got:', parts);
-        return { N: emptyHand(), E: emptyHand(), S: emptyHand(), W: emptyHand() };
+        return { S: emptyHand(), W: emptyHand(), N: emptyHand(), E: emptyHand() };
       }
-      // Map the 4 strings into seats according to DEAL_ORDER
-      const seats = { N: null, E: null, S: null, W: null };
-      for (let i = 0; i < 4; i++) {
-        const seat = DEAL_ORDER[i];
-        seats[seat] = splitHand(parts[i]);
-      }
-      return seats;
+      // Map to S, W, N, E from parts[0..3]
+      return {
+        S: splitHand(parts[0]),
+        W: splitHand(parts[1]),
+        N: splitHand(parts[2]),
+        E: splitHand(parts[3])
+      };
     }
 
     function splitHand(handStr) {
@@ -200,14 +201,13 @@
     }
 
     function emptyHand() { return { spades: '', hearts: '', diamonds: '', clubs: '' }; }
-    // ================= CORE FIX ENDS HERE =================
 
     function calculateAllHCP(hands) {
       return {
-        N: calculateHCP(hands.N),
-        E: calculateHCP(hands.E),
         S: calculateHCP(hands.S),
-        W: calculateHCP(hands.W)
+        W: calculateHCP(hands.W),
+        N: calculateHCP(hands.N),
+        E: calculateHCP(hands.E)
       };
     }
 
@@ -219,10 +219,11 @@
       return total;
     }
 
-    function renderHandDiagram(hands, hcp) {
+    function renderHandDiagram(hands, hcp, dealer) {
+      // Top: North | Left: West, Right: East | Bottom: South
       return `
         <div class="position">
-          <div class="position-label">North (${hcp.N} HCP)</div>
+          <div class="position-label${dealer==='N'?' dealer':''}">${dealer==='N'?'Dealer: ':''}North (${hcp.N} HCP)</div>
           <div class="suits" data-position="N">
             <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.N.spades)}</div>
             <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.N.hearts)}</div>
@@ -232,7 +233,7 @@
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
           <div class="position">
-            <div class="position-label">West (${hcp.W} HCP)</div>
+            <div class="position-label${dealer==='W'?' dealer':''}">${dealer==='W'?'Dealer: ':''}West (${hcp.W} HCP)</div>
             <div class="suits" data-position="W">
               <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.W.spades)}</div>
               <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.W.hearts)}</div>
@@ -241,152 +242,7 @@
             </div>
           </div>
           <div class="position">
-            <div class="position-label">East (${hcp.E} HCP)</div>
+            <div class="position-label${dealer==='E'?' dealer':''}">${dealer==='E'?'Dealer: ':''}East (${hcp.E} HCP)</div>
             <div class="suits" data-position="E">
               <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.E.spades)}</div>
-              <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.E.hearts)}</div>
-              <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.E.diamonds)}</div>
-              <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.E.clubs)}</div>
-            </div>
-          </div>
-        </div>
-        <div class="position">
-          <div class="position-label">South (${hcp.S} HCP)</div>
-          <div class="suits" data-position="S">
-            <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.S.spades)}</div>
-            <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.S.hearts)}</div>
-            <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.S.diamonds)}</div>
-            <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.S.clubs)}</div>
-          </div>
-        </div>`;
-    }
-
-    function formatCards(cards) {
-      // Replace T with 10, keep existing 10 as-is. Show em dash when empty.
-      if (!cards) return '—';
-      return cards.replace(/T/g, '10');
-    }
-
-    function getVulnClass(vuln) {
-      const classes = { 'None':'vul-none', 'NS':'vul-ns', 'EW':'vul-ew', 'All':'vul-all' };
-      return classes[vuln] || 'vul-none';
-    }
-
-    function playAnimation() {
-      if (animationState === 'playing') return;
-      resetAnimation();
-      animationState = 'playing';
-      const hand = bridgeHands[currentBoard];
-      if (!hand) return;
-      hand.decisions.forEach((decision, index) => {
-        const timeout = setTimeout(() => { highlightRelevantCards(decision.highlight); }, (index + 1) * 1000);
-        animationTimeouts.push(timeout);
-      });
-    }
-
-    function highlightRelevantCards(highlightType) {
-      document.querySelectorAll('.suit').forEach(el => el.classList.remove('highlight'));
-
-      // Handle specific suits e.g., "N-spades", "S-hearts" by matching the suffix
-      const suitNames = ['spades', 'hearts', 'diamonds', 'clubs'];
-      for (const suit of suitNames) {
-        if (highlightType.endsWith(suit)) {
-          const pos = highlightType[0]; // N / E / S / W
-          document.querySelectorAll(`.suits[data-position="${pos}"] [data-suit="${suit}"]`).forEach(el => el.classList.add('highlight'));
-          return;
-        }
-      }
-
-      // Handle "N-all" / "S-all" etc.
-      if (/-all$/.test(highlightType)) {
-        const pos = highlightType[0];
-        document.querySelectorAll(`.suits[data-position="${pos}"] .suit`).forEach(el => el.classList.add('highlight'));
-        return;
-      }
-    }
-
-    function pauseAnimation() {
-      animationState = 'paused';
-      animationTimeouts.forEach(timeout => clearTimeout(timeout));
-      animationTimeouts = [];
-    }
-
-    function resetAnimation() {
-      animationState = 'stopped';
-      animationTimeouts.forEach(timeout => clearTimeout(timeout));
-      animationTimeouts = [];
-      document.querySelectorAll('.suit').forEach(el => el.classList.remove('highlight'));
-    }
-  </script>
-</head>
-<body>
-  <div class="container">
-    <h1>The Splinter Convention: When Bridge Players Go Completely Bonkers (But in a Good Way)</h1>
-    <div class="subtitle">Or: How to Confuse Your Opponents While Actually Making Sense</div>
-
-    <p>Picture this: You're sitting at the bridge table, holding a hand that's practically screaming "SLAM!" at you. Your partner opens 1♠, you've got four-card spade support, 13+ points, and a singleton somewhere that's about as useful as a chocolate teapot. What do you do? Well, my dear bridge enthusiasts, you SPLINTER!</p>
-
-    <h2>What on Earth is a Splinter BID?</h2>
-    <p>A Splinter BID is bridge's way of saying, "Partner, I'm super excited about your suit, I've got the points for slam exploration, but I have this one suit that's deader than disco." It's a conventional bid that shows:</n></p>
-    <ul>
-      <li>4+ card support for partner's major suit</li>
-      <li>13+ points (some play 12+, but let's not get into that argument)</li>
-      <li>A singleton or void in the suit you're bidding</li>
-      <li>A burning desire to explore slam possibilities</li>
-    </ul>
-
-    <div class="bid-example">
-      <strong>Partner opens:</strong> 1♠<br />
-      <strong>Your bid:</strong> 4♣ (Splinter - showing club singleton/void)<br />
-      <strong>Message:</strong> "I have 4+ spades, 13+ points, and a club shortage!"
-    </div>
-
-    <h2>The Beauty of the Splinter</h2>
-    <p>What makes Splinters so deliciously effective is that they give your partner crucial information in one fell swoop. Instead of the usual dance of "I have points," "I have support," "Maybe we have slam," you're essentially saying all of this at once while also revealing where you're weak.</p>
-    <p>Your partner can immediately evaluate whether their honors in your short suit are working overtime (bad) or if they're well-placed elsewhere (good). It's like having X-ray vision for slam evaluation!</p>
-
-    <h2>When NOT to Splinter</h2>
-    <p>As tempting as it is to show off your convention knowledge, there are times when splinting is about as welcome as rain at a picnic:</p>
-    <ul>
-      <li>When you don't have 4+ card support (obviously)</li>
-      <li>When your "singleton" is actually the ace or king (those are working cards!)</li>
-      <li>When you're playing with a partner who thinks splinters are something you get from old furniture</li>
-      <li>When the opponents have already shown length in your short suit</li>
-    </ul>
-
-    <div class="interactive-section">
-      <h2 class="interactive-title">🎯 Interactive Examples: See It In Action!</h2>
-      <div class="board-selector">
-        <h3>Select a Hand to Analyze:</h3>
-        <div class="board-buttons" id="boardButtons">
-          <button class="board-btn active" onclick="loadBoard(1)">Example 1</button>
-          <button class="board-btn" onclick="loadBoard(2)">Example 2</button>
-          <button class="board-btn" onclick="loadBoard(5)">Example 5</button>
-          <button class="board-btn" onclick="loadBoard(6)">Example 6</button>
-        </div>
-      </div>
-      <div class="controls">
-        <button class="control-btn" onclick="playAnimation()">▶️ Play Animation</button>
-        <button class="control-btn" onclick="pauseAnimation()">⏸️ Pause</button>
-        <button class="control-btn" onclick="resetAnimation()">🔄 Reset</button>
-      </div>
-      <div id="animationContainer" class="animation-container"></div>
-    </div>
-
-    <h2>So what is partner to do when I bid the splinter 4♣ to his 1♠?</h2>
-    <p>Well, first things first: my splinter has already told partner that we're going to game in spades, no question about that. What I've also said is, "By the way, I've got shortness in clubs — a singleton or maybe even a void — and I like your spades a lot."</p>
-    <p>So now the spotlight turns to partner. His job isn't just to count up points like he's doing an exam. It's more subtle: he needs to ask himself, "Are my points actually useful opposite this hand, or are they sitting in the wrong place?"</p>
-
-    <h3>Here's the magic:</h3>
-    <ul>
-      <li><strong>If partner is looking down at three or four ragged little clubs, that's actually wonderful.</strong> Why? Because those "useless" cards suddenly become golden — I'll be ruffing them out all day long.</li>
-      <li><strong>On the flip side, if he's proudly holding the ♣KQ, that's bad news.</strong> Opposite my shortage, those lovely high cards are wasted. They don't pull their weight, and the hand instantly loses its slam potential.</li>
-    </ul>
-
-    <p>So the splinter isn't really about more points = better hand. It's about <em>working points</em> in the right suits. That's why you'll often hear players say: "With wasted values in partner's short suit, just sign off in game." But if your honours and shape are working beautifully with mine, now we can start dreaming about slam.</p>
-
-    <h2>The Bottom Line</h2>
-    <p>Splinter bids are one of those conventions that make bridge both more complex and more beautiful. They're a tool for precise communication in those exciting moments when slam might be on the horizon. Just remember: with great power comes great responsibility. Use your splinters wisely, discuss them with your partner beforehand, and prepare for the occasional confused look from opponents who haven't discovered this particular gem yet.</p>
-  </div>
-</body>
-</html>
+              <div class="suit hearts
