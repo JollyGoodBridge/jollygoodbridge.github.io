@@ -363,18 +363,19 @@ const bridgeHands = {
   },
 
   2: {
-  deal: "93.54.542.T76532 K8765.QJ32.A93.4 AJT.86.JT87.KQ98 Q42.AKT97.KQ6.AJ",
-  vulnerability: "NS",
-  title: "Classic Splinter - But Opener Has Wasted Values",
-  sequence: ["1♥", "4♣", "4♥"],
-  decisions: [
-    { question: "Does North have 4+ heart support?", answer: "Yes - QJ32 = 4-card support ✓", highlight: "N-hearts" },
-    { question: "Does North have a shortage?", answer: "Yes - singleton club (♣4) ✓", highlight: "N-clubs" },
-    { question: "Should North splinter 4♣?", answer: "YES - Perfect splinter hand!", highlight: "N-all" },
-    { question: "How should South respond?", answer: "4♥ only - A♣J are wasted opposite shortage", highlight: "S-clubs" }
-  ],
-  conclusion: "Perfect example of why opener signs off at game level. North's singleton club and 4-card heart support make a splinter clear. Combined HCP (North+South) = 29; South's club honors are largely wasted opposite the shortage."
-}
+    deal: "93.54.542.T76532 K8765.QJ32.A93.4 AJT.86.JT87.KQ98 Q42.AKT97.KQ6.AJ",
+    vulnerability: "NS",
+    title: "Classic Splinter - But Opener Has Wasted Values",
+    sequence: ["1♥", "4♣", "4♥"],
+    decisions: [
+      { question: "Does North have 4+ heart support?", answer: "Yes - QJ32 = 4-card support ✓", highlight: "N-hearts" },
+      { question: "Does North have a shortage?", answer: "Yes - singleton club (♣4) ✓", highlight: "N-clubs" },
+      { question: "Should North splinter 4♣?", answer: "YES - Perfect splinter hand!", highlight: "N-all" },
+      { question: "How should South respond?", answer: "4♥ only - A♣J are wasted opposite shortage", highlight: "S-clubs" }
+    ],
+    conclusion: "Perfect example of why opener signs off at game level. North's singleton club and 4-card heart support make a splinter clear. Combined HCP (North+South) = 29; South's club honors are largely wasted opposite the shortage."
+  },
+
   5: {
     deal: "T54.AJ97.5.QJ954 AKQ7.83.AJT62.82 32.T42.K943.T763 J986.KQ65.Q87.AK",
     vulnerability: "NS",
@@ -402,6 +403,7 @@ const bridgeHands = {
     conclusion: "Despite only 28 combined HCP, this is a great slam! North's splinter and South's controls show there are no wasted values opposite the shortage."
   }
 };
+
 
     let currentBoard = 1;
     let animationState = 'stopped';
