@@ -408,7 +408,6 @@ function loadBoard(boardNum) {
   resetAnimation();
   setupBoardDisplay();
 }
-
 function setupBoardDisplay() {
   const hand = bridgeHands[currentBoard];
   if (!hand) return;
@@ -417,8 +416,13 @@ function setupBoardDisplay() {
   const hands = parseHandData(hand.deal);
   const hcp = calculateAllHCP(hands);
 
+  // Add dealer display line
+  const dealerMap = {N: "North", E: "East", S: "South", W: "West"};
+  const dealerDisplay = hand.dealer ? `<div style="margin-bottom:10px;font-size:1.13em;"><strong>Dealer: ${dealerMap[hand.dealer]}</strong></div>` : "";
+
   container.innerHTML = `
     <div style="text-align: center; margin-bottom: 20px;">
+      ${dealerDisplay}
       <h3 style="color: #2c5530; margin-bottom: 10px;">
         ${hand.title}
         <span class="vulnerability-indicator ${getVulnClass(hand.vulnerability)}">
