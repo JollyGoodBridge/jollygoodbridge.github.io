@@ -5,19 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Splinter Convention: When Bridge Players Go Completely Bonkers (But in a Good Way)</title>
   <style>
-    /* CSS Reset and Box sizing */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body, h1, h2, h3, h4, p, ul, li, div, button {
-      margin: 0;
-      padding: 0;
-    }
-    ul {
-      list-style: disc;
-      margin-left: 1.25em;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    body, h1, h2, h3, h4, p, ul, li, div, button { margin: 0; padding: 0; }
+    ul { list-style: disc; margin-left: 1.25em; }
     body {
       font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.6;
@@ -34,49 +24,11 @@
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-
-    h1 {
-      color: #2c5530;
-      text-align: center;
-      font-size: 2.2em;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-    .subtitle {
-      font-style: italic;
-      color: #666;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: 1.1em;
-    }
-
-    h2 {
-      color: #2c5530;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 8px;
-      margin-top: 35px;
-    }
-    h3, h4 {
-      color: #2c5530;
-      margin-top: 25px;
-    }
-
-    p {
-      margin-bottom: 15px;
-      text-align: justify;
-      font-size: 1.05em;
-    }
-
-    .bid-example {
-      background: #e8f5e8;
-      border-left: 4px solid #4CAF50;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 5px;
-      font-family: 'Courier New', monospace;
-      font-size: 1.05em;
-    }
-
+    h1 { color: #2c5530; text-align: center; font-size: 2.2em; margin-bottom: 10px; line-height: 1.3; }
+    .subtitle { font-style: italic; color: #666; margin-bottom: 30px; text-align: center; font-size: 1.1em; }
+    h2 { color: #2c5530; border-bottom: 2px solid #4CAF50; padding-bottom: 8px; margin-top: 35px; }
+    h3, h4 { color: #2c5530; margin-top: 25px; }
+    p { margin-bottom: 15px; text-align: justify; font-size: 1.05em; }
     .interactive-section {
       background: linear-gradient(135deg, #0f4c3a, #1a5c4a);
       margin: 40px -40px;
@@ -90,15 +42,13 @@
       margin-bottom: 20px;
       color: #fff;
     }
-
     .board-selector {
       text-align: center;
       margin: 20px 0;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.1);
       border-radius: 10px;
     }
-
     .board-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -119,14 +69,8 @@
       min-width: 100px;
       text-align: center;
     }
-    .board-btn:hover {
-      background: #218838;
-      transform: translateY(-2px);
-    }
-    .board-btn.active {
-      background: #ffc107;
-      color: #333;
-    }
+    .board-btn:hover { background: #218838; transform: translateY(-2px); }
+    .board-btn.active { background: #ffc107; color: #333; }
     @media (max-width: 500px) {
       .board-btn {
         font-size: 0.9em;
@@ -134,31 +78,20 @@
         min-width: auto;
       }
     }
-
     .animation-container {
       margin: 20px 0;
       background: white;
       border-radius: 10px;
       padding: 25px;
       color: #333;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
       min-height: 300px;
       user-select: none;
     }
-
-    .hand-display {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
+    .hand-display { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
     @media (max-width: 768px) {
-      .hand-display {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
+      .hand-display { grid-template-columns: 1fr; gap: 15px; }
     }
-
     .hand-diagram {
       background: #f8f9fa;
       border-radius: 10px;
@@ -166,18 +99,8 @@
       border: 2px solid #dee2e6;
       min-width: 0;
     }
-
-    .position {
-      margin: 15px 0;
-      text-align: center;
-      overflow-wrap: break-word;
-    }
-    .position-label {
-      font-weight: bold;
-      color: #2c5530;
-      margin-bottom: 8px;
-      font-size: 1.2em;
-    }
+    .position { margin: 15px 0; text-align: center; overflow-wrap: break-word; }
+    .position-label { font-weight: bold; color: #2c5530; margin-bottom: 8px; font-size: 1.2em; }
     .suits {
       text-align: left;
       background: white;
@@ -188,10 +111,7 @@
       font-size: 1.1em;
       overflow-wrap: break-word;
     }
-    .suit {
-      margin: 6px 0;
-      transition: all 0.3s ease;
-    }
+    .suit { margin: 6px 0; transition: all 0.3s ease; }
     .suit.highlight {
       background: #fff3cd;
       padding: 4px;
@@ -199,25 +119,18 @@
       border-left: 3px solid #ffc107;
       animation: pulse 1.5s infinite;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
     .spades { color: #000; font-weight: bold; }
     .hearts { color: #d32f2f; font-weight: bold; }
     .diamonds { color: #f57c00; font-weight: bold; }
     .clubs { color: #000; font-weight: bold; }
-
     .analysis-section {
       background: white;
       border-radius: 10px;
       padding: 20px;
       border: 2px solid #dee2e6;
     }
-    .bidding-sequence {
-      text-align: center;
-      margin: 15px 0;
-    }
+    .bidding-sequence { text-align: center; margin: 15px 0; }
     .bid-step {
       display: inline-block;
       margin: 5px 10px;
@@ -235,9 +148,7 @@
     .bid-step:nth-child(1) { animation-delay: 0.5s; }
     .bid-step:nth-child(2) { animation-delay: 1.0s; }
     .bid-step:nth-child(3) { animation-delay: 1.5s; }
-    @keyframes bidAppear {
-      to { opacity: 1; }
-    }
+    @keyframes bidAppear { to { opacity: 1; } }
     .decision-tree {
       margin: 20px 0;
       padding: 20px;
@@ -257,19 +168,9 @@
     .decision-step:nth-child(2) { animation-delay: 2.5s; }
     .decision-step:nth-child(3) { animation-delay: 3.0s; }
     .decision-step:nth-child(4) { animation-delay: 3.5s; }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .decision-question {
-      font-weight: bold;
-      color: #0056b3;
-      margin-bottom: 5px;
-    }
-    .decision-answer {
-      color: #495057;
-      font-style: italic;
-    }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+    .decision-question { font-weight: bold; color: #0056b3; margin-bottom: 5px; }
+    .decision-answer { color: #495057; font-style: italic; }
     .conclusion {
       margin-top: 20px;
       padding: 15px;
@@ -280,10 +181,7 @@
       animation: slideIn 0.6s ease forwards;
       animation-delay: 4.0s;
     }
-    .controls {
-      text-align: center;
-      margin: 20px 0;
-    }
+    .controls { text-align: center; margin: 20px 0; }
     .control-btn {
       padding: 10px 20px;
       margin: 0 8px;
@@ -295,10 +193,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .control-btn:hover {
-      background: #0056b3;
-      transform: translateY(-1px);
-    }
+    .control-btn:hover { background: #0056b3; transform: translateY(-1px); }
     .vulnerability-indicator {
       display: inline-block;
       padding: 4px 10px;
@@ -317,11 +212,109 @@
   <div class="container">
     <h1>The Splinter Convention: When Bridge Players Go Completely Bonkers (But in a Good Way)</h1>
     <div class="subtitle">Or: How to Confuse Your Opponents While Actually Making Sense</div>
-    <p>Picture this: You're sitting at the bridge table, holding a hand that's practically screaming "SLAM!" at you...</p>
-    <h2>What on Earth is a Splinter BID?</h2>
-    <p>A Splinter BID is bridge's way of saying, "Partner, I'm super excited about your suit ..."</p>
-    <!-- Content truncated for brevity -->
 
+    <!-- Complete blog post content from WordPress follows: -->
+    <p>Picture this: You’re sitting at the bridge table, holding a hand that’s practically screaming “SLAM!” at you. Your partner opens 1♠, you’ve got four-card spade support, 13+ points, and a singleton somewhere that’s about as useful as a chocolate teapot. What do you do? Well, my dear bridge enthusiasts, you SPLINTER!</p>
+    <h3>What on Earth is a Splinter BID?</h3>
+    <p>A Splinter BID is bridge’s way of saying, “Partner, I’m super excited about your suit, I’ve got the points for slam exploration, but I have this one suit that’s deader than disco.” It’s a conventional bid that shows:</p>
+    <ul>
+      <li>4+ card support for partner’s major suit</li>
+      <li>13+ points (some play 12+, but let’s not get into that argument)</li>
+      <li>A singleton or void in the suit you’re bidding</li>
+      <li>A burning desire to explore slam possibilities</li>
+    </ul>
+    <p>The beauty of the Splinter is that it’s a jump bid that looks completely insane to anyone not in the know. When your partner opens 1♠ and you bid 4♣ with one measly club, your opponents will think you’ve either lost your mind or discovered some revolutionary new bidding system involving interpretive dance.  They may well ask so partner better be ready.</p>
+    <p>(although the benefits of never asking anything always appeal to me.  What’s your thoughts?).</p>
+    <h3>The Mechanics: How to Splinter Without Falling Over</h3>
+    <p>Here’s how this magnificent convention works:</p>
+    <p><strong>After Partner Opens 1♠:</strong></p>
+    <ul>
+      <li>4♣ = Splinter showing club singleton/void, 4+ spades, 13+ points</li>
+      <li>4♦ = Splinter showing diamond singleton/void, 4+ spades, 13+ points</li>
+      <li>4♥ = Splinter showing heart singleton/void, 4+ spades, 13+ points</li>
+    </ul>
+    <p><strong>After Partner Opens 1♥:</strong></p>
+    <ul>
+      <li>4♣ = Splinter showing club singleton/void, 4+ hearts, 13+ points</li>
+      <li>4♦ = Splinter showing diamond singleton/void, 4+ hearts, 13+ points</li>
+      <li>4♠ = Splinter showing spade singleton/void, 4+ hearts, 13+ points</li>
+    </ul>
+    <p>Notice how we conveniently skip bidding 4 of partner’s major? That’s because we’re not complete lunatics – that bid is reserved for “Partner, I like your suit but let’s just play game and call it a day.”</p>
+    <h3>Enter the 2NT Forcing Support Bid (Or: How to Be Polite While Still Being Aggressive)</h3>
+    <p>Now, here’s where things get interesting. What if you have that same exciting hand – 4+ card support, 13+ points, slam interest – but you DON’T have a convenient singleton to splinter with? What if your hand is disappointingly balanced, like a well-adjusted person at a bridge tournament?</p>
+    <p>Enter the 2NT Forcing Support bid, the Swiss Army knife of bridge conventions. After partner opens 1♥ or 1♠, a 2NT response shows:</p>
+    <ul>
+      <li>4+ card support for partner’s major</li>
+      <li>13+ points</li>
+      <li>Forcing to at least 3 of the major</li>
+      <li>NO singleton or void suitable for splintering</li>
+    </ul>
+    <p>It’s like saying, “Partner, I’m interested in slam, I love your suit, but my hand is as boring as a bridge lecture on percentage play.”</p>
+    <h3>Why Play These Conventions? (Besides the Obvious Fun Factor)</h3>
+    <p><strong>1. Information Overload (In a Good Way)</strong><br>
+    These bids pack more information into one call than a Wikipedia article. Partner immediately knows your point range, support, and distribution (or lack thereof).</p>
+    <p><strong>2. Slam Exploration Made Easy</strong><br>
+    Instead of fumbling around with vague raises and hoping for the best, you’ve immediately established that slam is on the table. It’s like GPS for bridge bidding.</p>
+    <p><strong>3. Opponent Disruption</strong><br>
+    Nothing confuses the enemy quite like jumping to the four-level with apparent reckless abandon. They’ll spend so much time trying to figure out what you’re doing, they might forget their own system.</p>
+    <p><strong>4. Partner Knows What to Do</strong><br>
+    After a Splinter or 2NT support bid, partner can evaluate their hand with laser precision. Wasted values in your short suit? Time to sign off. Perfect hand with no wasted honors? Time to start thinking about grand slams and early retirement.</p>
+    <h3>The Splinter in Action: A Real-Life Example</h3>
+    <p><strong>You hold:</strong> ♠AKJ3 ♥Q1087 ♦A ♣9654</p>
+    <p>Partner opens 1♠. Your hand is practically vibrating with excitement – you’ve got 13 HCP, four-card spade support, and that singleton diamond is like a neon sign pointing toward slam.</p>
+    <p><strong>Your bid:</strong> 4♦ (Splinter)</p>
+    <p>Partner now knows:</p>
+    <ul>
+      <li>You have 4+ spades (check!)</li>
+      <li>You have 13+ points (double check!)</li>
+      <li>You have a singleton/void diamond (their ♦K is suddenly as valuable as Monopoly money)</li>
+      <li>Slam is definitely worth exploring</li>
+    </ul>
+    <p>If partner has ♠QT975 ♥AK ♦KQJ ♣AKQ, they’ll see that diamond King is wasted and sign off in 4♠. But if they have ♠QT975 ♥AK ♦32 ♣AKQj, suddenly 6♠ looks very attractive indeed.</p>
+    <h3>The 2NT Alternative: When Life Gives You Balanced Hands</h3>
+    <p><strong>You hold:</strong> ♠AKJ3 ♥Q108 ♦A97 ♣K65</p>
+    <p>Same 13 HCP, same four-card spade support, same slam interest, but now you’re as balanced as a gymnast on a beam. No singleton to splinter with, but still too good for a simple raise.</p>
+    <p><strong>Your bid:</strong> 2NT (Forcing support)</p>
+    <p>This tells partner you’re interested in slam but don’t have any exciting distribution to report. Partner can now use control bidding, Roman Key Card Blackwood, or whatever slam-seeking weapon of choice they prefer.</p>
+    <h3>Advanced Splinter Strategies (For When You’re Feeling Fancy)</h3>
+    <p><strong>The Mini-Splinter:</strong> Some partnerships play that you can splinter with fewer points (10-12) by making the cheapest splinter bid available. It’s like Splinter Light – all the distribution, half the calories… er, points.</p>
+    <p><strong>Void-Showing Splinters:</strong> Jump to the five-level to show a void instead of a singleton. Because sometimes you need to be EXTRA dramatic about your shortage.</p>
+    <p><strong>The Splinter Re-Splinter:</strong> When partner splinters and you have a different singleton, you can splinter right back. It’s like a bidding conversation where everyone’s shouting about what they DON’T have.</p>
+    <h3>Common Mistakes (Or: How to Turn Comedy into Tragedy)</h3>
+    <ol>
+      <li><strong>Splintering with the wrong hand type:</strong> Remember, you need 4+ card support AND slam interest. Don’t splinter just because you have a singleton – that’s like buying a sports car just because you like car keys.</li>
+      <li><strong>Forgetting the point requirements:</strong> Splintering with 8 points is like showing up to a black-tie event in pajamas – technically possible, but you’ll swap the Uber home for an ambulance.</li>
+      <li><strong>Splintering in partner’s second suit:</strong> If partner bids 1♠-1NT-2♣, don’t splinter in clubs. That’s like criticizing someone’s cooking while asking for seconds.</li>
+    </ol>
+    <h3>Responding to Splinters (Partner’s Guide to Not Panicking)</h3>
+    <p>When partner splinters, don’t immediately assume they’ve lost their mind. Instead, ask yourself:</p>
+    <ul>
+      <li>Do I have wasted honors in their short suit? (Bad news)</li>
+      <li>Do I have useful cards elsewhere? (Good news!)</li>
+      <li>Is my hand minimum or maximum for my opening? (Crucial information)</li>
+      <li>Can I visualize 12 tricks? (The ultimate question)</li>
+    </ul>
+    <h3>Conclusion: Embracing the Splinter Life</h3>
+    <p>The Splinter convention and 2NT forcing support are like the dynamic duo of bridge conventions – Batman and Robin, peanut butter and jelly, coffee and Monday mornings. They work together to solve the eternal bridge problem: how to show a big hand with support without overshooting or undershooting your target.</p>
+    <p>Sure, you’ll occasionally splinter into a disaster, or use 2NT support only to discover partner has a minimum opening with no slam interest whatsoever. But when these conventions work – when you smoothly navigate to a cold slam that other pairs miss – you’ll feel like you’ve cracked the bridge code.</p>
+    <p>So next time you pick up a hand with four-card support and slam dreams, don’t be afraid to splinter or force with 2NT. Your partner will thank you, your opponents will fear you, and your bridge game will never be the same.</p>
+    <p>Remember: In bridge, as in life, sometimes you need to take a leap of faith. Just make sure you land in the right contract!</p>
+    <hr />
+    <p><em>Disclaimer: No bridge partnerships were harmed in the making of this blog post, though several may have experienced temporary confusion. Always play conventions that you and your partner understand. When in doubt, keep it simple – there’s no shame in a good old-fashioned limit raise.</em></p>
+    <p>To practice this convention</p>
+    <p>Currently I can’t embed the bridge solver on Wordpress (they want £32 a month) so if anyone shows an interest in these blogs I will move the content</p>
+    <p>In the meantime follow this link to my 10 practice hands for this convention </p>
+    <p><a href="https://bridgesolver.online/?pbnUrl=https://drive.google.com/uc?export=download&amp;id=1aZ_gNd93C-TyV81ucSKF6Glko1P0stOf">View this hand in Bridge Solver Online</a></p>
+    <p>Other ways to Practice this convention</p>
+    <p>Either download the following file and upload to a bridge playing app or website like BBO</p>
+    <p>Alternatively </p>
+    <p>Download the BRIJ app on your iOS device and download this file via the web search functionality found under the load button</p>
+    <p>Click load </p>
+    <p>Select web search</p>
+    <p>Select Google Search and search https://jollybridge.wordpress.com/</p>
+    <p>Once downloaded the app will present you with 10 boards to practice the bidding with your partner</p>
+
+    <!-- INTERACTIVE EXAMPLES: unchanged -->
     <div class="interactive-section">
       <h2 class="interactive-title">🎯 Interactive Examples: See It In Action!</h2>
       <div class="board-selector">
@@ -340,16 +333,10 @@
       </div>
       <div id="animationContainer" class="animation-container"></div>
     </div>
-
-    <h2>So what is partner to do when I bid the splinter 4♣ to his 1♠?</h2>
-    <p>Well, first things first: my splinter has already told partner that ...</p>
-    <!-- More content ... -->
   </div>
-
   <script>
-
 const bridgeHands = {
-  1: { 
+  1: {
     deal: "AKJ75.T87.K8.J43 832.9542.965.A85 Q964.KJ3.AQJ7.K2 T.AQ6.T432.QT976",
     vulnerability: "None",
     title: "Perfect 2NT Response - Balanced Support",
@@ -362,7 +349,6 @@ const bridgeHands = {
     ],
     conclusion: "This shows the difference between splinter hands and 2NT responses. South has the strength and support but no shortage to advertise."
   },
-
   2: {
     deal: "K8765.QJ32.A93.4 93.54.542.T76532 AJT.86.JT87.KQ98 Q42.AKT97.KQ6.AJ",
     vulnerability: "NS",
@@ -376,7 +362,6 @@ const bridgeHands = {
     ],
     conclusion: "Perfect example of why opener signs off at game level. North's singleton club and 4-card heart support make a splinter clear. Combined HCP (North+South) = 29; South's club honors are largely wasted opposite the shortage."
   },
-
   5: {
     deal: "AKQ7.83.AJT62.82 T54.AJ97.5.QJ954 J986.KQ65.Q87.AK 32.T42.K943.T763",
     vulnerability: "NS",
@@ -390,7 +375,6 @@ const bridgeHands = {
     ],
     conclusion: "Anti-splinter example! Don't splinter when your 'shortage' contains working honors. The A♣K are valuable cards that help make tricks."
   },
-
   6: {
     deal: "983.Q94.2.AKJT98 ..JT987654.Q6532 AK54.AKJT6.A3.74 QJT762.87532.KQ.",
     vulnerability: "EW",
@@ -405,238 +389,236 @@ const bridgeHands = {
   }
 };
 
+let currentBoard = 1;
+let animationState = 'stopped';
+let animationTimeouts = [];
 
-    let currentBoard = 1;
-    let animationState = 'stopped';
-    let animationTimeouts = [];
+window.onload = function() {
+  setupBoardDisplay();
+};
 
-    window.onload = function() {
-      setupBoardDisplay();
-    };
-
-    function loadBoard(boardNum) {
-      currentBoard = boardNum;
-      document.querySelectorAll('.board-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.textContent.trim() === `Example ${boardNum}`) {
-          btn.classList.add('active');
-        }
-      });
-      resetAnimation();
-      setupBoardDisplay();
+function loadBoard(boardNum) {
+  currentBoard = boardNum;
+  document.querySelectorAll('.board-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.textContent.trim() === `Example ${boardNum}`) {
+      btn.classList.add('active');
     }
+  });
+  resetAnimation();
+  setupBoardDisplay();
+}
 
-    function setupBoardDisplay() {
-      const hand = bridgeHands[currentBoard];
-      if (!hand) return;
-      const container = document.getElementById('animationContainer');
-      container.style.display = 'block';
-      const hands = parseHandData(hand.deal);
-      const hcp = calculateAllHCP(hands);
+function setupBoardDisplay() {
+  const hand = bridgeHands[currentBoard];
+  if (!hand) return;
+  const container = document.getElementById('animationContainer');
+  container.style.display = 'block';
+  const hands = parseHandData(hand.deal);
+  const hcp = calculateAllHCP(hands);
 
-      container.innerHTML = `
-        <div style="text-align: center; margin-bottom: 20px;">
-          <h3 style="color: #2c5530; margin-bottom: 10px;">
-            ${hand.title}
-            <span class="vulnerability-indicator ${getVulnClass(hand.vulnerability)}">
-              ${hand.vulnerability}
-            </span>
-          </h3>
-          <p style="font-style: italic; color: #666;">
-            HCP Breakdown: N:${hcp.N} E:${hcp.E} S:${hcp.S} W:${hcp.W}
-          </p>
+  container.innerHTML = `
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h3 style="color: #2c5530; margin-bottom: 10px;">
+        ${hand.title}
+        <span class="vulnerability-indicator ${getVulnClass(hand.vulnerability)}">
+          ${hand.vulnerability}
+        </span>
+      </h3>
+      <p style="font-style: italic; color: #666;">
+        HCP Breakdown: N:${hcp.N} E:${hcp.E} S:${hcp.S} W:${hcp.W}
+      </p>
+    </div>
+    <div class="hand-display">
+      <div class="hand-diagram">${renderHandDiagram(hands, hcp)}</div>
+      <div class="analysis-section">
+        <h4 style="text-align: center; color: #2c5530;">Bidding Analysis</h4>
+        <div class="bidding-sequence">
+          ${hand.sequence.map(bid => `<div class="bid-step">${bid}</div>`).join('')}
         </div>
-        <div class="hand-display">
-          <div class="hand-diagram">${renderHandDiagram(hands, hcp)}</div>
-          <div class="analysis-section">
-            <h4 style="text-align: center; color: #2c5530;">Bidding Analysis</h4>
-            <div class="bidding-sequence">
-              ${hand.sequence.map(bid => `<div class="bid-step">${bid}</div>`).join('')}
+        <div class="decision-tree">
+          <h4 style="margin-bottom: 15px; color: #856404;">Decision Process:</h4>
+          ${hand.decisions.map(decision => `
+            <div class="decision-step">
+              <div class="decision-question">${decision.question}</div>
+              <div class="decision-answer">${decision.answer}</div>
             </div>
-            <div class="decision-tree">
-              <h4 style="margin-bottom: 15px; color: #856404;">Decision Process:</h4>
-              ${hand.decisions.map(decision => `
-                <div class="decision-step">
-                  <div class="decision-question">${decision.question}</div>
-                  <div class="decision-answer">${decision.answer}</div>
-                </div>
-              `).join('')}
-            </div>
-            <div class="conclusion">
-              <strong>Key Learning:</strong><br>
-              ${hand.conclusion}
-            </div>
-          </div>
+          `).join('')}
         </div>
-      `;
-    }
-
-    function parseHandData(dealString) {
-      if (typeof dealString !== "string") {
-        console.error("Invalid deal string:", dealString);
-        return { N: emptyHand(), E: emptyHand(), S: emptyHand(), W: emptyHand() };
-      }
-      const handsArr = dealString.trim().split(' ');
-      if (handsArr.length !== 4) {
-        console.error("Expected 4 hands in deal string but got", handsArr.length, "->", dealString);
-        return { N: emptyHand(), E: emptyHand(), S: emptyHand(), W: emptyHand() };
-      }
-      return {
-        N: splitHand(handsArr[0]),
-        E: splitHand(handsArr[1]),
-        S: splitHand(handsArr[2]),
-        W: splitHand(handsArr[3])
-      };
-    }
-
-    function emptyHand() {
-      return { spades: "", hearts: "", diamonds: "", clubs: "" };
-    }
-
-    function splitHand(handStr) {
-      if (typeof handStr !== "string") {
-        console.error("splitHand expected string, got:", handStr);
-        return emptyHand();
-      }
-      const suits = handStr.split('.');
-      while (suits.length < 4) suits.push('');
-      return {
-        spades: suits[0],
-        hearts: suits[1],
-        diamonds: suits[2],
-        clubs: suits[3]
-      };
-    }
-
-    function calculateAllHCP(hands) {
-      return {
-        N: calculateHCP(hands.N),
-        E: calculateHCP(hands.E),
-        S: calculateHCP(hands.S),
-        W: calculateHCP(hands.W)
-      };
-    }
-
-    function calculateHCP(hand) {
-      let total = 0;
-      const values = {'A': 4, 'K': 3, 'Q': 2, 'J': 1};
-      const allCards = (hand.spades + hand.hearts + hand.diamonds + hand.clubs).toUpperCase();
-      for (let card of allCards) {
-        total += values[card] || 0;
-      }
-      return total;
-    }
-
-    function formatCards(cards) {
-      if (!cards) return '—';
-      // Convert T to 10 for display if needed
-      return cards.replace(/T/g, '10');
-    }
-
-    function renderHandDiagram(hands, hcp) {
-      return `
-        <div class="position">
-          <div class="position-label">North (${hcp.N} HCP)</div>
-          <div class="suits" data-position="N">
-            <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.N.spades)}</div>
-            <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.N.hearts)}</div>
-            <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.N.diamonds)}</div>
-            <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.N.clubs)}</div>
-          </div>
+        <div class="conclusion">
+          <strong>Key Learning:</strong><br>
+          ${hand.conclusion}
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
-          <div class="position">
-            <div class="position-label">West (${hcp.W} HCP)</div>
-            <div class="suits" data-position="W">
-              <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.W.spades)}</div>
-              <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.W.hearts)}</div>
-              <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.W.diamonds)}</div>
-              <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.W.clubs)}</div>
-            </div>
-          </div>
-          <div class="position">
-            <div class="position-label">East (${hcp.E} HCP)</div>
-            <div class="suits" data-position="E">
-              <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.E.spades)}</div>
-              <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.E.hearts)}</div>
-              <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.E.diamonds)}</div>
-              <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.E.clubs)}</div>
-            </div>
-          </div>
+      </div>
+    </div>
+  `;
+}
+
+function parseHandData(dealString) {
+  if (typeof dealString !== "string") {
+    console.error("Invalid deal string:", dealString);
+    return { N: emptyHand(), E: emptyHand(), S: emptyHand(), W: emptyHand() };
+  }
+  const handsArr = dealString.trim().split(' ');
+  if (handsArr.length !== 4) {
+    console.error("Expected 4 hands in deal string but got", handsArr.length, "->", dealString);
+    return { N: emptyHand(), E: emptyHand(), S: emptyHand(), W: emptyHand() };
+  }
+  return {
+    N: splitHand(handsArr[0]),
+    E: splitHand(handsArr[1]),
+    S: splitHand(handsArr[2]),
+    W: splitHand(handsArr[3])
+  };
+}
+
+function emptyHand() {
+  return { spades: "", hearts: "", diamonds: "", clubs: "" };
+}
+
+function splitHand(handStr) {
+  if (typeof handStr !== "string") {
+    console.error("splitHand expected string, got:", handStr);
+    return emptyHand();
+  }
+  const suits = handStr.split('.');
+  while (suits.length < 4) suits.push('');
+  return {
+    spades: suits[0],
+    hearts: suits[1],
+    diamonds: suits[2],
+    clubs: suits[3]
+  };
+}
+
+function calculateAllHCP(hands) {
+  return {
+    N: calculateHCP(hands.N),
+    E: calculateHCP(hands.E),
+    S: calculateHCP(hands.S),
+    W: calculateHCP(hands.W)
+  };
+}
+
+function calculateHCP(hand) {
+  let total = 0;
+  const values = {'A': 4, 'K': 3, 'Q': 2, 'J': 1};
+  const allCards = (hand.spades + hand.hearts + hand.diamonds + hand.clubs).toUpperCase();
+  for (let card of allCards) {
+    total += values[card] || 0;
+  }
+  return total;
+}
+
+function formatCards(cards) {
+  if (!cards) return '—';
+  return cards.replace(/T/g, '10');
+}
+
+function renderHandDiagram(hands, hcp) {
+  return `
+    <div class="position">
+      <div class="position-label">North (${hcp.N} HCP)</div>
+      <div class="suits" data-position="N">
+        <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.N.spades)}</div>
+        <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.N.hearts)}</div>
+        <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.N.diamonds)}</div>
+        <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.N.clubs)}</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div class="position">
+        <div class="position-label">West (${hcp.W} HCP)</div>
+        <div class="suits" data-position="W">
+          <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.W.spades)}</div>
+          <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.W.hearts)}</div>
+          <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.W.diamonds)}</div>
+          <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.W.clubs)}</div>
         </div>
-        <div class="position">
-          <div class="position-label">South (${hcp.S} HCP)</div>
-          <div class="suits" data-position="S">
-            <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.S.spades)}</div>
-            <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.S.hearts)}</div>
-            <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.S.diamonds)}</div>
-            <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.S.clubs)}</div>
-          </div>
+      </div>
+      <div class="position">
+        <div class="position-label">East (${hcp.E} HCP)</div>
+        <div class="suits" data-position="E">
+          <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.E.spades)}</div>
+          <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.E.hearts)}</div>
+          <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.E.diamonds)}</div>
+          <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.E.clubs)}</div>
         </div>
-      `;
-    }
+      </div>
+    </div>
+    <div class="position">
+      <div class="position-label">South (${hcp.S} HCP)</div>
+      <div class="suits" data-position="S">
+        <div class="suit spades" data-suit="spades">♠ ${formatCards(hands.S.spades)}</div>
+        <div class="suit hearts" data-suit="hearts">♥ ${formatCards(hands.S.hearts)}</div>
+        <div class="suit diamonds" data-suit="diamonds">♦ ${formatCards(hands.S.diamonds)}</div>
+        <div class="suit clubs" data-suit="clubs">♣ ${formatCards(hands.S.clubs)}</div>
+      </div>
+    </div>
+  `;
+}
 
-    function getVulnClass(vuln) {
-      const classes = {
-        'None': 'vul-none',
-        'NS': 'vul-ns',
-        'EW': 'vul-ew',
-        'All': 'vul-all'
-      };
-      return classes[vuln] || 'vul-none';
-    }
+function getVulnClass(vuln) {
+  const classes = {
+    'None': 'vul-none',
+    'NS': 'vul-ns',
+    'EW': 'vul-ew',
+    'All': 'vul-all'
+  };
+  return classes[vuln] || 'vul-none';
+}
 
-    function playAnimation() {
-      if (animationState === 'playing') return;
-      resetAnimation();
-      animationState = 'playing';
-      const hand = bridgeHands[currentBoard];
-      if (!hand) return;
-      hand.decisions.forEach((decision, index) => {
-        const timeout = setTimeout(() => {
-          highlightRelevantCards(decision.highlight);
-        }, (index + 1) * 1000);
-        animationTimeouts.push(timeout);
-      });
-    }
+function playAnimation() {
+  if (animationState === 'playing') return;
+  resetAnimation();
+  animationState = 'playing';
+  const hand = bridgeHands[currentBoard];
+  if (!hand) return;
+  hand.decisions.forEach((decision, index) => {
+    const timeout = setTimeout(() => {
+      highlightRelevantCards(decision.highlight);
+    }, (index + 1) * 1000);
+    animationTimeouts.push(timeout);
+  });
+}
 
-    function highlightRelevantCards(highlightType) {
-      document.querySelectorAll('.suit').forEach(el => {
-        el.classList.remove('highlight');
-      });
-      if (!highlightType) return;
-      if (highlightType.includes('spades')) {
-        document.querySelectorAll('[data-suit="spades"]').forEach(el => el.classList.add('highlight'));
-      }
-      if (highlightType.includes('hearts')) {
-        document.querySelectorAll('[data-suit="hearts"]').forEach(el => el.classList.add('highlight'));
-      }
-      if (highlightType.includes('clubs')) {
-        document.querySelectorAll('[data-suit="clubs"]').forEach(el => el.classList.add('highlight'));
-      }
-      if (highlightType.includes('diamonds')) {
-        document.querySelectorAll('[data-suit="diamonds"]').forEach(el => el.classList.add('highlight'));
-      }
-      if (highlightType === 'S-all') {
-        document.querySelectorAll('.suits[data-position="S"] .suit').forEach(el => el.classList.add('highlight'));
-      }
-      if (highlightType === 'N-all') {
-        document.querySelectorAll('.suits[data-position="N"] .suit').forEach(el => el.classList.add('highlight'));
-      }
-    }
+function highlightRelevantCards(highlightType) {
+  document.querySelectorAll('.suit').forEach(el => {
+    el.classList.remove('highlight');
+  });
+  if (!highlightType) return;
+  if (highlightType.includes('spades')) {
+    document.querySelectorAll('[data-suit="spades"]').forEach(el => el.classList.add('highlight'));
+  }
+  if (highlightType.includes('hearts')) {
+    document.querySelectorAll('[data-suit="hearts"]').forEach(el => el.classList.add('highlight'));
+  }
+  if (highlightType.includes('clubs')) {
+    document.querySelectorAll('[data-suit="clubs"]').forEach(el => el.classList.add('highlight'));
+  }
+  if (highlightType.includes('diamonds')) {
+    document.querySelectorAll('[data-suit="diamonds"]').forEach(el => el.classList.add('highlight'));
+  }
+  if (highlightType === 'S-all') {
+    document.querySelectorAll('.suits[data-position="S"] .suit').forEach(el => el.classList.add('highlight'));
+  }
+  if (highlightType === 'N-all') {
+    document.querySelectorAll('.suits[data-position="N"] .suit').forEach(el => el.classList.add('highlight'));
+  }
+}
 
-    function pauseAnimation() {
-      animationState = 'paused';
-      animationTimeouts.forEach(timeout => clearTimeout(timeout));
-      animationTimeouts = [];
-    }
+function pauseAnimation() {
+  animationState = 'paused';
+  animationTimeouts.forEach(timeout => clearTimeout(timeout));
+  animationTimeouts = [];
+}
 
-    function resetAnimation() {
-      animationState = 'stopped';
-      animationTimeouts.forEach(timeout => clearTimeout(timeout));
-      animationTimeouts = [];
-      document.querySelectorAll('.suit').forEach(el => el.classList.remove('highlight'));
-    }
+function resetAnimation() {
+  animationState = 'stopped';
+  animationTimeouts.forEach(timeout => clearTimeout(timeout));
+  animationTimeouts = [];
+  document.querySelectorAll('.suit').forEach(el => el.classList.remove('highlight'));
+}
   </script>
 </body>
 </html>
