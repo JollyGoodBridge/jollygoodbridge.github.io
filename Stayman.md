@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "Stayman: The Bridge Convention That Saves You From Talking to Yourself"
-date: 2025-09-08 09:55:00 +0000
+date: "2025-09-08 09:55:00 +0000"
 categories: bridge cardgames
-tags: [bridge, conventions, Stayman, bidding]
-author:Michael Lambert Jolly
+tags: ["bridge", "conventions", "Stayman", "bidding"]
+author: "Michael Lambert Jolly"
 excerpt: "Discover how the Stayman convention helps you find major suit fits and avoid notrump misery with a simple, memorable bid."
 published: true
 ---
+
 # Stayman: The Bridge Convention That Saves You From Talking to Yourself
 
 If you’ve ever sat across from your partner in a bridge game, stared lovingly into their eyes (or maybe with mild suspicion), and thought: _“Do you have a four-card major, or am I doomed to a life of playing in notrumps?”_ — then congratulations, you already understand why **Stayman** exists.
@@ -49,3 +50,5 @@ If you’ve ever sat across from your partner in a bridge game, stared lovingly 
 ## Final Thought
 
 Stayman is like asking your partner what they want for dinner. Sure, you could just order pizza every time (1NT), but sometimes you discover they secretly wanted steak (spades) or pasta (hearts). Use Stayman — your bridge scores (and your partnership) will be all the better for it.
+
+<p><a href="/">← Back to Home</a></p>
