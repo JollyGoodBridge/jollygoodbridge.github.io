@@ -1,0 +1,3 @@
+Sitemap: https://jollygoodbridge.github.io/sitemap.xml
+User-agent: *
+Disallow:
