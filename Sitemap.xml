@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
     <loc>https://jollygoodbridge.github.io/</loc>
     <lastmod>2025-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <loc>https://jollygoodbridge.github.io/Bridge-a-POV</loc>
-  >loc>https://jollygoodbridge.github.io/the-great-two-bid-revolution</loc>
-  >loc>https://jollygoodbridge.github.io/the-splinter-convention</loc>
-  >loc>https://jollygoodbridge.github.io/Jacoby-Tranfers</loc>
-  >loc>https://jollygoodbridge.github.io/Stayman</loc>
+
+  <url>
+    <loc>https://jollygoodbridge.github.io/Bridge-a-POV</loc>
+  </url>
+
+  <url>
+    <loc>https://jollygoodbridge.github.io/the-great-two-bid-revolution</loc>
+  </url>
+
+  <url>
+    <loc>https://jollygoodbridge.github.io/the-splinter-convention</loc>
+  </url>
+
+  <url>
+    <loc>https://jollygoodbridge.github.io/Jacoby-Tranfers</loc>
+  </url>
+
+  <url>
+    <loc>https://jollygoodbridge.github.io/Stayman</loc>
+  </url>
+
 </urlset>
