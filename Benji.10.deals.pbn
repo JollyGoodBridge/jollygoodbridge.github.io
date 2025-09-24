@@ -4,7 +4,7 @@
 [Date "2025.09.24"]
 [NumberOfBoards "10"]
 
-[Board "1"]
+[Board "1" south]
 [Dealer "N"]
 [Vulnerable "none"]
 [Deal "N:AKQJ7..9.AKQJ976 9532.Q54.Q875.85 64.AJT97.AK64.43 T8.K8632.JT32.T2"]
