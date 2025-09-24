@@ -1,0 +1,55 @@
+% PBN 2.0
+[Event "Benji 2 Practice Set"]
+[Site "JollyGoodBridge"]
+[Date "2025.09.24"]
+[NumberOfBoards "10"]
+
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "none"]
+[Deal "N:AKQJ7..9.AKQJ976 9532.Q54.Q875.85 64.AJT97.AK64.43 T8.K8632.JT32.T2"]
+
+[Board "2"]
+[Dealer "E"]
+[Vulnerable "ns"]
+[Deal "E:865.7642.643.643 AK2.AJ.KQJ82.AJ5 T973.T853.T97.KQ QJ4.KQ9.A5.T9872"]
+
+[Board "3"]
+[Dealer "S"]
+[Vulnerable "ew"]
+[Deal "S:Q9.6.AT964.A7432 AJ754.K8.8.KQ985 3.AJT75432.J32.T KT862.Q9.KQ75.J6"]
+
+[Board "4"]
+[Dealer "W"]
+[Vulnerable "all"]
+[Deal "W:Q3.AT974.Q985.53 7.QJ5.A4.AT98764 K962.K862.K63.J2 AJT854.3.JT72.KQ"]
+
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "ns"]
+[Deal "N:2.AQJ8742.K4.J98 KT98.T9.T83.A753 AQ7653.3.9762.42 J4.K65.AQJ5.KQT6"]
+
+[Board "6"]
+[Dealer "E"]
+[Vulnerable "none"]
+[Deal "E:AJ.KQ.62.AT98762 762.8.AKQJT854.K 984.AJ6432.97.QJ KQT53.T975.3.543"]
+
+[Board "7"]
+[Dealer "S"]
+[Vulnerable "ew"]
+[Deal "S:Q63.AK5.KJT.T876 KT92.9874.7643.3 5.T32.Q82.AKJ942 AJ874.QJ6.A95.Q5"]
+
+[Board "8"]
+[Dealer "W"]
+[Vulnerable "none"]
+[Deal "W:J74.AT5.Q9.KQJ86 AKT86.83.K632.72 Q932.7.AT754.953 5.KQJ9642.J8.AT4"]
+
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "ns"]
+[Deal "N:AT.JT87532.J4.96 K86.KQ.KT542.AQ2 AQ652.AJ53.98.43 T83.8.A63.KJT765"]
+
+[Board "10"]
+[Dealer "E"]
+[Vulnerable "all"]
+[Deal "E:.A854.Q87642.T82 A82.KQ9.AK3.AQJ5 Q97.JT762.T95.93 KJT6543.3.J.K764"]
