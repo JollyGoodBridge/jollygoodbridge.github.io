@@ -1,0 +1,887 @@
+% PBN 2.1
+% EXPORT
+%Content-type: text/pbn; charset=ISO-8859-1
+%Creator: Bridgewebs
+%
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "1"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "2"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "3"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "4"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "5"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "6"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "7"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "8"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "9"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "10"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "11"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "12"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "13"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "14"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "15"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "16"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "17"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "18"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "19"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "20"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
+[Event "One"]
+[Site "Jolly Good Bridge Club"]
+[Date "2025.09.24"]
+[Board "21"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AAAA.AAAA.AAAA.AAAA"]
+[DoubleDummyTricks "55555555555555555555"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+N  S  5
+N  H  5
+N  D  5
+N  C  5
+N NT  5
+E  S  5
+E  H  5
+E  D  5
+E  C  5
+E NT  5
+S  S  5
+S  H  5
+S  D  5
+S  C  5
+S NT  5
+W  S  5
+W  H  5
+W  D  5
+W  C  5
+W NT  5
+[ScoreTable "PairId_NS\4R;PairId_EW\4R;Contract\5L;Declarer\1R;Result\2R"]
+1    2    1NT   N  5
+2    3    2H    S  5
+3    4    2S    E  5
+[Scoring "MP"]
+[Declarer "?"]
+[Contract "?"]
+[Result "?"]
+
