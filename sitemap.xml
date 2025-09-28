@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <!-- Homepage -->
   <url>
     <loc>https://jollygoodbridge.github.io/</loc>
-    <lastmod>2025-09-13</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Blog posts / content pages -->
+  <url>
+    <loc>https://jollygoodbridge.github.io/Bridge-a-POV.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/Bridge-a-POV</loc>
+    <loc>https://jollygoodbridge.github.io/the-great-two-bid-revolution.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/the-great-two-bid-revolution</loc>
+    <loc>https://jollygoodbridge.github.io/the-splinter-convention.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/the-splinter-convention</loc>
+    <loc>https://jollygoodbridge.github.io/Jacoby.Transfers.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/Jacoby-Tranfers</loc>
+    <loc>https://jollygoodbridge.github.io/Stayman.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/Stayman</loc>
-  </url>
-
-  </url>
     <loc>https://jollygoodbridge.github.io/Download.centre.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  
+
 </urlset>
