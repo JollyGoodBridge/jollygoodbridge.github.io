@@ -10,37 +10,37 @@
 
   <!-- Blog posts / content pages -->
   <url>
-  <loc>https://jollygoodbridge.github.io/Bridge-a-POV</loc>
-  <priority>0.8</priority>
-  <changefreq>monthly</changefreq>
-</url>
-
-  <url>
-    <loc>https://jollygoodbridge.github.io/the-great-two-bid-revolution.html</loc>
+    <loc>https://jollygoodbridge.github.io/Bridge-a-POV</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/the-splinter-convention.html</loc>
+    <loc>https://jollygoodbridge.github.io/the-great-two-bid-revolution</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/Jacoby.Transfers.html</loc>
+    <loc>https://jollygoodbridge.github.io/the-splinter-convention</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://jollygoodbridge.github.io/Jacoby.Transfers</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/Stayman.html</loc>
+    <loc>https://jollygoodbridge.github.io/Stayman</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://jollygoodbridge.github.io/Download.centre.html</loc>
+    <loc>https://jollygoodbridge.github.io/Download.centre</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
