@@ -1,20 +1,18 @@
-[Event "Endplay example"]
-[Site "Local"]
-[Date "2025.10.04"]
-[Board "1"]
-[Dealer "N"]
-[Vulnerable "None"]
-[Deal "N:K72.QJ83.9432.Q4 AQ9.A765.AQT.AK7 JT8.KT9.876.T95 6543.42.KJ5.J863"]
-[Scoring "IMP"]
-[Declarer "N"]
-[Contract "3NT"]
-[Result "9"]
-
+Event “Endplay example”]
+[Site “Local”]
+[Date “2025.10.04”]
+[Board “1”]
+[Dealer “N”]
+[Vulnerable “None”]
+[Deal “N:K72.QJ83.9432.Q4 AQ9.A765.AQT.AK7 JT8.KT9.876.T95 6543.42.KJ5.J8632”]
+[Scoring “IMP”]
+[Declarer “N”]
+[Contract “3NT”]
+[Result “9”]
 {Notes:
 This example begins with North as dealer and (for the purposes of this exercise) declarer of 3NT.
 Full deal (S H D C):
 North: K72 . QJ83 . 9432 . Q4
-East:  JT8 . KT9 . 876 . T95
+East: JT8 . KT9 . 876 . T95
 South: AQ9 . A765 . AQT . AK7
-West: 6543 . 42  . KJ5 . J863
-}
+West: 6543 . 42 . KJ5 . J8632
