@@ -80,7 +80,7 @@
   
   <h2>The Deal (Starting Position)</h2>
 
-  <p>Full deal (North dealer): North is declarer in 3NT. Click to expand.</p>
+  <p>Full deal (North dealer): North is declarer in 3NT.</p>
   <img src="../assets/Images/endplay_starting_position.png" alt="Bridge starting position diagram for end play example" class="deal-image">
 
   <div class="deal-diagram">
@@ -145,6 +145,123 @@ West:   K♦  J♦  5♦
     <li>Instead, consider tricking so that East or West is forced to lead. If West is thrown in and must lead a diamond, any lead gives the defenders no safe exit — leading into the AQ10 layout gives declarer a trick, and if West leads the K, declarer still takes the Q and T later, emerging with needed tricks.</li>
     <li>Thus, even if a direct finesse loses (say you finesse the Q from North at trick 1 and West captures with the K), the opponents are left with a lead that lets declarer exploit the remaining danger and win the contract — the essence of end play.</li>
   </ol>
+  <!-- Paste this where you want the small end-play diagram to appear -->
+<style>
+  /* End-play mini diagram (self-contained) */
+  .endplay-diagram {
+    max-width: 560px;
+    margin: 1.2em auto;
+    font-family: "Georgia", serif;
+    color: #111;
+  }
+  .ep-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+  .hand {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    background: #fff;
+    text-align: left;
+  }
+  .hand h4 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    text-align: center;
+  }
+  .cards {
+    display:flex;
+    gap:6px;
+    justify-content:center;
+    flex-wrap:wrap;
+    font-size:1.05rem;
+    line-height:1.4;
+  }
+  .card {
+    padding: 3px 7px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: #fbfbfb;
+    min-width: 34px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .suit-diamond { color: #d33; }   /* red */
+  .suit-heart   { color: #d33; }   /* red */
+  .suit-club    { color: #111; }   /* black */
+  .suit-spade   { color: #111; }   /* black */
+
+  /* Positioning boxes for N/E/W/S */
+  .north, .south { grid-column: 1 / 3; }
+  .north { justify-self:center; }
+  .south { justify-self:center; }
+  .east  { justify-self:end; }
+  .west  { justify-self:start; }
+
+  .caption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #444;
+    text-align: center;
+  }
+
+  /* small-screen tweak */
+  @media (max-width:520px){
+    .endplay-diagram { padding: 0 12px; }
+    .card { min-width: 30px; font-size:0.98rem; }
+  }
+</style>
+
+<figure class="endplay-diagram" aria-label="Three-card end-play diamond position">
+  <div class="ep-grid" role="group" aria-roledescription="end-play diagram">
+    <!-- North -->
+    <div class="hand north" role="img" aria-label="North: diamonds 4 3 2">
+      <h4>North (dealer / declarer)</h4>
+      <div class="cards" aria-hidden="false">
+        <span class="card suit-diamond">4♦</span>
+        <span class="card suit-diamond">3♦</span>
+        <span class="card suit-diamond">2♦</span>
+      </div>
+    </div>
+
+    <!-- East -->
+    <div class="hand east" role="img" aria-label="East: diamonds 8 7 6">
+      <h4>East</h4>
+      <div class="cards">
+        <span class="card suit-diamond">8♦</span>
+        <span class="card suit-diamond">7♦</span>
+        <span class="card suit-diamond">6♦</span>
+      </div>
+    </div>
+
+    <!-- West -->
+    <div class="hand west" role="img" aria-label="West: diamonds K J 5">
+      <h4>West</h4>
+      <div class="cards">
+        <span class="card suit-diamond">K♦</span>
+        <span class="card suit-diamond">J♦</span>
+        <span class="card suit-diamond">5♦</span>
+      </div>
+    </div>
+
+    <!-- South -->
+    <div class="hand south" role="img" aria-label="South: diamonds A Q T">
+      <h4>South</h4>
+      <div class="cards">
+        <span class="card suit-diamond">A♦</span>
+        <span class="card suit-diamond">Q♦</span>
+        <span class="card suit-diamond">T♦</span>
+      </div>
+    </div>
+  </div>
+
+  <figcaption class="caption">
+    End-play position (only diamonds remain). Play: North leads 2♦ → South's T♦; if West wins with J♦/K♦ and is forced to return a diamond, declarer gains two tricks.
+  </figcaption>
+</figure>
 
   <h2>Wrap-Up and Next Steps</h2>
 
@@ -154,8 +271,7 @@ West:   K♦  J♦  5♦
   </p>
 
   <p>
-    Later we can add interactive tooling so readers can play the deal on the page — and we can add more examples (strip-and-endplay, throw-in, entry-shaving lines). 
-    For now, you can download the PBN file with the full deal and use it in any PBN-compatible viewer:
+    In the next blog we can add more examples (strip-and-endplay, throw-in, entry-shaving lines). For now, you can download the PBN file with the full deal and use it in any PBN-compatible viewer or play it now on the page by selecting 3NT by Nrth below
   </p>
 
   <p>
