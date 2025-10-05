@@ -2,24 +2,23 @@
 % EXPORT
 % Content-type: text/pbn; charset=ISO-8859-1
 
-[Event “Endplays Practice Hands”]
-[Site “BridgeBase”]
-[Date “2025.10.05”]
-[Board “1”]
-[Dealer “W”]
-[Vulnerable “None”]
-[Deal “W:984.74.KJ54.Q853 J76.AT52.T63.AJ6 AK53.9.872.KT742 QT2.KQJ863.AQ9.9”]
-[Scoring “IMP”]
-[Declarer “S”]
-[Contract “4H”]
-[Auction “W”]
+[Event "Endplays Practice Hands"]
+[Site "BridgeBase"]
+[Date "2025.10.05"]
+[Board "1"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:984.74.KJ54.Q853 J76.AT52.T63.AJ6 AK53.9.872.KT742 QT2.KQJ863.AQ9.9"]
+[Scoring "IMP"]
+[Declarer "S"]
+[Contract "4H"]
+[Auction "W"]
 Pass 1H Pass 1S
 Pass 3H Pass 4H
 Pass Pass Pass
-[Result “10”]
+[Result "10"]
 
-{Notes:
-Endplays Practice Hand - Advanced Level
+{Endplays Practice Hand – Advanced Level
 
 Full deal (S H D C):
 North: J76 AT52 T63 AJ6
@@ -29,7 +28,7 @@ West:  984 74 KJ54 Q853
 
 Bidding:
 West passes, North opens 1H
-East passes, South responds 1S (fourth suit forcing/artificial)
+East passes, South responds 1S
 West passes, North rebids 3H (invitational)
 East passes, South bids 4H (game)
 All pass
