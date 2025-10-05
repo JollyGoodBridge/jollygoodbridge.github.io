@@ -2,25 +2,38 @@
 % EXPORT
 % Content-type: text/pbn; charset=ISO-8859-1
 
-[Event "Endplay Example"]
-[Site "Local"]
-[Date "2025.10.04"]
-[Board "1"]
-[Dealer "N"]
-[Vulnerable "None"]
-[Deal "N:AQ9.A765.AQT.AK7 6543.42.KJ5.J863 K72.QJ83.9432.Q4 JT8.KT9.876.T952"]
-[Scoring "IMP"]
-[Declarer "N"]
-[Contract "3NT"]
-[Result "9"]
+[Event “Endplays Practice Hands”]
+[Site “BridgeBase”]
+[Date “2025.10.05”]
+[Board “1”]
+[Dealer “W”]
+[Vulnerable “None”]
+[Deal “W:984.74.KJ54.Q853 J76.AT52.T63.AJ6 AK53.9.872.KT742 QT2.KQJ863.AQ9.9”]
+[Scoring “IMP”]
+[Declarer “S”]
+[Contract “4H”]
+[Auction “W”]
+Pass 1H Pass 1S
+Pass 3H Pass 4H
+Pass Pass Pass
+[Result “10”]
 
 {Notes:
-This example has North as dealer and declarer of 3NT.
+Endplays Practice Hand - Advanced Level
 
 Full deal (S H D C):
-North: AQ9 A765 AQT AK7 (23 HCP - opener)
-East:  6543 42 KJ5 J863 (4 HCP)
-South: K72 QJ83 9432 Q4 (9 HCP - responder)
-West:  JT8 KT9 876 T952 (8 HCP)
+North: J76 AT52 T63 AJ6
+East:  AK53 9 872 KT742
+South: QT2 KQJ863 AQ9 9
+West:  984 74 KJ54 Q853
 
-North opens with strong hand, South responds, reaching 3NT played by North.}
+Bidding:
+West passes, North opens 1H
+East passes, South responds 1S (fourth suit forcing/artificial)
+West passes, North rebids 3H (invitational)
+East passes, South bids 4H (game)
+All pass
+
+Contract: 4H by South
+Result: Making 10 tricks (4H=)
+}
