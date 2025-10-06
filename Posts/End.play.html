@@ -79,11 +79,12 @@
 /* Starting position diagram styling */
 .starting-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: 12px;
-  align-items: center;
   max-width: 600px;
   margin: 1.5em auto;
+  align-items: center;
 }
 .hand {
   border: 1px solid #ddd;
@@ -114,23 +115,28 @@
 .red { color: #d33; }
 .black { color: #111; }
 
-.north, .south { grid-column: 1 / 3; }
-.north { justify-self: center; }
-.south { justify-self: center; }
-.east { justify-self: end; }
-.west { justify-self: start; }
+.north { grid-column: 2; grid-row: 1; }
+.west { grid-column: 1; grid-row: 2; }
+.east { grid-column: 3; grid-row: 2; }
+.south { grid-column: 2; grid-row: 3; }
 
 /* Endplay position styling */
 .endplay-diagram {
-  max-width: 560px;
+  max-width: 600px;
   margin: 1.2em auto;
 }
 .ep-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: 12px;
   align-items: center;
 }
+.ep-north { grid-column: 2; grid-row: 1; }
+.ep-west { grid-column: 1; grid-row: 2; }
+.ep-east { grid-column: 3; grid-row: 2; }
+.ep-south { grid-column: 2; grid-row: 3; }
+
 .cards {
   display: flex;
   gap: 6px;
@@ -150,6 +156,7 @@
 }
 .suit-diamond { color: #d33; }
 .suit-heart { color: #d33; }
+.suit-club { color: #111; }
 .caption {
   margin-top: 10px;
   font-size: 0.95rem;
@@ -161,6 +168,18 @@
 @media (max-width: 620px) {
   .starting-grid, .endplay-diagram { padding: 0 12px; }
   .hand-cards { font-size: 0.9rem; }
+  .starting-grid { grid-template-columns: 1fr; }
+  .north, .south, .west, .east { grid-column: 1; }
+  .north { grid-row: 1; }
+  .west { grid-row: 2; }
+  .east { grid-row: 3; }
+  .south { grid-row: 4; }
+  .ep-grid { grid-template-columns: 1fr; }
+  .ep-north, .ep-south, .ep-west, .ep-east { grid-column: 1; }
+  .ep-north { grid-row: 1; }
+  .ep-west { grid-row: 2; }
+  .ep-east { grid-row: 3; }
+  .ep-south { grid-row: 4; }
 }
 ```
 
@@ -348,7 +367,7 @@ All Pass
   <figure class="endplay-diagram" aria-label="Endplay position with diamonds remaining">
     <div class="ep-grid">
       <!-- North -->
-      <div class="hand north">
+      <div class="hand ep-north">
         <h4>North (Dummy)</h4>
         <div class="cards">
           <span class="card suit-heart">A♥</span>
@@ -360,7 +379,7 @@ All Pass
 
 ```
   <!-- West -->
-  <div class="hand west">
+  <div class="hand ep-west">
     <h4>West</h4>
     <div class="cards">
       <span class="card suit-diamond">K♦</span>
@@ -371,7 +390,7 @@ All Pass
   </div>
 
   <!-- East -->
-  <div class="hand east">
+  <div class="hand ep-east">
     <h4>East</h4>
     <div class="cards">
       <span class="card suit-diamond">8♦</span>
@@ -381,7 +400,7 @@ All Pass
   </div>
 
   <!-- South -->
-  <div class="hand south">
+  <div class="hand ep-south">
     <h4>South (Declarer)</h4>
     <div class="cards">
       <span class="card suit-heart">K♥</span>
@@ -438,7 +457,7 @@ All Pass
       <li>Once more to lead the diamond for the throw-in</li>
     </ol>
     Drawing more than one round of trumps early would have destroyed this beautiful line of play.
-  </ol>
+  </div>
 
   <h2>Alternative Lines That Fail</h2>
 
