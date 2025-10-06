@@ -79,12 +79,12 @@
 /* Starting position diagram styling */
 .starting-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 12px;
-  max-width: 600px;
+  max-width: 650px;
   margin: 1.5em auto;
-  align-items: center;
+  align-items: start;
 }
 .hand {
   border: 1px solid #ddd;
@@ -122,15 +122,15 @@
 
 /* Endplay position styling */
 .endplay-diagram {
-  max-width: 600px;
+  max-width: 650px;
   margin: 1.2em auto;
 }
 .ep-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 12px;
-  align-items: center;
+  align-items: start;
 }
 .ep-north { grid-column: 2; grid-row: 1; }
 .ep-west { grid-column: 1; grid-row: 2; }
@@ -394,8 +394,8 @@ All Pass
     <h4>East</h4>
     <div class="cards">
       <span class="card suit-diamond">8♦</span>
-      <span class="card suit-club">K♣</span>
-      <span class="card suit-club">T♣</span>
+      <span class="card suit-diamond">7♦</span>
+      <span class="card suit-diamond">2♦</span>
     </div>
   </div>
 
