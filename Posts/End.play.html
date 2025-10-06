@@ -165,6 +165,38 @@
   font-style: italic;
 }
 
+.reveal-button {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1.5em auto;
+  display: block;
+  font-family: 'Georgia', serif;
+  transition: background 0.3s;
+}
+.reveal-button:hover {
+  background: #0052a3;
+}
+.hidden-content {
+  display: none;
+}
+.hidden-content.revealed {
+  display: block;
+}
+.thinking-prompt {
+  background: #e7f3ff;
+  border-left: 4px solid #0066cc;
+  padding: 1.5em;
+  margin: 1.5em 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+}
+
 @media (max-width: 620px) {
   .starting-grid, .endplay-diagram { padding: 0 12px; }
   .hand-cards { font-size: 0.9rem; }
@@ -299,8 +331,17 @@ All Pass
   </ul>
 
   <p>
-    At first glance, this looks like a routine contract: lose two spades, ruff the club, and take the diamond finesse. If the ♦K is onside, you make 10 tricks. But we can do better!  BEFORE you read on Scroll to the bottom of the page, Take a look at the board and plan your play
+    At first glance, this looks like a routine contract: lose two spades, ruff the club, and take the diamond finesse. If the ♦K is onside, you make 10 tricks. But we can do better!
   </p>
+
+  <div class="thinking-prompt">
+    <p><strong>⏸️ Pause and Think</strong></p>
+    <p>Before reading the solution, take a look at the board above and plan your line of play. Can you see a way to guarantee the contract without relying on the diamond finesse?</p>
+  </div>
+
+<button class="reveal-button" onclick="revealSolution()">Click Here to Read the Solution</button>
+
+  <div class="hidden-content" id="solution-content">
 
   <h2>The Winning Plan: Elimination and Endplay</h2>
 
@@ -495,6 +536,19 @@ All Pass
   <p>
     <a href="https://jollygoodbridge.github.io/Deals/endplay_4hearts.pbn" download>Download the PBN file (endplay_4hearts.pbn)</a>
   </p>
+
+  </div>
+
+  <script>
+    function revealSolution() {
+      var content = document.getElementById('solution-content');
+      var button = document.querySelector('.reveal-button');
+      content.classList.add('revealed');
+      button.style.display = 'none';
+      // Smooth scroll to the revealed content
+      content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
 
   <h2>Play the Hand Online</h2>
   <iframe
