@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,10 +14,7 @@
       color: #222;
       background: #fff;
     }
-    h1 {
-      color: #333;
-      text-align: center;
-    }
+    h1 { color: #333; text-align: center; }
     h2 {
       margin-top: 1.6em;
       color: #444;
@@ -61,12 +57,8 @@
       margin: 1em 0;
       color: #155724;
     }
-    a {
-      color: #0066cc;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #0066cc; }
+    a:hover { text-decoration: underline; }
     .bsol-iframe {
       margin: 1.5em 0;
       width: 100%;
@@ -74,147 +66,74 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-
-```
-/* Starting position diagram styling */
-.starting-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 12px;
-  max-width: 650px;
-  margin: 1.5em auto;
-  align-items: start;
-}
-.hand {
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 6px;
-  background: #fff;
-  text-align: left;
-}
-.hand h4 {
-  margin: 0 0 8px 0;
-  font-size: 1.05rem;
-  text-align: center;
-  color: #333;
-}
-.hand-cards {
-  font-family: 'Courier New', monospace;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-.suit-line {
-  margin: 2px 0;
-}
-.suit-symbol {
-  display: inline-block;
-  width: 20px;
-  font-weight: bold;
-}
-.red { color: #d33; }
-.black { color: #111; }
-
-.north { grid-column: 2; grid-row: 1; }
-.west { grid-column: 1; grid-row: 2; }
-.east { grid-column: 3; grid-row: 2; }
-.south { grid-column: 2; grid-row: 3; }
-
-/* Endplay position styling */
-.endplay-diagram {
-  max-width: 650px;
-  margin: 1.2em auto;
-}
-.ep-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 12px;
-  align-items: start;
-}
-.ep-north { grid-column: 2; grid-row: 1; }
-.ep-west { grid-column: 1; grid-row: 2; }
-.ep-east { grid-column: 3; grid-row: 2; }
-.ep-south { grid-column: 2; grid-row: 3; }
-
-.cards {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 1.05rem;
-  line-height: 1.4;
-}
-.card {
-  padding: 3px 7px;
-  border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.06);
-  background: #fbfbfb;
-  min-width: 34px;
-  text-align: center;
-  font-weight: 600;
-}
-.suit-diamond { color: #d33; }
-.suit-heart { color: #d33; }
-.suit-club { color: #111; }
-.caption {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #444;
-  text-align: center;
-  font-style: italic;
-}
-
-.reveal-button {
-  background: #0066cc;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1.05rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 1.5em auto;
-  display: block;
-  font-family: 'Georgia', serif;
-  transition: background 0.3s;
-}
-.reveal-button:hover {
-  background: #0052a3;
-}
-.hidden-content {
-  display: none;
-}
-.hidden-content.revealed {
-  display: block;
-}
-.thinking-prompt {
-  background: #e7f3ff;
-  border-left: 4px solid #0066cc;
-  padding: 1.5em;
-  margin: 1.5em 0;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-@media (max-width: 620px) {
-  .starting-grid, .endplay-diagram { padding: 0 12px; }
-  .hand-cards { font-size: 0.9rem; }
-  .starting-grid { grid-template-columns: 1fr; }
-  .north, .south, .west, .east { grid-column: 1; }
-  .north { grid-row: 1; }
-  .west { grid-row: 2; }
-  .east { grid-row: 3; }
-  .south { grid-row: 4; }
-  .ep-grid { grid-template-columns: 1fr; }
-  .ep-north, .ep-south, .ep-west, .ep-east { grid-column: 1; }
-  .ep-north { grid-row: 1; }
-  .ep-west { grid-row: 2; }
-  .ep-east { grid-row: 3; }
-  .ep-south { grid-row: 4; }
-}
-```
-
+    /* Starting position diagram styling */
+    .starting-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 12px;
+      max-width: 650px;
+      margin: 1.5em auto;
+      align-items: start;
+    }
+    .hand {
+      border: 1px solid #ddd;
+      padding: 12px;
+      border-radius: 6px;
+      background: #fff;
+      text-align: left;
+    }
+    .hand h4 { margin: 0 0 8px 0; font-size: 1.05rem; text-align: center; color: #333; }
+    .hand-cards {
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .suit-line { margin: 2px 0; }
+    .suit-symbol { display: inline-block; width: 20px; font-weight: bold; }
+    .red { color: #d33; }
+    .black { color: #111; }
+    .north { grid-column: 2; grid-row: 1; }
+    .west { grid-column: 1; grid-row: 2; }
+    .east { grid-column: 3; grid-row: 2; }
+    .south { grid-column: 2; grid-row: 3; }
+    .caption {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #444;
+      text-align: center;
+      font-style: italic;
+    }
+    .reveal-button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.05rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 1.5em auto;
+      display: block;
+      font-family: 'Georgia', serif;
+      transition: background 0.3s;
+    }
+    .reveal-button:hover { background: #0052a3; }
+    .hidden-content { display: none; }
+    .hidden-content.revealed { display: block; }
+    .thinking-prompt {
+      background: #e7f3ff;
+      border-left: 4px solid #0066cc;
+      padding: 1.5em;
+      margin: 1.5em 0;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    @media (max-width: 620px) {
+      .starting-grid { grid-template-columns: 1fr; }
+      .north, .south, .west, .east { grid-column: 1; }
+      .north { grid-row: 1; } .west { grid-row: 2; } .east { grid-row: 3; } .south { grid-row: 4; }
+    }
   </style>
 </head>
 <body>
@@ -222,301 +141,139 @@
   <h1>The Trump Management Endplay: When Patience Pays in 4♥</h1>
 
   <p class="author-note">
-    Author's note: This hand teaches a crucial lesson that many beginner players miss — not all trump contracts require drawing trumps immediately. Sometimes, you need those trumps in dummy for crucial tasks: ruffing losers, maintaining entries, and setting up the endplay. This is an advanced concept, but once you see it work, you'll start spotting these opportunities at the table. MDLJ.
+    Author's note: This hand teaches a crucial lesson — not all trump contracts require drawing trumps immediately. Sometimes, you need dummy's trumps for ruffing losers and maintaining entries. Watch how this restraint sets up an elegant endplay. — MDLJ
   </p>
 
   <h2>Understanding the Endplay Concept</h2>
-
-  <p>
-    An <strong>endplay</strong> (also called a "throw-in") occurs when you deliberately give up the lead to an opponent at a moment when any card they return will benefit you. They must either:
-  </p>
-  <ul>
-    <li>Lead into your tenace (a holding like A-Q where any lead gives you two tricks), or</li>
-    <li>Give you a ruff-and-discard (lead a suit where both you and dummy are void, letting you ruff in one hand while discarding a loser from the other)</li>
-  </ul>
-
-  <p>
-    In this hand, we'll transform what looks like a simple diamond finesse (a 50% chance) into a guaranteed endplay by careful elimination of side suits and trump management.
-  </p>
+  <p>An <strong>endplay</strong> (or "throw-in") occurs when you deliberately give the lead to an opponent who must then make a play that benefits you — either leading into your tenace or giving a ruff-and-discard. This deal shows how elimination and timing can make a 50% diamond finesse unnecessary.</p>
 
   <h2>The Deal (Starting Position)</h2>
+  <p><strong>Contract:</strong> 4♥ by South, after the auction: Pass – Pass – Pass – 1♥ – Pass – 3♥ – Pass – 4♥</p>
 
-  <p><strong>Contract:</strong> 4♥ by South, after the auction: Pass - Pass - Pass - 1♥ - Pass - 3♥ - Pass - 4♥</p>
-
-  <figure class="deal-diagram" aria-label="Starting position for 4 hearts contract">
+  <figure class="deal-diagram">
     <div class="starting-grid">
-      <!-- North -->
       <div class="hand north">
         <h4>North (Dummy)</h4>
         <div class="hand-cards">
-          <div class="suit-line"><span class="suit-symbol black">♠</span> J76</div>
-          <div class="suit-line"><span class="suit-symbol red">♥</span> AT52</div>
-          <div class="suit-line"><span class="suit-symbol red">♦</span> T63</div>
-          <div class="suit-line"><span class="suit-symbol black">♣</span> AJ6</div>
+          ♠ J76<br>♥ AT52<br>♦ T63<br>♣ AJ6
         </div>
       </div>
-
-```
-  <!-- West -->
-  <div class="hand west">
-    <h4>West</h4>
-    <div class="hand-cards">
-      <div class="suit-line"><span class="suit-symbol black">♠</span> 984</div>
-      <div class="suit-line"><span class="suit-symbol red">♥</span> 74</div>
-      <div class="suit-line"><span class="suit-symbol red">♦</span> KJ54</div>
-      <div class="suit-line"><span class="suit-symbol black">♣</span> Q853</div>
+      <div class="hand west">
+        <h4>West</h4>
+        <div class="hand-cards">
+          ♠ 984<br>♥ 74<br>♦ KJ54<br>♣ Q853
+        </div>
+      </div>
+      <div class="hand east">
+        <h4>East</h4>
+        <div class="hand-cards">
+          ♠ AK53<br>♥ 9<br>♦ 872<br>♣ KT742
+        </div>
+      </div>
+      <div class="hand south">
+        <h4>South (Declarer)</h4>
+        <div class="hand-cards">
+          ♠ QT2<br>♥ KQJ863<br>♦ AQ9<br>♣ 9
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- East -->
-  <div class="hand east">
-    <h4>East</h4>
-    <div class="hand-cards">
-      <div class="suit-line"><span class="suit-symbol black">♠</span> AK53</div>
-      <div class="suit-line"><span class="suit-symbol red">♥</span> 9</div>
-      <div class="suit-line"><span class="suit-symbol red">♦</span> 872</div>
-      <div class="suit-line"><span class="suit-symbol black">♣</span> KT742</div>
-    </div>
-  </div>
-
-  <!-- South -->
-  <div class="hand south">
-    <h4>South (Declarer)</h4>
-    <div class="hand-cards">
-      <div class="suit-line"><span class="suit-symbol black">♠</span> QT2</div>
-      <div class="suit-line"><span class="suit-symbol red">♥</span> KQJ863</div>
-      <div class="suit-line"><span class="suit-symbol red">♦</span> AQ9</div>
-      <div class="suit-line"><span class="suit-symbol black">♣</span> 9</div>
-    </div>
-  </div>
-</div>
-<figcaption class="caption">
-  Opening lead: ♠4 (fourth best)
-</figcaption>
-```
-
+    <figcaption class="caption">Opening lead: ♠4 (fourth best)</figcaption>
   </figure>
 
   <h2>The Bidding</h2>
-
-  <p><strong>Auction sequence:</strong></p>
   <div class="deal-diagram">
     <pre>
-West    North   East    South
-Pass    Pass     Pass    1♥
-Pass    3♥      Pass    4♥
+West   North   East   South
+Pass   Pass    Pass   1♥
+Pass   3♥      Pass   4♥
 All Pass
     </pre>
   </div>
-
-  <p>South opens 1♥, showing a modest opening hand with at least four hearts.
-North responds 3♥, promising four or more hearts and more than 10 HCP.  All pass — and South declares 4♥.
-
-  </p>
+  <p>South opens 1♥ with six hearts and 13 HCP. North raises to 3♥ with four-card support and 12 points. South accepts the invitation to game.</p>
 
   <h2>Initial Assessment</h2>
-
-  <p><strong>Quick trick count:</strong></p>
+  <p><strong>Quick Trick Count:</strong></p>
   <ul>
-    <li><strong>Spades:</strong> 1 trick (♠Q after opponents cash A-K)</li>
-    <li><strong>Hearts:</strong> 6 tricks (six trumps in South's hand)</li>
-    <li><strong>Diamonds:</strong> 1-2 tricks (♦A certain, ♦Q depends on finesse)</li>
-    <li><strong>Clubs:</strong> 1 trick (♣A), but need to ruff the losing club in dummy</li>
+    <li><strong>Spades:</strong> None after opponents cash A–K</li>
+    <li><strong>Hearts:</strong> Six potential winners</li>
+    <li><strong>Diamonds:</strong> ♦A and possibly ♦Q (finesse?)</li>
+    <li><strong>Clubs:</strong> One top trick (♣A) and a possible ruff</li>
   </ul>
 
-  <p><strong>Immediate problems:</strong></p>
-  <ul>
-    <li>Two spade losers (opponents will cash ♠A-K)</li>
-    <li>One club loser (need to ruff in dummy)</li>
-    <li>Potential diamond loser if finesse fails</li>
-  </ul>
-
-  <p>
-    At first glance, this looks like a routine contract: lose two spades, ruff the club, and take the diamond finesse. If the ♦K is onside, you make 10 tricks. But we can do better!
-  </p>
+  <p>Two spade losers and one club loser are certain. The normal route would be to finesse in diamonds — but declarer can instead eliminate the side suits and endplay West.</p>
 
   <div class="thinking-prompt">
-    <p><strong>⏸️ Pause and Think</strong></p>
-    <p>Before reading the solution, take a look at the board above and plan your line of play. Can you see a way to guarantee the contract without relying on the diamond finesse?</p>
+    <p><strong>⏸️ Pause and Think:</strong> Before reading on, can you find a way to avoid taking the diamond finesse altogether?</p>
   </div>
 
-<button class="reveal-button" onclick="revealSolution()">Click Here to Read the Solution</button>
+  <button class="reveal-button" onclick="revealSolution()">Click Here to Read the Solution</button>
 
   <div class="hidden-content" id="solution-content">
 
-<h2>The Play (Trick by Trick)</h2>
-
-<p><strong>Table setting:</strong> Contract 4♥ by South. West leads ♠4 (fourth-best).</p>
-
-<ul>
-  <li>
-    <strong>Trick 1 — Spade to the ace.</strong>
-    <br>West leads ♠4. North plays ♠6, East wins ♠A and returns a spade. South follows low.
-  </li>
-
-  <li>
-    <strong>Trick 2 — More spades; declarer prepares to ruff.</strong>
-    <br>East continues with ♠K. South plays ♠Q, West follows and dummy follows. East has shortened the defenders’ spade length — the third round is coming.
-  </li>
-
-  <li>
-    <strong>Trick 3 — Ruff the third spade in hand.</strong>
-    <br>East leads the third spade (a small spade). South ruffs in hand with a small heart. The defenders’ spade suit is now effectively removed as an outside threat — the first condition for an endplay is in place.
-  </li>
-
-  <li>
-    <strong>Trick 4 — Start running the top diamonds from hand.</strong>
-    <br>South cashes ♦A. All follow. The aim now is to clean up side suits so that when a defender wins a trick he will be helpless to make a safe return.
-  </li>
-
-  <li>
-    <strong>Trick 5 — Continue diamonds; force a defender to win.</strong>
-    <br>South plays ♦Q. West (holding the KJ of diamonds) may win this trick (or win the next diamond); either way West is a good candidate to be thrown in later. Declarer has been careful to preserve at least one trump in dummy as an entry.
-  </li>
-
-  <li>
-    <strong>Trick 6 — If West wins a diamond, he's on lead — the throw-in.</strong>
-    <br>When West wins and is on lead he must return something: a heart, a club or (if he foolishly gives a diamond) something equally helpful. Any return is likely to hand South either a trick or a ruff-and-discard because declarer has stripped the other suits from dummy and hand.
-  </li>
-
-  <li>
-    <strong>Trick 7 — Using dummy’s entries.</strong>
-    <br>If West leads a club, dummy’s ♣A (and the remaining club spots) will be used to either discard a loser from South or to set up a trump return. If West leads a heart, declarer wins and can draw the last trumps or pitch a loser from dummy — either way West has no safe exit.
-  </li>
-
-  <li>
-    <strong>Trick 8 — Finish cleaning up.</strong>
-    <br>Declarer now arranges entries: cash the high clubs from dummy, draw the last necessary trumps (if needed) and claim the remaining tricks. The defenders have been stripped of safe exit cards; the final defensive lead concedes the extra trick to declarer by giving a ruff-and-sluff or allowing a finesse/winner.
-  </li>
-</ul>
-
-<p><strong>Why this works (short version):</strong></p>
-<ul>
-  <li>South ruffs the third round of spades to remove the defenders’ spade exit cards.</li>
-  <li>Declarer then attacks diamonds (South’s high diamonds) to force a defender to win — that defender is the one who gets thrown in.</li>
-  <li>With clubs and spades stripped (or under declarer’s control) the defender on lead has no safe return: any lead concedes a trick (a ruff-and-discard, a finesse or a direct winner to declarer).</li>
-  <li>Result: declarer makes 10 tricks (4♥ = ) by executing an elimination-and-throw-in endplay rather than by brute-force drawing of all trumps.</li>
-</ul>
-
-<p><em>Note:</em> I avoided listing exact spot-card plays for every trick after the defenders’ spade suit is removed, because the precise spot-card sequence can vary depending on which defender takes the diamond trick. The key technique is the combination of (1) ruffing the third spade, (2) cashing high diamonds to force a defensive winner, and (3) throwing that winner back to the defender with no safe exit.</p>
-  <!-- West -->
-  <div class="hand ep-west">
-    <h4>West</h4>
-    <div class="cards">
-      <span class="card suit-diamond">K♦</span>
-      <span class="card suit-diamond">J♦</span>
-      <span class="card suit-diamond">5♦</span>
-      <span class="card suit-diamond">4♦</span>
-    </div>
-  </div>
-
-  <!-- East -->
-  <div class="hand ep-east">
-    <h4>East</h4>
-    <div class="cards">
-      <span class="card suit-diamond">8♦</span>
-      <span class="card suit-diamond">7♦</span>
-      <span class="card suit-diamond">2♦</span>
-    </div>
-  </div>
-
-  <!-- South -->
-  <div class="hand ep-south">
-    <h4>South (Declarer)</h4>
-    <div class="cards">
-      <span class="card suit-heart">K♥</span>
-      <span class="card suit-heart">8♥</span>
-      <span class="card suit-diamond">A♦</span>
-      <span class="card suit-diamond">Q♦</span>
-    </div>
-  </div>
-</div>
-<figcaption class="caption">
-  Position after Trick 8: Time to execute the endplay
-</figcaption>
-```
-
-  </figure>
-
-  <h2>How the Endplay Works</h2>
-
-  <p><strong>Trick 9:</strong> The throw-in</p>
+  <h2>The Play (Trick by Trick)</h2>
+  <p><strong>Contract:</strong> 4♥ by South. West leads ♠4 (fourth-best).</p>
   <ul>
-    <li>North leads ♦3. East plays ♦8, South plays ♦Q, West must win with either ♦K or ♦J.</li>
-    <li><em>West is now on lead with only diamonds remaining, and both opponents are void in clubs and spades.</em></li>
+    <li><strong>Trick 1 — Spade to the ace.</strong><br>
+      West leads ♠4. North plays ♠6, East wins ♠A and returns a spade. South follows low.</li>
+    <li><strong>Trick 2 — Second spade.</strong><br>
+      East continues with ♠K. South covers with ♠Q, North and West follow small. The defenders have taken their two spade tricks.</li>
+    <li><strong>Trick 3 — Third spade; the suit is dead.</strong><br>
+      East continues with a third spade. South follows with ♠2, dummy follows, and West discards. Declarer allows the defenders to exhaust their safe spade exits.</li>
+    <li><strong>Trick 4 — Start drawing trumps, but only partially.</strong><br>
+      South plays ♥K, all follow. Declarer draws one round only, keeping dummy’s hearts for later entries.</li>
+    <li><strong>Trick 5 — Eliminate clubs.</strong><br>
+      South leads ♣9 to dummy’s ♣A, then ruffs a club with ♥3 in hand. Clubs are now eliminated.</li>
+    <li><strong>Trick 6 — Return to dummy with a trump.</strong><br>
+      South leads a low heart to dummy’s ♥T (or ♥A). This re-establishes dummy for the diamond play.</li>
+    <li><strong>Trick 7 — Attack diamonds.</strong><br>
+      Dummy leads a small diamond to declarer’s ♦A, then ♦Q to force out West’s ♦K. The defender who wins is marked for the endplay.</li>
+    <li><strong>Trick 8 — The throw-in develops.</strong><br>
+      When West wins a diamond, he has no safe exit: any club gives a ruff-and-discard, a heart concedes tempo, and another diamond returns into declarer’s tenace. Declarer wins and claims ten tricks.</li>
   </ul>
 
-  <p><strong>Trick 10:</strong> West's impossible choice</p>
-  <p>West faces an impossible situation:</p>
+  <p><strong>Result:</strong> South makes 10 tricks without taking a finesse. Timing and restraint do the work.</p>
+
+  <h2>Why This Works</h2>
   <ul>
-    <li><strong>If West leads a diamond:</strong> South's ♦A-Q sits over West's remaining diamond honor, guaranteeing South two diamond tricks. This gives declarer 10 tricks total.</li>
-    <li><strong>If West leads a club:</strong> Both North and South are void in clubs! This gives a ruff-and-discard — South can ruff in hand while discarding dummy's diamond loser, again making 10 tricks.</li>
+    <li>The defenders’ spades are fully removed early — no safe exit later.</li>
+    <li>Clubs are stripped from both hands before the endplay.</li>
+    <li>Trumps are managed carefully so dummy retains entries.</li>
+    <li>When West wins a diamond, he is endplayed — any return helps declarer.</li>
   </ul>
 
   <div class="key-point">
-    <strong>The Beauty of the Endplay:</strong> We've transformed a 50% diamond finesse into a 100% certain success. No matter what West does, we make our contract. This is the elegance of elimination play — by carefully removing all safe exit cards, we force the opponents to help us.
+    <strong>Key insight:</strong> The endplay replaces a 50% diamond finesse with a 100% sure plan by eliminating the opponents’ safe exit cards.
   </div>
 
   <h2>Why Trump Management Was Crucial</h2>
-
-  <p>Let's see what would have happened with the "normal" line of drawing all trumps immediately:</p>
-
   <ol>
-    <li>If we drew all trumps after trick 2, dummy would have no trumps left</li>
-    <li>We couldn't ruff our club loser in dummy</li>
-    <li>We couldn't get back to dummy to lead diamonds</li>
-    <li>We'd be forced to take an immediate diamond finesse from hand</li>
-    <li>When the finesse loses to West's ♦K, we'd still have a club loser remaining</li>
-    <li>Result: Down one in a makeable contract</li>
+    <li>Drawing all trumps early would remove dummy’s entries.</li>
+    <li>We needed dummy’s trumps to ruff a club and regain the lead twice.</li>
+    <li>By keeping three dummy hearts, we maintained control for the elimination and throw-in.</li>
   </ol>
 
   <div class="warning-box">
-    <strong>The Lesson:</strong> In elimination play, count your dummy entries carefully. Here we needed THREE trump entries to dummy:
-    <ol>
-      <li>Once to ruff the club</li>
-      <li>Once after ruffing the club to cash dummy's remaining club winner</li>
-      <li>Once more to lead the diamond for the throw-in</li>
-    </ol>
-    Drawing more than one round of trumps early would have destroyed this beautiful line of play.
+    <strong>The Lesson:</strong> In elimination play, dummy’s trumps are often worth more as entries than as immediate winners.
   </div>
 
   <h2>Alternative Lines That Fail</h2>
-
-  <p><strong>What if we try the immediate finesse?</strong></p>
-  <p>
-    If after winning ♣A we immediately lead ♦T from dummy for a finesse, West wins ♦K and returns a club. Now we have to ruff, but we've lost our timing — we can't eliminate clubs completely before throwing West in. The endplay fails.
-  </p>
-
-  <p><strong>What if we draw two rounds of trumps?</strong></p>
-  <p>
-    If we draw two rounds of trumps early, dummy is left with only two trumps. We can ruff the club and get back once, but we can't complete the full elimination. We're forced to take the diamond finesse the old-fashioned way.
-  </p>
+  <p><strong>If you draw trumps immediately:</strong> Dummy loses all entries, you can’t ruff a club, and you must rely on the diamond finesse (which loses).</p>
+  <p><strong>If you take the finesse early:</strong> West wins ♦K and returns a club before elimination is complete, defeating the endplay.</p>
 
   <h2>Wrap-Up and Key Takeaways</h2>
-
   <div class="key-point">
-    <strong>Three Key Lessons:</strong>
+    <strong>Three lessons:</strong>
     <ol>
-      <li><strong>Don't automatically draw trumps:</strong> Sometimes you need them in dummy for ruffing and entries.</li>
-      <li><strong>Count your entries:</strong> In this hand, we needed three trump entries to dummy to execute the elimination.</li>
-      <li><strong>Elimination play beats finesses:</strong> When you can eliminate all safe exits, an endplay converts a 50% guess into a 100% certainty.</li>
+      <li>Don’t automatically draw trumps.</li>
+      <li>Preserve entries for eliminations and ruffs.</li>
+      <li>Endplays often turn a guess into a certainty.</li>
     </ol>
   </div>
 
-  <p>
-    This type of advanced play separates good declarers from great ones. The ability to visualize the endplay position and work backward to determine the correct line of play is a skill that develops with practice. Start looking for elimination opportunities in your own games — whenever you see a two-way finesse or a guess in a key suit, ask yourself: "Can I eliminate the other suits and throw someone in?"
-  </p>
+  <p>This endplay shows declarer thinking several tricks ahead — visualizing the defender on lead with no safe exit. That foresight is what separates routine declarers from expert ones.</p>
 
   <h2>Practice This Hand</h2>
-
-  <p>
-    Download the PBN file below or play the hand interactively. Try both lines: the immediate trump-drawing line and the careful elimination line. See for yourself how trump management makes the difference between guessing and guaranteeing your contract.
-  </p>
-
-  <p>
-    <a href="https://jollygoodbridge.github.io/Deals/endplay_4hearts.pbn" download>Download the PBN file (endplay_4hearts.pbn)</a>
-  </p>
-
+  <p><a href="https://jollygoodbridge.github.io/Deals/endplay_4hearts.pbn" download>Download the PBN file (endplay_4hearts.pbn)</a></p>
   </div>
 
   <script>
@@ -525,18 +282,15 @@ North responds 3♥, promising four or more hearts and more than 10 HCP.  All pa
       var button = document.querySelector('.reveal-button');
       content.classList.add('revealed');
       button.style.display = 'none';
-      // Smooth scroll to the revealed content
       content.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   </script>
 
-  <h2>Walk through the Hand Online.  Dealer West and lead on the day was 4 of Spades</h2>
-  <h2></h2>if you prefer to download and play without sight of all the hands a link is provided below</h2>
+  <h2>Walk Through the Hand Online</h2>
+  <p>Dealer: West. Opening lead: ♠4.</p>
   <iframe
     src="https://dds.bridgewebs.com/bsol2/ddummy.htm?file=https://raw.githubusercontent.com/JollyGoodBridge/jollygoodbridge.github.io/main/Deals/endplay_4hearts.pbn"
-    width="100%"
-    height="640"
-    style="border: 1px solid #ccc; border-radius: 5px;">
+    width="100%" height="640" style="border:1px solid #ccc; border-radius:5px;">
     <p>Your browser doesn't support iframes. <a href="https://dds.bridgewebs.com/bsol2/ddummy.htm" target="_blank">Click here to view bridge hands online</a></p>
   </iframe>
 
