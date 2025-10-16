@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jollygoodbridge.github.io/sitemap.xml
+Sitemap: https://jollygoodbridge.github.io/assets/sitemap.xml
