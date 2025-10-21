@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RKCB, Eddie Kantar-style — a witty guide</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: Georgia, "Times New Roman", serif; line-height:1.55; margin:2rem; color:#222 }
+    h1 { font-family: "Palatino Linotype", "Book Antiqua", serif; font-size:2.2rem; margin-bottom:.2rem; }
+    h2 { margin-top:1.4rem }
+    .lede { color:#555; margin-bottom:1.25rem }
+    pre { background:#f8f8f8; border-left:4px solid #ccc; padding: .75rem; overflow:auto }
+    .cheat { border-collapse:collapse; margin: .75rem 0 1.25rem 0; width:100%; max-width:720px }
+    .cheat th, .cheat td { border:1px solid #ddd; padding:.5rem .75rem; text-align:left }
+    .example { background:#fcfcfc; border:1px dashed #ddd; padding:.75rem; margin:.75rem 0 }
+    .tip { background:#fffbe6; border-left:4px solid #ffd24d; padding:.5rem; margin:.75rem 0 }
+    .footer { margin-top:1.5rem; color:#666; font-size:.95rem }
+    .muted { color:#888; font-size:.95rem }
+    .big-emoji { font-size:1.4rem; margin-right:.25rem }
+  </style>
+</head>
+<body>
+  <h1>RKCB, Eddie Kantar-style — how to ask for key cards without detonating your partner's brain</h1>
+
+  <p class="lede">
+    Here’s a tidy, slightly cheeky write-up of your notes on Eddie Kantar’s suggested RKCB (Roman Key Card Blackwood) variant.
+    I’ve turned your bullets into prose, added a short cheat-sheet and examples, and kept the spirit: practical, slightly smug, and useful at the table.
+  </p>
+
+  <h2>A bit of history (brief and unobtrusive)</h2>
+  <p class="muted">
+    Eddie Kantar — a legendary American bridge player, teacher and author — suggested many practical approaches to bidding that emphasise clarity and usability at the table.
+    The RKCB variant below is one of those pragmatic options: compact responses to 4NT that pack information about key cards <em>and</em> where the trump queen is.
+  </p>
+
+  <h2>The core of the system (your notes, cleaned up)</h2>
+  <p>
+    When you bid <strong>4NT</strong> as RKCB you are asking for key cards (the four aces plus the king of trumps).  In the variant you recorded, responder’s step responses are:
+  </p>
+
+  <table class="cheat">
+    <thead>
+      <tr><th>Response to 4NT</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>5♦</strong></td><td><strong>3 or 0</strong> key cards</td></tr>
+      <tr><td><strong>5♣</strong></td><td><strong>1 or 4</strong> key cards</td></tr>
+      <tr><td><strong>5♥</strong></td><td>Exactly <strong>2 key cards, without the Q of trumps</strong></td></tr>
+      <tr><td><strong>5♠</strong></td><td>Exactly <strong>2 key cards, with the Q of trumps</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p class="tip"><span class="big-emoji">💡</span>
+    Important: this mapping is the one in your notes (note the non-standard order of 5♣/5♦ compared to some other forms of RKCB).  I preserved it exactly so the post reflects your chosen variant.
+  </p>
+
+  <h2>How trumps are defined</h2>
+  <p>
+    If a trump suit has already been agreed (a suit was bid and then supported), RKCB refers to that agreed suit.
+    If no suit has been agreed, the trump suit is taken as the <em>last suit bid by the partnership</em> (i.e. the last natural suit bid that wasn't a splinter).
+  </p>
+
+  <h2>Finding out about the queen of trumps</h2>
+  <p>
+    One of the neat features of your variant is that the responses that show "2 key cards" also tell you whether partner holds the queen of trumps:
+    <ul>
+      <li>5♥ → 2 key cards <strong>without</strong> the trump queen</li>
+      <li>5♠ → 2 key cards <strong>with</strong> the trump queen</li>
+    </ul>
+    In short: the only time you reliably know where the trump queen is is when partner shows the "2" responses (5♥ or 5♠).
+  </p>
+
+  <h2>When to ask the queen question</h2>
+  <p class="muted">
+    Your notes say: if you need to know where the queen of trumps is, bid the next lowest possible bid after the response to 4NT and ask directly whether partner has the Q.  Practically this means:
+  </p>
+  <div class="example">
+    <strong>After 4NT — responder bids 5♣ or 5♦</strong> (i.e. not yet showing whether the Q is present): <br>
+    Bid the cheapest available asking bid (the “next lowest” natural bid) to ask for the trump queen.  If responder has the queen, they upgrade the bid by one step; if not, they pass or make the cheap negative.
+  </div>
+
+  <p class="muted">
+    Note from your notes: “Obviously only after 5♣ or 5♦ because 5♥ already denied the queen and 5♠ said yes.”  Nicely put.
+  </p>
+
+  <h2>Use of 5NT and follow-ups</h2>
+  <p>
+    In your notes you wrote things like “With 5 = 5NT” and “with 5 plus Q trumps 6C.”  The usual role of 5NT after RKCB is to ask for specific kings (and sometimes the queen of trumps if you haven’t found it), and your notes are consistent with that: 5NT is the king-asking step provided the auction hasn't been passed off.
+  </p>
+  <p class="muted">
+    Implementation suggestion (practical): treat 5NT as the “which kings?” ask.  If responder previously showed the trump queen, then the cheapest appropriate suit (often 6♣ in your notes) can be used to show or deny a particular king pattern — make this part of your partnership agreement so you don’t argue in the post-mortem.
+  </p>
+
+  <h2>When to bid small slam / big slam / stop</h2>
+  <p>
+    Your notes offer practical slam rules of thumb — short, usable, and perfect for the post-mortem:
+  </p>
+  <ul>
+    <li><strong>Missing two key cards</strong> → generally do not bid slam.</li>
+    <li><strong>Missing one key card but you have the trump queen</strong> → bid a small slam; it’s roughly a 50:50 bet (depends on outside tricks).</li>
+    <li><strong>Missing one key card and you <em>don’t</em> have the trump queen</strong> → bid small slam only if you have 10 trumps, or 9 trumps with the trump jack — otherwise be cautious.</li>
+    <li><strong>For a grand</strong> → if you have all key cards but not the Q of trumps, you may still bid a grand IF you hold 10 trumps — practical, aggressive, but defensible.</li>
+  </ul>
+
+  <h2>Finding out about outside honours</h2>
+  <p>
+    After key cards are sorted, if you still need high-card information outside trumps, continue with conventional follow-ups — cue-bids, king-asks (5NT), or agreed suit checks — depending on what your partnership prefers.
+    Your final note — “Is to follow if your brain has not exploded yet” — is the best bidding etiquette: when in doubt, take the safe route. The brain will thank you.
+  </p>
+
+  <h2>Two worked examples</h2>
+
+  <div class="example">
+    <strong>Example A — agreed trumps: spades</strong><br>
+    Auction: <pre>1♠ — 3♠ — 4NT</pre>
+    Responder holds: ♠ KQJxx, ♥ Axx, ♦ Kx, ♣ xx (i.e. two key cards and the trump queen) → <strong>respond 5♠ (2 with Q of trumps)</strong>. Opener knows: 2 key cards and the Q — consider small slam if side values line up.
+  </div>
+
+  <div class="example">
+    <strong>Example B — last suit becomes trumps</strong><br>
+    Auction: <pre>1♣ — 1♥ — 2♥ — 4NT</pre>
+    (Hearts were the last suit bid and supported — hearts = trumps.)<br>
+    Responder holds: ♥ Axx, ♠ KQxxx, ♦ Axx, ♣ xx → that's 2 key cards <em>without</em> the trump queen → <strong>respond 5♥</strong>.
+  </div>
+
+  <h2>Quick cheat-sheet (printable)</h2>
+  <table class="cheat">
+    <thead><tr><th>Bid</th><th>Short meaning</th></tr></thead>
+    <tbody>
+      <tr><td>5♦</td><td>3 or 0 key cards</td></tr>
+      <tr><td>5♣</td><td>1 or 4 key cards</td></tr>
+      <tr><td>5♥</td><td>2 key cards, trump Q <strong>absent</strong></td></tr>
+      <tr><td>5♠</td><td>2 key cards, trump Q <strong>present</strong></td></tr>
+      <tr><td>5NT</td><td>King ask (use after a non-passing response)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Final notes & editorial housekeeping</h2>
+  <p>
+    • I kept your exact response mapping (5♦ = 3/0, 5♣ = 1/4) — that’s the most important single decision to record in your partnership notes. <br>
+    • Two short things that could use a partnership footnote: exactly when the “next lowest bid” is used to ask about the trump queen (agree a simple formula: cheapest non-forcing step); and how you treat 5NT (king ask) after each of the 5-level replies. Clear agreements = fewer arguments. <br>
+    • Tone: this blog post aims to be useful at the table and entertaining on the page — a little smugness about slam bidding is allowed; don’t go full poetry.
+  </p>
+
+  <div class="footer">
+    If you want, I can:
+    <ul>
+      <li>Convert this into a single-page printable cheat sheet (PDF)</li>
+      <li>Produce a version that compares this Kantar variant to the <em>standard</em> RKCB step responses so readers can see the differences</li>
+      <li>Polish the tone (more academic, more jokey, or more textbook) depending on your blog’s voice</li>
+    </ul>
+    Tell me which and I’ll do it — or simply copy-paste this HTML into your blog editor and call it a day. 🎯
+  </div>
+</body>
+</html>
