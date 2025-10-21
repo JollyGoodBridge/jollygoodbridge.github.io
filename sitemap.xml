@@ -49,4 +49,9 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://jollygoodbridge.github.io/Posts/RKCB.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
