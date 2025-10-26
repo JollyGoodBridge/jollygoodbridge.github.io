@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Double Squeeze (5-card ending) — Reach x−1 and Make 'Em Talk</title>
+<style>
+  :root{
+    --bg:#fbfbfb;
+    --card:#fff;
+    --muted:#606060;
+    --accent:#1f1f1f;
+    --border:#e6e6e6;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  body{background:var(--bg);margin:0;padding:28px;color:var(--accent);line-height:1.48}
+  .wrap{max-width:920px;margin:0 auto;background:linear-gradient(#ffffff,#fcfcfc);padding:26px;border-radius:12px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(20,20,20,0.04)}
+  h1{margin:0 0 6px;font-size:1.6rem}
+  p.lead{margin:0 0 16px;color:var(--muted)}
+  .meta{font-size:0.9rem;color:var(--muted);margin-bottom:14px}
+  .diagram{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .table{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px}
+  .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .pos{width:48%;display:flex;flex-direction:column;gap:8px}
+  .pos h3{margin:0;font-size:0.95rem}
+  .hand{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:6px}
+  .card{border:1px solid var(--border);padding:8px;border-radius:6px;background:linear-gradient(#fff,#fffaf7);text-align:center;font-weight:600}
+  .label{font-size:0.85rem;color:var(--muted);margin-top:8px}
+  .explain{margin-top:16px;padding:12px;background:#fffaf4;border-left:4px solid #ffd16b;border-radius:8px;color:var(--accent)}
+  ol,ul{margin-left:18px}
+  .steps{margin-top:14px}
+  .tips{margin-top:12px}
+  .btn{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:8px;background:#f4f6f8;border:1px solid var(--border);cursor:pointer}
+  pre{background:#f7f7f7;border:1px dashed var(--border);padding:12px;border-radius:8px;overflow:auto}
+  footer{margin-top:18px;color:var(--muted);font-size:0.9rem}
+  /* responsive */
+  @media (max-width:760px){
+    .diagram{grid-template-columns:1fr}
+    .hand{grid-template-columns:repeat(3,1fr)}
+  }
+  /* suit small labels */
+  .suit{display:block;font-size:0.82rem;color:var(--muted);font-weight:500}
+  .note{font-size:0.95rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<article class="wrap" aria-labelledby="title">
+  <h1 id="title">The Double Squeeze — 5-card ending, and why <em>rectifying the count</em> matters</h1>
+  <p class="lead">A double squeeze is one of those theatrical plays in bridge where both defenders feel the pinch at once. To pull it off you must be in the <strong>x−1</strong> state — and this example shows exactly how to get and use that state in a five-card ending.</p>
+  <div class="meta">Situation: notrump contract, <strong>5 tricks remaining</strong> (x = 5). Declarer must win <strong>x−1 = 4</strong> of them before cashing the final squeeze card; the squeeze will create the 5th trick.</div>
+
+  <!-- Visual diagram: Traditional layout (N/E/S/W) -->
+  <section aria-label="Final five-card position" class="diagram">
+    <div class="table" aria-label="North and West hands">
+      <div class="row">
+        <div class="pos" aria-label="North (Dummy)">
+          <h3>North (Dummy)</h3>
+          <div class="hand" role="list">
+            <div class="card" role="listitem">K♠ <span class="suit">(Spade menace)</span></div>
+            <div class="card" role="listitem">K♥ <span class="suit">(Heart menace)</span></div>
+            <div class="card" role="listitem">K♦ <span class="suit">(Shared menace)</span></div>
+            <div class="card" role="listitem">5♣ <span class="suit">(small)</span></div>
+            <div class="card" role="listitem">3♣ <span class="suit">(entry-ish)</span></div>
+          </div>
+          <p class="label">North: three prime threats (Ks) — they will be promoted if defenders unguard the suits.</p>
+        </div>
+
+        <div class="pos" aria-label="West (Defender)">
+          <h3>West (Defender)</h3>
+          <div class="hand" role="list">
+            <div class="card" role="listitem">A♠ <span class="suit">(Spade stopper)</span></div>
+            <div class="card" role="listitem">9♥ <span class="suit">(idle)</span></div>
+            <div class="card" role="listitem">A♦ <span class="suit">(Diamond stopper)</span></div>
+            <div class="card" role="listitem">8♣ <span class="suit">(small)</span></div>
+            <div class="card" role="listitem">6♣ <span class="suit">(small)</span></div>
+          </div>
+          <p class="label">West is the primary guard for <strong>spades & diamonds</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="table" aria-label="South and East hands">
+      <div class="row">
+        <div class="pos" aria-label="South (Declarer)">
+          <h3>South (Declarer)</h3>
+          <div class="hand" role="list">
+            <div class="card" role="listitem">Q♠ <span class="suit">(secondary spade menace / entry)</span></div>
+            <div class="card" role="listitem">2♥ <span class="suit">(low heart)</span></div>
+            <div class="card" role="listitem">2♦ <span class="suit">(low diamond)</span></div>
+            <div class="card" role="listitem">A♣ <span class="suit">(Squeeze card / cashing winner)</span></div>
+            <div class="card" role="listitem">4♣ <span class="suit">(small, entry support)</span></div>
+          </div>
+          <p class="label">South holds the squeeze card (A♣) and an entry (Q♠ / clubs) to cash promoted threats.</p>
+        </div>
+
+        <div class="pos" aria-label="East (Defender)">
+          <h3>East (Defender)</h3>
+          <div class="hand" role="list">
+            <div class="card" role="listitem">7♠ <span class="suit">(idle)</span></div>
+            <div class="card" role="listitem">A♥ <span class="suit">(Heart stopper)</span></div>
+            <div class="card" role="listitem">Q♦ <span class="suit">(Diamond guard)</span></div>
+            <div class="card" role="listitem">9♣ <span class="suit">(small)</span></div>
+            <div class="card" role="listitem">2♣ <span class="suit">(small)</span></div>
+          </div>
+          <p class="label">East primarily guards <strong>hearts & diamonds</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="explain" aria-label="Short summary">
+    <strong>Short summary:</strong> North holds the three threats (K♠, K♥, K♦). West protects ♠ & ♦; East protects ♥ & ♦. South has the final winner to cash (A♣). If South can get to the point where they need to win only <em>4</em> of the remaining 5 tricks (i.e. they have already lost their allowable trick earlier — rectified the count), then cashing the A♣ squeezes both defenders: one must drop a stopper and a menace becomes good.
+  </div>
+
+  <!-- Step-by-step -->
+  <section class="steps">
+    <h2 style="margin-top:14px">Step-by-step — rectifying the count and executing the double squeeze</h2>
+
+    <ol>
+      <li><strong>Rectify the count (before the 5-card ending):</strong> earlier in the play, declarer deliberately lost the one trick they could afford. That leaves South requiring <strong>4 of the last 5</strong> tricks — the precise <em>x−1</em> state (x = 5, x−1 = 4).</li>
+
+      <li><strong>Visualise who's guarding what:</strong> West = spades & diamonds; East = hearts & diamonds. Diamonds are the <em>shared suit</em> (both defenders hold stakes in it) — that makes this a classic double squeeze pattern.</li>
+
+      <li><strong>Cash the squeeze card:</strong> South plays the A♣ (the established winner that forces discards). At this moment each defender must discard one card from their five-card holding.</li>
+
+      <li><strong>Defenders' dilemma (the squeeze):</strong>
+        <ul>
+          <li>If West discards the A♠ (or unguards spades), North's K♠ (or South's Q♠ after entry) becomes a winner.</li>
+          <li>If East discards the A♥ (or unguards hearts), North's K♥ becomes a winner.</li>
+          <li>If either defender tosses a diamond stopper, the shared diamond menace (K♦) or South's diamond becomes effective — the other defender then also runs short of safe discards.</li>
+        </ul>
+      </li>
+
+      <li><strong>Cash the promoted trick(s):</strong> after the A♣ forces the discards, declarer uses remaining entries (clubs or the Q♠) to reach the hand (North or South) and cash the newly established winners. Because we were in the x−1 state, you now take 4 safe tricks plus the promoted fifth trick the squeeze created — mission accomplished.</li>
+    </ol>
+  </section>
+
+  <section class="tips">
+    <h2>Practical teaching points & pitfalls</h2>
+    <ul>
+      <li><strong>Rectify the count early:</strong> you must lose your allowable loser(s) before the squeeze moment. If you haven't, defenders will have an idle card to dump and the squeeze fails.</li>
+      <li><strong>Find the target pair:</strong> double squeezes usually involve a shared suit plus one unique suit for each defender. Identify who protects which suit — that's your squeeze map.</li>
+      <li><strong>Entry management:</strong> have entries to the hand that holds the threats (here, North). The squeeze only promotes threats if you can reach them afterwards.</li>
+      <li><strong>Timing:</strong> cash the squeeze card when both defenders are down to the same small number of cards (here, five) and cannot afford to discard their guards.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top:14px">
+    <h2>Walkthrough recap — the arithmetic behind the magic</h2>
+    <p class="note">With 5 tricks remaining we wanted to be in the <strong>x−1</strong> state — that is, able to take 4 of the last 5 without help. The squeeze card (A♣) then forces both defenders to reveal which stopper they can’t live without; one of them will be forced to unguard a suit and a menace becomes good. It is <em>rectifying the count</em> (losing the right trick earlier) that removes defenders' idle discards and makes the squeeze possible.</p>
+  </section>
+
+  <section style="margin-top:16px">
+    <button class="btn" onclick="copyHTML()">Copy full HTML to clipboard</button>
+    <small style="margin-left:10px;color:var(--muted)">(Copies the visible article markup only.)</small>
+    <pre id="raw" style="display:none">&lt;!-- Paste this whole article block into your blog --&gt;</pre>
+  </section>
+
+  <footer>
+    <p>If you'd like, I can (1) provide a printable black-and-white diagram, (2) swap the example to a different suit layout, or (3) convert the layout to a step-by-step hand you can paste into a bridge-table program. Which would you like next?</p>
+  </footer>
+</article>
+
+<script>
+  // Copy the main article HTML to clipboard for quick paste
+  function copyHTML(){
+    const wrap = document.querySelector('.wrap');
+    // We'll copy the inner HTML of the article element (so user can paste into their editor)
+    const html = wrap.outerHTML;
+    // create a temporary textarea to hold the text
+    const ta = document.createElement('textarea');
+    ta.value = html;
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      alert('Article HTML copied to clipboard — paste into your blog editor.');
+    } catch(e) {
+      alert('Copy failed — you can select the article and copy manually.');
+    }
+    document.body.removeChild(ta);
+  }
+</script>
+</body>
+</html>
