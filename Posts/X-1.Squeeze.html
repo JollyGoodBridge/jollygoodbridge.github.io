@@ -180,34 +180,5 @@
     <p class="note">With 5 tricks remaining we wanted to be in the <strong>x−1</strong> state — that is, able to take 4 of the last 5 without help. The squeeze card (A♣) then forces both defenders to reveal which stopper they can’t live without; one of them will be forced to unguard a suit and a menace becomes good. It is <em>rectifying the count</em> (losing the right trick earlier) that removes defenders' idle discards and makes the squeeze possible.</p>
   </section>
 
-  <section style="margin-top:16px">
-    <button class="btn" onclick="copyHTML()">Copy full HTML to clipboard</button>
-    <small style="margin-left:10px;color:var(--muted)">(Copies the visible article markup only.)</small>
-    <pre id="raw" style="display:none">&lt;!-- Paste this whole article block into your blog --&gt;</pre>
-  </section>
 
-  <footer>
-    <p>If you'd like, I can (1) provide a printable black-and-white diagram, (2) swap the example to a different suit layout, or (3) convert the layout to a step-by-step hand you can paste into a bridge-table program. Which would you like next?</p>
-  </footer>
-</article>
-
-<script>
-  // Copy the main article HTML to clipboard for quick paste
-  function copyHTML(){
-    const wrap = document.querySelector('.wrap');
-    const html = wrap.outerHTML;
-    const ta = document.createElement('textarea');
-    ta.value = html;
-    document.body.appendChild(ta);
-    ta.select();
-    try {
-      document.execCommand('copy');
-      alert('Article HTML copied to clipboard — paste into your blog editor.');
-    } catch(e) {
-      alert('Copy failed — you can select the article and copy manually.');
-    }
-    document.body.removeChild(ta);
-  }
-</script>
-</body>
-</html>
+ 
