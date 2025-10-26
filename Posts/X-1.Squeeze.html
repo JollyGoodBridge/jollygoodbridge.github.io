@@ -18,13 +18,57 @@
   h1{margin:0 0 6px;font-size:1.6rem}
   p.lead{margin:0 0 16px;color:var(--muted)}
   .meta{font-size:0.9rem;color:var(--muted);margin-bottom:14px}
-  .diagram{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-  .table{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px}
-  .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-  .pos{width:48%;display:flex;flex-direction:column;gap:8px}
-  .pos h3{margin:0;font-size:0.95rem}
-  .hand{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:6px}
-  .card{border:1px solid var(--border);padding:8px;border-radius:6px;background:linear-gradient(#fff,#fffaf7);text-align:center;font-weight:600}
+
+  /* Bridge table layout */
+  .bridge-table {
+    display: grid;
+    grid-template-areas:
+      ". north ."
+      "west . east"
+      ". south .";
+    gap: 24px 40px;
+    justify-items: center;
+    align-items: center;
+    margin: 24px 0;
+  }
+
+  .seat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    width: 240px;
+  }
+
+  .seat h3 {
+    text-align: center;
+    margin: 0 0 6px;
+    font-size: 1rem;
+  }
+
+  #north { grid-area: north; }
+  #south { grid-area: south; }
+  #east  { grid-area: east; }
+  #west  { grid-area: west; }
+
+  .hand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .card {
+    min-width: 36px;
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid var(--border);
+    background: linear-gradient(#fff, #fffaf7);
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
   .label{font-size:0.85rem;color:var(--muted);margin-top:8px}
   .explain{margin-top:16px;padding:12px;background:#fffaf4;border-left:4px solid #ffd16b;border-radius:8px;color:var(--accent)}
   ol,ul{margin-left:18px}
@@ -33,14 +77,6 @@
   .btn{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:8px;background:#f4f6f8;border:1px solid var(--border);cursor:pointer}
   pre{background:#f7f7f7;border:1px dashed var(--border);padding:12px;border-radius:8px;overflow:auto}
   footer{margin-top:18px;color:var(--muted);font-size:0.9rem}
-  /* responsive */
-  @media (max-width:760px){
-    .diagram{grid-template-columns:1fr}
-    .hand{grid-template-columns:repeat(3,1fr)}
-  }
-  /* suit small labels */
-  .suit{display:block;font-size:0.82rem;color:var(--muted);font-weight:500}
-  .note{font-size:0.95rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -49,63 +85,57 @@
   <p class="lead">A double squeeze is one of those theatrical plays in bridge where both defenders feel the pinch at once. To pull it off you must be in the <strong>x−1</strong> state — and this example shows exactly how to get and use that state in a five-card ending.</p>
   <div class="meta">Situation: notrump contract, <strong>5 tricks remaining</strong> (x = 5). Declarer must win <strong>x−1 = 4</strong> of them before cashing the final squeeze card; the squeeze will create the 5th trick.</div>
 
-  <!-- Visual diagram: Traditional layout (N/E/S/W) -->
-  <section aria-label="Final five-card position" class="diagram">
-    <div class="table" aria-label="North and West hands">
-      <div class="row">
-        <div class="pos" aria-label="North (Dummy)">
-          <h3>North (Dummy)</h3>
-          <div class="hand" role="list">
-            <div class="card" role="listitem">K♠ <span class="suit">(Spade menace)</span></div>
-            <div class="card" role="listitem">K♥ <span class="suit">(Heart menace)</span></div>
-            <div class="card" role="listitem">K♦ <span class="suit">(Shared menace)</span></div>
-            <div class="card" role="listitem">5♣ <span class="suit">(small)</span></div>
-            <div class="card" role="listitem">3♣ <span class="suit">(entry-ish)</span></div>
-          </div>
-          <p class="label">North: three prime threats (Ks) — they will be promoted if defenders unguard the suits.</p>
-        </div>
-
-        <div class="pos" aria-label="West (Defender)">
-          <h3>West (Defender)</h3>
-          <div class="hand" role="list">
-            <div class="card" role="listitem">A♠ <span class="suit">(Spade stopper)</span></div>
-            <div class="card" role="listitem">9♥ <span class="suit">(idle)</span></div>
-            <div class="card" role="listitem">A♦ <span class="suit">(Diamond stopper)</span></div>
-            <div class="card" role="listitem">8♣ <span class="suit">(small)</span></div>
-            <div class="card" role="listitem">6♣ <span class="suit">(small)</span></div>
-          </div>
-          <p class="label">West is the primary guard for <strong>spades & diamonds</strong>.</p>
-        </div>
+  <!-- ✅ Visual diagram: Correct bridge-table layout -->
+  <section aria-label="Final five-card position" class="bridge-table">
+    
+    <div class="seat" id="north" aria-label="North (Dummy)">
+      <h3>North (Dummy)</h3>
+      <div class="hand">
+        <div class="card">K♠</div>
+        <div class="card">K♥</div>
+        <div class="card">K♦</div>
+        <div class="card">5♣</div>
+        <div class="card">3♣</div>
       </div>
+      <p class="label">North: three prime threats (Ks) — they will be promoted if defenders unguard the suits.</p>
     </div>
 
-    <div class="table" aria-label="South and East hands">
-      <div class="row">
-        <div class="pos" aria-label="South (Declarer)">
-          <h3>South (Declarer)</h3>
-          <div class="hand" role="list">
-            <div class="card" role="listitem">Q♠ <span class="suit">(secondary spade menace / entry)</span></div>
-            <div class="card" role="listitem">2♥ <span class="suit">(low heart)</span></div>
-            <div class="card" role="listitem">2♦ <span class="suit">(low diamond)</span></div>
-            <div class="card" role="listitem">A♣ <span class="suit">(Squeeze card / cashing winner)</span></div>
-            <div class="card" role="listitem">4♣ <span class="suit">(small, entry support)</span></div>
-          </div>
-          <p class="label">South holds the squeeze card (A♣) and an entry (Q♠ / clubs) to cash promoted threats.</p>
-        </div>
-
-        <div class="pos" aria-label="East (Defender)">
-          <h3>East (Defender)</h3>
-          <div class="hand" role="list">
-            <div class="card" role="listitem">7♠ <span class="suit">(idle)</span></div>
-            <div class="card" role="listitem">A♥ <span class="suit">(Heart stopper)</span></div>
-            <div class="card" role="listitem">Q♦ <span class="suit">(Diamond guard)</span></div>
-            <div class="card" role="listitem">9♣ <span class="suit">(small)</span></div>
-            <div class="card" role="listitem">2♣ <span class="suit">(small)</span></div>
-          </div>
-          <p class="label">East primarily guards <strong>hearts & diamonds</strong>.</p>
-        </div>
+    <div class="seat" id="west" aria-label="West (Defender)">
+      <h3>West (Defender)</h3>
+      <div class="hand">
+        <div class="card">A♠</div>
+        <div class="card">9♥</div>
+        <div class="card">A♦</div>
+        <div class="card">8♣</div>
+        <div class="card">6♣</div>
       </div>
+      <p class="label">West is the primary guard for <strong>spades & diamonds</strong>.</p>
     </div>
+
+    <div class="seat" id="east" aria-label="East (Defender)">
+      <h3>East (Defender)</h3>
+      <div class="hand">
+        <div class="card">7♠</div>
+        <div class="card">A♥</div>
+        <div class="card">Q♦</div>
+        <div class="card">9♣</div>
+        <div class="card">2♣</div>
+      </div>
+      <p class="label">East primarily guards <strong>hearts & diamonds</strong>.</p>
+    </div>
+
+    <div class="seat" id="south" aria-label="South (Declarer)">
+      <h3>South (Declarer)</h3>
+      <div class="hand">
+        <div class="card">Q♠</div>
+        <div class="card">2♥</div>
+        <div class="card">2♦</div>
+        <div class="card">A♣</div>
+        <div class="card">4♣</div>
+      </div>
+      <p class="label">South holds the squeeze card (A♣) and an entry (Q♠ / clubs) to cash promoted threats.</p>
+    </div>
+
   </section>
 
   <div class="explain" aria-label="Short summary">
@@ -165,9 +195,7 @@
   // Copy the main article HTML to clipboard for quick paste
   function copyHTML(){
     const wrap = document.querySelector('.wrap');
-    // We'll copy the inner HTML of the article element (so user can paste into their editor)
     const html = wrap.outerHTML;
-    // create a temporary textarea to hold the text
     const ta = document.createElement('textarea');
     ta.value = html;
     document.body.appendChild(ta);
