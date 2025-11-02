@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>How a Multinational Uses Stablecoins in an Unstable Currency — The GlobalGoods Story</title>
   <style>
-    body{font-family: Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.55;color:#0f172a;margin:0;padding:24px;background:#f8fafc}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.55;color:#0f172a;margin:0;padding:24px;background:#f8fafc}
     .container{max-width:900px;margin:18px auto;background:#fff;border-radius:12px;box-shadow:0 6px 30px rgba(12,18,32,0.08);padding:28px}
-    h1{font-size:1.6rem;margin:0 0 8px}
-    h2{font-size:1.05rem;margin:18px 0 8px;color:#0b63ff}
+    h1{font-size:1.7rem;margin:0 0 8px}
+    h2{font-size:1.1rem;margin:22px 0 8px;color:#0b63ff}
     p{margin:10px 0}
     .lede{color:#374151}
     .panel{background:#fbfdff;border:1px solid #eef6ff;padding:14px;border-radius:10px;margin:14px 0}
@@ -25,22 +25,22 @@
     table{width:100%;border-collapse:collapse;margin-top:12px}
     td,th{padding:8px;border:1px solid #eef2f7;text-align:left}
     .foot{font-size:0.88rem;color:#6b7280;margin-top:18px;border-top:1px dashed #e6eefc;padding-top:12px}
-    /* responsive */
     @media (max-width:640px){.flow{flex-direction:column}.arrow{display:none}}
-    /* svg styling fallback */
     .svg-wrap{width:100%;display:flex;justify-content:center;margin:8px 0 18px}
     .pros-cons{display:flex;gap:12px;flex-wrap:wrap}
     .pros-cons .box{flex:1 1 220px;background:#fff;border-radius:8px;padding:12px;border:1px solid #eef2f7}
+    img.header{width:100%;border-radius:10px;margin-bottom:16px}
   </style>
 </head>
 <body>
   <div class="container">
+    <img src="/assets/images/globalgoods-header.png" alt="GlobalGoods Stablecoin Payment Flow" class="header"/>
+
     <h1>How GlobalGoods Inc. Uses Stablecoins to Move Dollars Faster (and Why it Matters)</h1>
-    <p class="lede">A short, practical story: a large multinational dealing in countries with unstable local currencies uses stablecoins to protect revenue and speed up payments. It's not a magic trick — it’s a set of tradeoffs. Here’s how it works, in plain language.</p>
+    <p class="lede">A short, practical story: a large multinational dealing in countries with unstable local currencies uses stablecoins to protect revenue and speed up payments. It’s not a magic trick — it’s a set of tradeoffs. Here’s how it works, in plain language.</p>
 
     <h2>The setting: Republica del Peso</h2>
     <p>GlobalGoods Inc. sells toothpaste, engine oil, and farm equipment in a country we’ll call <strong>Republica del Peso</strong>. The local currency (the peso) frequently loses value, banks are slow, and sometimes the government limits how much foreign currency companies can take out of the country.</p>
-
     <div class="panel">
       <div class="quote">
         “By the time local pesos travel through the banking system and convert to dollars, a large chunk of value is often gone. We needed a faster, predictable way to get paid in dollars.” — GlobalGoods Treasury
@@ -48,59 +48,47 @@
     </div>
 
     <h2>How the payment flow actually works</h2>
+    <p>Let’s look at the difference between the <strong>traditional flow</strong> and the <strong>stablecoin-enabled flow</strong>. In both cases, the goal is simple: turn local sales in pesos into usable dollars for GlobalGoods headquarters — but the route and timing are dramatically different.</p>
 
-    <div class="svg-wrap" aria-hidden="true">
-      <!-- Simple SVG flow (visual) -->
-      <svg width="820" height="170" viewBox="0 0 820 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Payment flow diagram">
-        <defs>
-          <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#e6f0ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
-        </defs>
-        <!-- Nodes -->
-        <rect x="10" y="20" rx="10" ry="10" width="150" height="110" fill="url(#g)" stroke="#dbeafe"/>
-        <text x="85" y="45" font-size="13" text-anchor="middle" fill="#0b1220" font-weight="700">Distributor</text>
-        <text x="85" y="65" font-size="12" text-anchor="middle" fill="#374151">(pesos collected)</text>
-
-        <rect x="200" y="20" rx="10" ry="10" width="150" height="110" fill="url(#g)" stroke="#dbeafe"/>
-        <text x="275" y="45" font-size="13" text-anchor="middle" fill="#0b1220" font-weight="700">Local Crypto Broker</text>
-        <text x="275" y="65" font-size="12" text-anchor="middle" fill="#374151">(pesos → stablecoins)</text>
-
-        <rect x="390" y="20" rx="10" ry="10" width="150" height="110" fill="url(#g)" stroke="#dbeafe"/>
-        <text x="465" y="45" font-size="13" text-anchor="middle" fill="#0b1220" font-weight="700">Stablecoin</text>
-        <text x="465" y="65" font-size="12" text-anchor="middle" fill="#374151">(USDC / USDT)</text>
-
-        <rect x="580" y="20" rx="10" ry="10" width="230" height="110" fill="url(#g)" stroke="#dbeafe"/>
-        <text x="695" y="45" font-size="13" text-anchor="middle" fill="#0b1220" font-weight="700">GlobalGoods Wallet</text>
-        <text x="695" y="65" font-size="12" text-anchor="middle" fill="#374151">(digital dollars arrive in minutes)</text>
-
-        <!-- Arrows -->
-        <defs>
-          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#0b63ff"/>
-          </marker>
-        </defs>
-        <line x1="160" y1="75" x2="200" y2="75" stroke="#0b63ff" stroke-width="2" marker-end="url(#arrowhead)"/>
-        <line x1="350" y1="75" x2="390" y2="75" stroke="#0b63ff" stroke-width="2" marker-end="url(#arrowhead)"/>
-        <line x1="540" y1="75" x2="580" y2="75" stroke="#0b63ff" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-        <!-- Small label under stablecoin -->
-        <text x="465" y="100" font-size="11" text-anchor="middle" fill="#475569">Backed by cash & short Treasuries</text>
-      </svg>
-    </div>
-
-    <div class="flow" aria-hidden="false">
+    <h3>1. The traditional (bank-based) route</h3>
+    <div class="flow">
       <div class="node">
         <div class="title">Distributor (Local)</div>
-        <div class="small">Pays in pesos → sells to broker</div>
+        <div class="small">Pays GlobalGoods in pesos via local bank</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node">
+        <div class="title">Local Bank</div>
+        <div class="small">Holds pesos, applies FX spread</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node">
+        <div class="title">Correspondent Banks</div>
+        <div class="small">Convert pesos → USD over several days</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node">
+        <div class="title">GlobalGoods Treasury</div>
+        <div class="small">Receives USD (days later, minus fees)</div>
+      </div>
+    </div>
+    <p class="small">In this setup, delays of 5–10 business days are common. Meanwhile, inflation eats into the peso’s value, and the company’s margins quietly shrink.</p>
+
+    <h3>2. The stablecoin-enabled route</h3>
+    <div class="flow">
+      <div class="node">
+        <div class="title">Distributor (Local)</div>
+        <div class="small">Pays in pesos → sells to crypto broker</div>
       </div>
       <div class="arrow">→</div>
       <div class="node">
         <div class="title">Local Crypto Broker</div>
-        <div class="small">Converts pesos → stablecoins</div>
+        <div class="small">Converts pesos → stablecoins (USDC/USDT)</div>
       </div>
       <div class="arrow">→</div>
       <div class="node">
-        <div class="title">Stablecoin</div>
-        <div class="small">Digital $1 = $1 (peg)</div>
+        <div class="title">Stablecoin Network</div>
+        <div class="small">Transfers digital $1 instantly</div>
       </div>
       <div class="arrow">→</div>
       <div class="node">
@@ -108,6 +96,16 @@
         <div class="small">Receives digital dollars in minutes</div>
       </div>
     </div>
+    <p class="small">The result: a transaction that used to take a week now settles in under an hour — without losing value to local currency devaluation.</p>
+
+    <h2>How stablecoins backed by Treasuries benefit the U.S. government</h2>
+    <p>Most leading stablecoins, like <strong>USDC</strong> and <strong>USDT</strong>, are backed by short-term U.S. Treasury bills and cash equivalents. When companies like GlobalGoods hold or use these coins, they indirectly create constant demand for U.S. government debt.</p>
+    <ul class="small">
+      <li>Each new stablecoin issued requires the issuer to buy U.S. Treasuries to back it.</li>
+      <li>This provides the U.S. government with a steady, non-domestic buyer base — corporations, investors, and individuals worldwide who use digital dollars.</li>
+      <li>In effect, the global appetite for stablecoins acts as a continuous source of low-cost funding for the U.S. Treasury.</li>
+    </ul>
+    <p class="small"><strong>In short:</strong> every time GlobalGoods uses a stablecoin to speed up payments, it’s helping sustain global demand for U.S. debt — quietly reinforcing the dollar’s dominance in digital form.</p>
 
     <h2>What GlobalGoods actually does with those stablecoins</h2>
     <div class="pros-cons">
@@ -155,29 +153,28 @@
 
     <h2>The Risks Beneath the Calm Surface</h2>
     <p class="small">Yes — this setup is powerful, but not risk-free. Below are the main failure scenarios GlobalGoods’ treasury team watches closely.</p>
-
     <ul class="risk-list small">
-      <li><strong>Run on the stablecoin issuer:</strong> If depositors rush to redeem stablecoins at once (because of a scandal, hack, or rumors), the issuer may not be able to convert reserves to cash quickly. That can break the $1 peg and temporarily shave value off each coin.</li>
-      <li><strong>Liquidity mismatch:</strong> If the issuer holds assets that can’t be sold fast (illiquid securities, or reserves tied up in a failing bank), redemptions can be delayed or haircuts may be applied.</li>
-      <li><strong>Regulatory shock:</strong> Sudden rules (freezes, bans, forced wind-downs) can prevent access to funds or make some markets unusable. This is why major corporates prefer fully audited, regulated stablecoins or institutional on-ramps.</li>
-      <li><strong>Dollar depreciation / inflation:</strong> Stablecoins preserve nominal dollars, not purchasing power. If the U.S. dollar loses global value over years, the company’s dollar receipts still buy less.</li>
-      <li><strong>Third-party platform risk:</strong> Using local crypto brokers or exchanges carries counterparty risk — KYC/AML issues, exchange hacks, or local restrictions can interrupt flows.</li>
+      <li><strong>Run on the stablecoin issuer:</strong> If depositors rush to redeem stablecoins at once, the issuer may not be able to convert reserves to cash quickly. That can break the $1 peg temporarily.</li>
+      <li><strong>Liquidity mismatch:</strong> If the issuer holds assets that can’t be sold fast (illiquid securities or reserves tied up in a failing bank), redemptions may be delayed or discounted.</li>
+      <li><strong>Regulatory shock:</strong> Sudden rules (freezes, bans, forced wind-downs) can prevent access to funds or make some markets unusable.</li>
+      <li><strong>Dollar depreciation:</strong> Stablecoins preserve nominal dollars, not purchasing power. If the U.S. dollar weakens globally, receipts still buy less.</li>
+      <li><strong>Third-party risk:</strong> Using local crypto brokers or exchanges carries counterparty and compliance risks.</li>
     </ul>
 
     <div class="panel">
       <strong>How GlobalGoods manages these risks</strong>
       <ul class="small">
-        <li>Use multiple regulated stablecoin issuers (diversification).</li>
-        <li>Limit the share of large balances held as stablecoins; convert to bank dollars on a schedule.</li>
-        <li>Use custodial, institution-grade wallets and partners with insurance and audits.</li>
-        <li>Have contingency plans: on-chain and off-chain exit routes, and FX hedges.</li>
+        <li>Use multiple regulated stablecoin issuers (diversification)</li>
+        <li>Limit balances held as stablecoins; convert to bank dollars on schedule</li>
+        <li>Use insured, institutional-grade custodians and audited issuers</li>
+        <li>Maintain on-chain and off-chain contingency routes</li>
       </ul>
     </div>
 
     <h2>Final thought</h2>
     <p>For GlobalGoods, stablecoins are <em>not</em> an investment — they are a treasury tool. They trade off yield for speed, certainty, and fungibility. When used carefully and with strong controls, stablecoins can turn slow, risky cross-border receipts into reliable, moveable working capital — and for a large multinational operating in volatile markets, that’s often worth far more than the interest the company might have otherwise earned sitting in local banks.</p>
 
-    <p class="foot">If you’d like, I can turn this into a one-page infographic (PNG/SVG) or an embeddable HTML block with animations for your site.</p>
+    <p class="foot">Header image placeholder: <code>/assets/images/globalgoods-header.png</code><br>Optional: this article can be turned into an infographic or animated flow for embedding.</p>
   </div>
 </body>
 </html>
