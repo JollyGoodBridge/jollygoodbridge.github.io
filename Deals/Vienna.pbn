@@ -1,15 +1,10 @@
-[Event "?"]
-[Site "BBO Practice"]
+% PBN 2.0
+[Event "Vienna"]
+[Site "JollyGoodBridge"]
 [Date "2026.06.28"]
+[NumberOfBoards "1"]
+
 [Board "1"]
-[West "?"]
-[North "?"]
-[East "?"]
-[South "?"]
 [Dealer "S"]
-[Vulnerable "None"]
+[Vulnerable "none"]
 [Deal "S:A95.KQT.AKQ6.JT2 KJ843.AJ943.85.6 Q7.62.742.AKQ984 T62.875.JT93.753"]
-[Auction "S"]
-1D 2D 2H P
-4NT P 5S P
-6C P P P
