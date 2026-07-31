@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bridge Hand Downloads | Jolly Good Bridge</title>
+
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c5530;
+            text-align: center;
+            font-size: 2.5em;
+            margin: 0 0 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #4caf50;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #e8f5e8, #d4edda);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 6px solid #28a745;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            color: #2c5530;
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 6px solid #007bff;
+        }
+
+        .section h2 {
+            color: #2c5530;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        .competitive-section {
+            border-left-color: #dc3545;
+        }
+
+        .file-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .file-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #dee2e6;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .file-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .file-name {
+            font-family: "Courier New", monospace;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .file-description {
+            color: #495057;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .download-btn::before {
+            content: "⬇️";
+            margin-right: 8px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .competitive-section .download-btn {
+            background: linear-gradient(135deg, #dc3545, #e83e8c);
+        }
+
+        .file-stats {
+            margin-top: 15px;
+            padding: 12px;
+            background: #e9ecef;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .what-is-pbn {
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 6px solid #ffc107;
+            margin-top: 40px;
+        }
+
+        .what-is-pbn h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+
+        .usage-instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #2196f3;
+        }
+
+        .usage-instructions h4 {
+            color: #0d47a1;
+            margin-top: 0;
+        }
+
+        .usage-instructions li {
+            margin-bottom: 8px;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .home-link {
+            margin-top: 30px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 22px 16px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
+            .download-btn {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async
+        src="https://www.googletagmanager.com/gtag/js?id=G-47XQPR5LL4">
+    </script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+        gtag("config", "G-47XQPR5LL4");
+    </script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>🃏 Bridge Hand Downloads</h1>
+
+        <div class="subtitle">
+            PBN and LIN files for practice, teaching and analysis
+        </div>
+
+        <section class="intro">
+            <h2>Welcome to the Bridge Hands Download Centre</h2>
+
+            <p>
+                This page contains bridge hand collections for practising
+                conventions, bidding, declarer play and competitive bridge.
+            </p>
+
+            <p>
+                The Jolly Good Bridge website was created to help me learn both
+                bridge and website coding. Files may be opened or downloaded
+                using the buttons below.
+            </p>
+
+            <p>
+                For questions or suggestions, email
+                <a href="mailto:jollygoodbridge@gmail.com">
+                    jollygoodbridge@gmail.com
+                </a>.
+            </p>
+        </section>
+
+
+        <!-- Practice files -->
+
+        <section class="section">
+
+            <h2>📚 Convention and Play Practice</h2>
+
+            <p>
+                Practice files designed to demonstrate bidding conventions,
+                declarer-play techniques and common bridge situations.
+            </p>
+
+            <div class="file-grid">
+
+
+                <!-- Splinters and Forcing 2NT -->
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        Splinter_and_Forcing_2NT_Examples_Practice.pbn
+                    </div>
+
+                    <div class="file-description">
+                        Hands demonstrating splinter bids and forcing 2NT
+                        responses, including slam evaluation and the difference
+                        between useful and wasted values.
+                    </div>
+
+                    <a
+                        href="/Deals/Splinter_and_Forcing_2NT_Examples_Practice.pbn"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open Splinter Examples
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Splinter bids, forcing 2NT and slam evaluation
+                        <br>
+
+                        <strong>Skill level:</strong>
+                        Intermediate to advanced
+                        <br>
+
+                        <strong>Format:</strong>
+                        PBN
+                    </div>
+
+                </div>
+
+
+                <!-- Benjamin Twos -->
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        Benji.10.deals.pbn
+                    </div>
+
+                    <div class="file-description">
+                        Ten practice hands for the Benjamin 2♣ and 2♦
+                        convention, including strong hands, weak twos and
+                        responding sequences.
+                    </div>
+
+                    <a
+                        href="/Deals/Benji.10.deals.pbn"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open Benjamin Twos
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Benjamin 2♣/2♦, strong hands and weak twos
+                        <br>
+
+                        <strong>Skill level:</strong>
+                        Intermediate
+                        <br>
+
+                        <strong>Hands:</strong>
+                        10
+                        <br>
+
+                        <strong>Format:</strong>
+                        PBN
+                    </div>
+
+                </div>
+
+
+                <!-- Endplay -->
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        endplay_4hearts.pbn
+                    </div>
+
+                    <div class="file-description">
+                        A practice hand illustrating endplay technique in a
+                        four-hearts contract, including timing, entries and
+                        suit management.
+                    </div>
+
+                    <a
+                        href="/Deals/endplay_4hearts.pbn"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open Endplay Hand
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Endplay technique and declarer play
+                        <br>
+
+                        <strong>Skill level:</strong>
+                        Intermediate to advanced
+                        <br>
+
+                        <strong>Format:</strong>
+                        PBN
+                    </div>
+
+                </div>
+
+
+                <!-- Vienna -->
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        Vienna.pbn
+                    </div>
+
+                    <div class="file-description">
+                        A test practice file for the Vienna bidding system.
+                        There is currently no accompanying blog post.
+                    </div>
+
+                    <a
+                        href="/Deals/Vienna.pbn"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open Vienna Practice
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Vienna bidding system
+                        <br>
+
+                        <strong>Skill level:</strong>
+                        Intermediate
+                        <br>
+
+                        <strong>Hands:</strong>
+                        1
+                        <br>
+
+                        <strong>Format:</strong>
+                        PBN
+                    </div>
+
+                </div>
+
+
+                <!-- LIN test file -->
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        bridge_hands_12_to_16_BBO_archive.lin
+                    </div>
+
+                    <div class="file-description">
+                        A test collection of bridge hands numbered 12 to 16,
+                        prepared in BBO LIN format for use with compatible
+                        bridge-playing or teaching software.
+                    </div>
+
+                    <a
+                        href="/Deals/bridge_hands_12_to_16_BBO_archive.lin"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open BBO LIN Hands
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Bridge hands 12 to 16
+                        <br>
+
+                        <strong>Hands:</strong>
+                        5
+                        <br>
+
+                        <strong>Format:</strong>
+                        BBO LIN version 2
+                    </div>
+
+                </div>
+
+
+                <!-- Test hand -->
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        test-hand.pbn
+                    </div>
+
+                    <div class="file-description">
+                        A simple test hand for checking PBN imports and software
+                        compatibility.
+                    </div>
+
+                    <a
+                        href="/Deals/test-hand.pbn"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open Test Hand
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Test hand
+                        <br>
+
+                        <strong>Format:</strong>
+                        PBN
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Competition files -->
+
+        <section class="section competitive-section">
+
+            <h2>🏆 Real Competition Hands</h2>
+
+            <p>
+                Hands from actual competitive play, allowing you to compare
+                bidding and play decisions with real results.
+            </p>
+
+            <div class="file-grid">
+
+                <div class="file-item">
+
+                    <div class="file-name">
+                        One.Full.27.boards.with.double.comparative.result.pbn
+                    </div>
+
+                    <div class="file-description">
+                        A complete 27-board session from competitive play,
+                        including double-dummy analysis and comparative results.
+                    </div>
+
+                    <a
+                        href="/Deals/One.Full.27.boards.with.double.comparative.result.pbn"
+                        class="download-btn"
+                        target="_blank"
+                        rel="noopener">
+                        Open Competition Set
+                    </a>
+
+                    <div class="file-stats">
+                        <strong>Content:</strong>
+                        Real competitive hands and results
+                        <br>
+
+                        <strong>Hands:</strong>
+                        27
+                        <br>
+
+                        <strong>Special features:</strong>
+                        Double-dummy analysis and comparative scoring
+                        <br>
+
+                        <strong>Format:</strong>
+                        PBN
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- File information -->
+
+        <section class="what-is-pbn">
+
+            <h3>About PBN and LIN Files</h3>
+
+            <p>
+                <strong>PBN — Portable Bridge Notation</strong> is a standard
+                format for storing bridge deals, auctions, play records and
+                results.
+            </p>
+
+            <p>
+                <strong>LIN</strong> is a format commonly associated with
+                Bridge Base Online. It can store bridge hands together with
+                bidding, play and presentation information.
+            </p>
+
+            <div class="usage-instructions">
+
+                <h4>Using the files</h4>
+
+                <ul>
+                    <li>
+                        Select the appropriate button to open the file.
+                    </li>
+
+                    <li>
+                        Save the file to your device when your browser or
+                        bridge software provides that option.
+                    </li>
+
+                    <li>
+                        In your bridge program, look for an option such as
+                        <strong>Import</strong>, <strong>Load</strong> or
+                        <strong>Open hand file</strong>.
+                    </li>
+
+                    <li>
+                        PBN and LIN support varies between different bridge
+                        programs.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <div class="contact">
+            Suggestions and questions:
+            <a href="mailto:jollygoodbridge@gmail.com">
+                jollygoodbridge@gmail.com
+            </a>
+        </div>
+
+        <p class="home-link">
+            <a href="/">← Back to Home</a>
+        </p>
+
+    </main>
+
+</body>
+</html>
