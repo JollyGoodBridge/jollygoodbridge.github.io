@@ -1,0 +1,100 @@
+% PBN 2.1
+% EXPORT
+
+[Event "Book Hands 12-16"]
+[Site ""]
+[Date ""]
+[Board "12"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:K.KQ1065.J1054.KJ5 1073.84.Q9.AQ10763 Q6.AJ72.K8732.94 AJ98542.93.A6.82"]
+[Declarer "W"]
+[Contract "4S"]
+[Auction "N"]
+1H Pass 3H 3S
+Pass 4S Pass Pass
+Pass
+*
+
+[Event "Book Hands 12-16"]
+[Site ""]
+[Date ""]
+[Board "13"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:6.QJ976.10.KJ10974 AK10982.AK543.A.A 543.8.KQJ9865.Q3 QJ7.102.7432.8652"]
+[Declarer "W"]
+[Contract "6S"]
+[Auction "S"]
+3D Pass Pass 4D
+Pass 4S Pass 6D
+Pass 6S Pass Pass
+Pass
+*
+
+[Event "Book Hands 12-16"]
+[Site ""]
+[Date ""]
+[Board "14"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:J8.A94.K9743.Q43 AK76.J8752.A82.K Q10942.Q103.65.765 53.K6.QJ10.AJ10982"]
+[Declarer "W"]
+[Contract "3NT"]
+[Auction "W"]
+1C Pass 1H Pass
+2C Pass 2S Pass
+2NT Pass 3NT Pass
+Pass Pass
+*
+
+[Event "Book Hands 12-16"]
+[Site ""]
+[Date ""]
+[Board "15"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:6.J843.9874.8753 843.752.QJ103.K106 J75.K109.K652.AJ4 AKQ1092.AQ6.A.Q92"]
+[Declarer "W"]
+[Contract "4S"]
+[Auction "W"]
+2C Pass 2D Pass
+2S Pass 3S Pass
+4S Pass Pass Pass
+*
+
+[Event "Book Hands 12-16"]
+[Site ""]
+[Date ""]
+[Board "16"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:KQJ95.K75.842.94 8643.1096.753.A83 1072.J832.1096.KJ10 A.AQ4.AKQJ.Q7652"]
+[Declarer "E"]
+[Contract "5C"]
+[Auction "S"]
+Pass 2C 2S Pass
+Pass X Pass 3C
+Pass 4C Pass 5C
+Pass Pass Pass
+*
