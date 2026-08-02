@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47XQPR5LL4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-47XQPR5LL4');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Digital Dollars vs Digital Gold: The Next Evolution of Stablecoins</title>
+  <meta name="description" content="How multinational companies can use stablecoins for international payments, why dollar-backed coins support demand for US Treasury bills, and how gold-backed tokens offer a different store-of-value proposition.">
+  <meta name="author" content="Michael David Lambert Jolly">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0b3b66">
+
+  <link rel="canonical" href="https://jollygoodbridge.github.io/Standalone/Stablecoins.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Digital Dollars vs Digital Gold">
+  <meta property="og:description" content="The next stablecoin contest may be between digital claims on US government debt and digital ownership of physical gold.">
+  <meta property="og:url" content="https://jollygoodbridge.github.io/Standalone/Stablecoins.html">
+  <meta property="og:site_name" content="Jolly Good Bridge">
+  <meta property="article:author" content="Michael David Lambert Jolly">
+  <meta property="article:published_time" content="2026-08-01">
+  <meta property="article:modified_time" content="2026-08-01">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Dollars vs Digital Gold">
+  <meta name="twitter:description" content="How stablecoins link global payments, US Treasury demand and tokenised gold.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Digital Dollars vs Digital Gold: The Next Evolution of Stablecoins",
+    "description": "How multinational companies can use stablecoins for international payments, why dollar-backed coins support demand for US Treasury bills, and how gold-backed tokens offer a different store-of-value proposition.",
+    "author": {
+      "@type": "Person",
+      "name": "Michael David Lambert Jolly"
+    },
+    "datePublished": "2026-08-01",
+    "dateModified": "2026-08-01",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jollygoodbridge.github.io/Standalone/Stablecoins.html"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Michael David Lambert Jolly"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0b3b66;
+      --blue: #1261a0;
+      --blue-light: #eaf4ff;
+      --gold: #a66c00;
+      --gold-light: #fff7df;
+      --ink: #172033;
+      --muted: #586579;
+      --line: #dce5ee;
+      --surface: #ffffff;
+      --background: #eef3f8;
+      --shadow: 0 14px 40px rgba(20, 39, 63, 0.10);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behaviour: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.68;
+    }
+
+    a {
+      color: var(--blue);
+      text-underline-offset: 3px;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    .page {
+      width: min(100% - 28px, 980px);
+      margin: 28px auto;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      padding: clamp(34px, 6vw, 72px);
+      color: #fff;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(255, 210, 92, 0.30), transparent 23%),
+        radial-gradient(circle at 15% 75%, rgba(76, 166, 255, 0.30), transparent 28%),
+        linear-gradient(135deg, #082c4d 0%, #0b4f84 56%, #172033 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #bfe0ff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.18;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.15rem, 5vw, 4.25rem);
+      letter-spacing: -0.045em;
+    }
+
+    .standfirst {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: #e5f1fb;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 24px;
+      color: #cfdeeb;
+      font-size: 0.9rem;
+    }
+
+    .hero-art {
+      width: 100%;
+      max-width: 320px;
+      margin-inline: auto;
+      filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.28));
+    }
+
+    .content {
+      padding: clamp(28px, 5vw, 64px);
+    }
+
+    .intro {
+      margin-top: 0;
+      font-size: 1.12rem;
+    }
+
+    h2 {
+      margin: 2.25em 0 0.65em;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 1.7em 0 0.55em;
+      color: #27364b;
+      font-size: 1.22rem;
+    }
+
+    p { margin: 0.9em 0; }
+
+    .callout {
+      margin: 26px 0;
+      padding: 20px 22px;
+      border: 1px solid #bddcf8;
+      border-left: 5px solid var(--blue);
+      border-radius: 12px;
+      background: var(--blue-light);
+    }
+
+    .callout.gold {
+      border-color: #ead39a;
+      border-left-color: var(--gold);
+      background: var(--gold-light);
+    }
+
+    .callout p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(7, auto);
+      align-items: stretch;
+      gap: 8px;
+      margin: 24px 0;
+    }
+
+    .flow-step {
+      display: grid;
+      place-items: center;
+      min-height: 104px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #f9fbfd;
+      text-align: center;
+    }
+
+    .flow-step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 0.96rem;
+    }
+
+    .flow-step span {
+      color: var(--muted);
+      font-size: 0.83rem;
+      line-height: 1.4;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      color: #7890a8;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 26px 0;
+    }
+
+    .card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfcfe;
+    }
+
+    .card.dollar { border-top: 5px solid var(--blue); }
+    .card.gold-card { border-top: 5px solid var(--gold); }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .card ul { margin-bottom: 0; }
+
+    ul {
+      padding-left: 1.3em;
+    }
+
+    li { margin: 0.42em 0; }
+
+    .table-wrap {
+      margin: 26px 0;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #fff;
+      background: var(--navy);
+      font-size: 0.94rem;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) { background: #f8fafc; }
+
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .risk {
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfcfe;
+    }
+
+    .risk strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    .risk span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .conclusion {
+      margin-top: 44px;
+      padding: clamp(24px, 4vw, 38px);
+      border-radius: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, #0b3b66, #16283f);
+    }
+
+    .conclusion h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .conclusion p:last-child { margin-bottom: 0; }
+
+    .sources {
+      margin-top: 46px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sources h2 { margin-top: 0; }
+
+    .sources ol {
+      padding-left: 1.35em;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .sources li { margin: 0.75em 0; }
+
+    footer {
+      padding: 24px clamp(28px, 5vw, 64px) 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: #f8fafc;
+      font-size: 0.88rem;
+    }
+
+    .disclaimer {
+      margin-top: 8px;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-art { max-width: 220px; }
+      .comparison, .risk-grid { grid-template-columns: 1fr; }
+
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .arrow {
+        min-height: 24px;
+        transform: rotate(90deg);
+      }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+
+<body>
+  <article class="page">
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Global finance · Stablecoins · Gold</p>
+          <h1>Digital Dollars vs Digital Gold</h1>
+          <p class="standfirst">
+            How multinational companies can use stablecoins to move money faster—and why
+            the next contest may be between digital claims on US government debt and
+            digital ownership of physical gold.
+          </p>
+          <div class="byline">
+            <span>By Michael David Lambert Jolly</span>
+            <span>Updated 1 August 2026</span>
+            <span>About 9 minutes</span>
+          </div>
+        </div>
+
+        <svg class="hero-art" viewBox="0 0 320 250" role="img"
+             aria-label="A digital dollar coin and a gold coin connected through a global network">
+          <defs>
+            <linearGradient id="coinBlue" x1="0" x2="1">
+              <stop offset="0%" stop-color="#d8efff"/>
+              <stop offset="100%" stop-color="#67b7f5"/>
+            </linearGradient>
+            <linearGradient id="coinGold" x1="0" x2="1">
+              <stop offset="0%" stop-color="#ffe7a0"/>
+              <stop offset="100%" stop-color="#d99918"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="160" cy="126" r="78" fill="none" stroke="#8fc9f5" stroke-width="2" opacity=".42"/>
+          <ellipse cx="160" cy="126" rx="126" ry="44" fill="none" stroke="#b8dfff" stroke-width="2" opacity=".45"/>
+          <ellipse cx="160" cy="126" rx="52" ry="116" fill="none" stroke="#b8dfff" stroke-width="2" opacity=".38"/>
+
+          <g fill="#fff">
+            <circle cx="61" cy="82" r="4"/>
+            <circle cx="95" cy="184" r="4"/>
+            <circle cx="164" cy="43" r="4"/>
+            <circle cx="246" cy="74" r="4"/>
+            <circle cx="264" cy="167" r="4"/>
+            <circle cx="183" cy="205" r="4"/>
+          </g>
+
+          <g stroke="#d7ebfb" stroke-width="1.5" opacity=".75">
+            <line x1="61" y1="82" x2="95" y2="184"/>
+            <line x1="61" y1="82" x2="164" y2="43"/>
+            <line x1="164" y1="43" x2="246" y2="74"/>
+            <line x1="246" y1="74" x2="264" y2="167"/>
+            <line x1="264" y1="167" x2="183" y2="205"/>
+            <line x1="183" y1="205" x2="95" y2="184"/>
+          </g>
+
+          <circle cx="104" cy="126" r="48" fill="url(#coinBlue)" stroke="#f4fbff" stroke-width="5"/>
+          <circle cx="216" cy="126" r="48" fill="url(#coinGold)" stroke="#fff4cb" stroke-width="5"/>
+          <text x="104" y="143" text-anchor="middle" font-size="51" font-weight="800" fill="#0b4f84">$</text>
+          <text x="216" y="141" text-anchor="middle" font-size="42" font-weight="800" fill="#704600">Au</text>
+
+          <path d="M148 109 C160 98, 166 98, 178 109" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M178 143 C166 154, 160 154, 148 143" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M173 104 l8 5 -8 5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M153 148 l-8 -5 8 -5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </header>
+
+    <main class="content">
+      <p class="intro">
+        Stablecoins began as a way for cryptocurrency traders to remain in digital markets
+        without holding volatile assets. They are now moving into payments, remittances and
+        corporate treasury operations. That shift raises a larger question: will the dominant
+        digital money be backed by government debt, physical gold—or both?
+      </p>
+
+      <h2>The setting: Republica del Peso</h2>
+
+      <p>
+        Imagine GlobalGoods Inc., a multinational manufacturer selling toothpaste, engine oil
+        and agricultural equipment in a country we will call <strong>Republica del Peso</strong>.
+        Its local currency is unstable, inflation is high and international bank transfers are
+        slow. Foreign-exchange rules may also restrict when and how local currency can be
+        converted or transferred abroad.
+      </p>
+
+      <p>
+        For GlobalGoods, each day between making a sale and obtaining usable hard currency
+        creates uncertainty. The company is not looking for a speculative investment. Its
+        treasury department wants to preserve the value of receipts, know where its cash is
+        and move money efficiently within the law.
+      </p>
+
+      <div class="callout">
+        <p><strong>The problem:</strong> by the time local pesos pass through the banking system
+        and become dollars, fees, exchange-rate movements and delays may have reduced their
+        value. A stablecoin can provide another settlement rail—but it does not remove the
+        company's legal, tax, sanctions or foreign-exchange obligations.</p>
+      </div>
+
+      <h2>The traditional banking route</h2>
+
+      <div class="flow" aria-label="Traditional international payment route">
+        <div class="flow-step">
+          <div><strong>Distributor</strong><span>Pays in local currency</span></div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="flow-step">
+          <div><strong>Local bank</strong><span>Processes payment and FX</span></div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="flow-step">
+          <div><strong>Correspondent banks</strong><span>Move and reconcile funds</span></div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="flow-step">
+          <div><strong>GlobalGoods</strong><span>Receives bank dollars</span></div>
+        </div>
+      </div>
+
+      <p>
+        The conventional route may involve several institutions, cut-off times and manual
+        compliance checks. In a difficult currency, the company also bears exchange-rate risk
+        while the payment is being processed. The result can be slower access to working
+        capital and less certainty over the final amount received.
+      </p>
+
+      <h2>The stablecoin-enabled route</h2>
+
+      <div class="flow" aria-label="Stablecoin-enabled international payment route">
+        <div class="flow-step">
+          <div><strong>Distributor</strong><span>Provides local currency</span></div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="flow-step">
+          <div><strong>Licensed provider</strong><span>Performs checks and conversion</span></div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="flow-step">
+          <div><strong>Blockchain network</strong><span>Transfers digital value</span></div>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="flow-step">
+          <div><strong>GlobalGoods</strong><span>Receives or redeems stablecoins</span></div>
+        </div>
+      </div>
+
+      <p>
+        Where local law permits it, an authorised provider can convert the distributor's
+        currency into a dollar-backed payment stablecoin. The tokens can then move across a
+        blockchain network without waiting for each correspondent bank to update its own
+        ledger.
+      </p>
+
+      <p>
+        GlobalGoods may redeem the tokens for bank deposits, use them to pay an approved
+        supplier, or retain a limited operational balance. Settlement can be considerably
+        faster, although the complete process still depends on local on-ramps, liquidity,
+        compliance reviews and access to the banking system at each end.
+      </p>
+
+      <h2>Why Washington now cares</h2>
+
+      <p>
+        The strategic significance of dollar stablecoins has become much clearer. Under the
+        United States' federal payment-stablecoin framework, permitted reserve assets include
+        cash, deposits, repurchase agreements and short-dated US government securities.
+        Circle says USDC is backed by highly liquid cash and cash-equivalent assets, with most
+        of its reserve held through a government money-market fund. Tether also reports large
+        reserve holdings and publishes quarterly reserve information.
+      </p>
+
+      <p>
+        This makes large stablecoin issuers meaningful buyers of short-term US government
+        debt. A growing stock of dollar-backed tokens can therefore increase direct demand
+        for Treasury bills and extend access to dollar-denominated value through internet-based
+        payment rails.
+      </p>
+
+      <div class="callout">
+        <p><strong>But the effect should not be overstated.</strong> Not every new stablecoin
+        dollar represents entirely new financing for the US government. Some users may simply
+        move money from bank deposits, Treasury funds or other dollar assets into a stablecoin.
+        The important development is the creation of a new, globally accessible channel through
+        which demand for dollars and short-term government securities can be expressed.</p>
+      </div>
+
+      <p>
+        In July 2025, the US Treasury explicitly described regulated stablecoins as a means of
+        reinforcing the dollar's reserve-currency role and increasing demand for Treasuries.
+        Stablecoin policy has therefore moved beyond cryptocurrency regulation: it has become
+        part of US monetary and financial strategy.
+      </p>
+
+      <h2>A different proposition: tokenised gold</h2>
+
+      <p>
+        A gold-backed token does not attempt to remain worth one dollar. Instead, each token
+        represents a defined quantity of physical gold. Paxos, for example, states that one
+        PAX Gold token represents one fine troy ounce of a London Good Delivery gold bar held
+        in professional vaults.
+      </p>
+
+      <p>
+        Calling these products “stablecoins” can be misleading. They are stable in relation
+        to a quantity of gold, not in relation to the dollar price of goods, wages or debts.
+        Their dollar value rises and falls with gold. A more precise description is
+        <strong>tokenised gold</strong> or a <strong>gold-backed digital asset</strong>.
+      </p>
+
+      <div class="comparison">
+        <section class="card dollar">
+          <h3>Digital dollars</h3>
+          <ul>
+            <li>Designed to maintain a one-dollar redemption value.</li>
+            <li>Suited to invoicing, payroll, trade and settlement.</li>
+            <li>Usually backed by liquid dollar assets, including Treasury bills.</li>
+            <li>Extend the reach of the US dollar and support demand for dollar reserves.</li>
+            <li>Preserve nominal dollars, not necessarily purchasing power.</li>
+          </ul>
+        </section>
+
+        <section class="card gold-card">
+          <h3>Digital gold</h3>
+          <ul>
+            <li>Represents ownership or a claim linked to physical bullion.</li>
+            <li>Suited more naturally to saving, reserves and portfolio diversification.</li>
+            <li>Does not maintain a fixed dollar value.</li>
+            <li>Reduces dependence on the credit of a sovereign borrower, but adds custody risk.</li>
+            <li>Offers gold exposure with blockchain transferability.</li>
+          </ul>
+        </section>
+      </div>
+
+      <h2>Government debt versus physical gold</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Treasury-backed digital dollar</th>
+              <th>Gold-backed digital asset</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>What does it track?</td>
+              <td>One US dollar</td>
+              <td>A specified weight of gold</td>
+            </tr>
+            <tr>
+              <td>Primary use</td>
+              <td>Payments, settlement and working capital</td>
+              <td>Savings, reserves and gold exposure</td>
+            </tr>
+            <tr>
+              <td>Underlying asset</td>
+              <td>Cash and liquid dollar securities</td>
+              <td>Allocated or otherwise specified bullion holdings</td>
+            </tr>
+            <tr>
+              <td>Main economic exposure</td>
+              <td>Dollar purchasing power and issuer redemption</td>
+              <td>Gold price, custody arrangements and redemption terms</td>
+            </tr>
+            <tr>
+              <td>Natural reserve income</td>
+              <td>Yes: Treasury bills and similar assets pay interest</td>
+              <td>No: securely stored bullion does not itself pay interest</td>
+            </tr>
+            <tr>
+              <td>Strategic effect</td>
+              <td>Extends dollar usage and supports demand for dollar assets</td>
+              <td>Provides a portable non-sovereign reserve asset</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>The yield question changes the economics</h2>
+
+      <p>
+        Treasury-backed issuers receive interest from their reserve assets while token holders
+        commonly receive no direct share of that income. This spread gives the issuer a strong
+        and scalable business model.
+      </p>
+
+      <p>
+        Physical gold produces no coupon. A gold-token issuer must normally charge custody,
+        transaction or redemption fees. It could try to generate revenue by lending or leasing
+        the metal, but that would introduce borrower and liquidity risks. It could also undermine
+        the central attraction of the product: confidence that the gold is fully present,
+        allocated and available.
+      </p>
+
+      <div class="callout gold">
+        <p><strong>The difference is fundamental:</strong> a Treasury-backed token can be both
+        fully reserved and income-producing. A conservatively structured gold-backed token can
+        be fully reserved, but the reserve itself produces no income. Sharing a Treasury coupon
+        is economically straightforward; creating a yield on gold usually requires adding risk.</p>
+      </div>
+
+      <h2>What GlobalGoods would actually use</h2>
+
+      <p>
+        For GlobalGoods, a dollar stablecoin and a gold-backed token are not interchangeable.
+        Most contracts, accounts and payroll obligations are denominated in currency. A
+        dollar-backed stablecoin is therefore the more natural operational tool.
+      </p>
+
+      <p>
+        Gold might have a role in longer-term treasury reserves, particularly where the company
+        wants diversification from dollar purchasing-power risk. It would be less suitable for
+        meeting next week's fixed dollar invoice because its dollar price may move before the
+        payment is due.
+      </p>
+
+      <h3>Possible uses of a dollar stablecoin</h3>
+      <ul>
+        <li>Receiving approved cross-border payments more quickly.</li>
+        <li>Paying suppliers that accept the same token.</li>
+        <li>Moving liquidity between approved group entities.</li>
+        <li>Reducing—but not eliminating—correspondent-banking friction.</li>
+        <li>Automating payments subject to treasury and compliance controls.</li>
+      </ul>
+
+      <h3>Possible uses of tokenised gold</h3>
+      <ul>
+        <li>Holding a limited strategic reserve outside ordinary currency deposits.</li>
+        <li>Transferring fractional gold ownership more easily than physical bars.</li>
+        <li>Providing portfolio exposure to gold without arranging direct vault access.</li>
+        <li>Using gold as collateral where counterparties and local law allow it.</li>
+      </ul>
+
+      <h2>The risks beneath the surface</h2>
+
+      <div class="risk-grid">
+        <div class="risk">
+          <strong>Issuer and legal-claim risk</strong>
+          <span>The token holder must understand exactly who owes what, and whether reserves are legally segregated if the issuer fails.</span>
+        </div>
+        <div class="risk">
+          <strong>Reserve and custody risk</strong>
+          <span>Cash can be trapped at a failing bank; securities can face liquidity stress; bullion depends on vaulting, title and audit controls.</span>
+        </div>
+        <div class="risk">
+          <strong>Redemption risk</strong>
+          <span>A market price can depart from the value of the reserve when redemption is restricted, slow, expensive or unavailable to the holder.</span>
+        </div>
+        <div class="risk">
+          <strong>Technology risk</strong>
+          <span>Wallet errors, compromised keys, smart-contract flaws, network congestion and incompatible blockchains can disrupt access.</span>
+        </div>
+        <div class="risk">
+          <strong>Regulatory risk</strong>
+          <span>Rules differ by country and can affect issuance, custody, transfers, sanctions screening, tax and the ability to convert into bank money.</span>
+        </div>
+        <div class="risk">
+          <strong>Market risk</strong>
+          <span>A dollar token preserves a nominal dollar claim; a gold token preserves a gold claim. Neither guarantees stable purchasing power in every economy.</span>
+        </div>
+      </div>
+
+      <h2>How a prudent treasury would manage them</h2>
+
+      <ul>
+        <li>Use regulated or appropriately supervised providers where available.</li>
+        <li>Verify reserve composition, attestations, legal terms and redemption rights.</li>
+        <li>Hold only the operational balance required rather than treating a payment token as an insured bank account.</li>
+        <li>Diversify providers, custody arrangements and settlement routes.</li>
+        <li>Maintain conventional bank access and tested contingency procedures.</li>
+        <li>Apply normal sanctions, anti-money-laundering, tax and foreign-exchange controls.</li>
+        <li>For tokenised gold, confirm whether the metal is allocated, whether it may be lent, and how physical or cash redemption works.</li>
+      </ul>
+
+      <section class="conclusion">
+        <h2>The likely outcome is coexistence, not a winner</h2>
+
+        <p>
+          Dollar stablecoins and tokenised gold solve different problems. Digital dollars are
+          well adapted to trade, payroll and short-term settlement because obligations are
+          already denominated in currency. Their reserves also create a commercially attractive
+          source of interest income and a new channel of demand for US Treasury bills.
+        </p>
+
+        <p>
+          Gold-backed tokens are more naturally a savings or reserve product. They can make
+          ownership of bullion more divisible and transferable, but their value still fluctuates
+          in dollars and their credibility depends on title, custody, audit and redemption.
+        </p>
+
+        <p>
+          The emerging contest is therefore not simply “stablecoin versus bank”. It is a choice
+          between different foundations of trust: a redeemable digital claim supported by
+          government debt, and a digital claim to a scarce physical asset.
+        </p>
+
+        <p>
+          The most plausible future contains both. <strong>Digital dollars may dominate
+          payments; digital gold may compete for savings and reserves.</strong>
+        </p>
+      </section>
+
+      <section class="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources and further reading</h2>
+        <ol>
+          <li>
+            US Department of the Treasury,
+            <a href="https://home.treasury.gov/news/press-releases/sb0213" rel="noopener">
+              Report concerning implementation of the GENIUS Act
+            </a>, 30 July 2025.
+          </li>
+          <li>
+            US Department of the Treasury,
+            <a href="https://home.treasury.gov/news/press-releases/sb0197" rel="noopener">
+              Statement on stablecoins, the dollar and demand for US Treasuries
+            </a>, 18 July 2025.
+          </li>
+          <li>
+            US Treasury Borrowing Advisory Committee,
+            <a href="https://home.treasury.gov/system/files/221/TBACCharge2Q12026.pdf" rel="noopener">
+              Trends in demand for US Treasury securities
+            </a>, 2026.
+          </li>
+          <li>
+            Circle,
+            <a href="https://www.circle.com/transparency" rel="noopener">
+              USDC reserves and transparency
+            </a>.
+          </li>
+          <li>
+            Tether,
+            <a href="https://tether.to/transparency/" rel="noopener">
+              Reserve transparency and reports
+            </a>.
+          </li>
+          <li>
+            Paxos,
+            <a href="https://www.paxos.com/pax-gold" rel="noopener">
+              PAX Gold product and custody information
+            </a>.
+          </li>
+          <li>
+            Bank of England,
+            <a href="https://www.bankofengland.co.uk/explainers/what-are-stablecoins-and-how-do-they-work" rel="noopener">
+              What stablecoins are and how they work
+            </a>, updated 2026.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2026 Michael David Lambert Jolly. Written with AI assistance.</div>
+      <div class="disclaimer">
+        This article is for general educational discussion only. It is not legal, tax,
+        accounting or investment advice. Stablecoin availability, regulation and redemption
+        rights vary by jurisdiction and provider.
+      </div>
+    </footer>
+  </article>
+</body>
+</html>
